@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Plarm</title>
+</head>
+<body>
+    <div id="nite">
+        <button id="sleep" class="button" > Turn Nightmode OFF</button>
+    </div>
+    <div id="menu">
+        <div id="character">
+            <div id="tl">
+                <button id="btl" class="button" class="selection" type="button"><img id="imgbtl" src="skinOneTop.png" /></button>                
+            </div>
+            <div id="tr">
+                <button id="btr" class="button" class="selection" type="button"><img id="imgbtr" src="skinTwoTop.png" /></button>
+            </div>
+            <div id="bl">
+                <button id="bbl" class="button" class="selection" type="button"><img id="imgbbl" src="skinThreeTop.png" /></button>
+            </div>
+            <div id="br">
+                <button id="bbr" class="button" class="selection" type="button"><img id="imgbbr" src="skinFourTop.png" /></button>
+            </div>            
+            
+        </div> 
+        
+    </div>
+    <div id="selected"><div id="imgsel"><img id="selimg" src="skinOneTop.png" /></div></div>
+    <div id="login">
+        <input id="name" type="text" placeholder="Nickname" maxLength="15"></input><br>
+        <button id="play" type="button" disabled>Connecting...</button>
+    </div>
+    <canvas id="canvas" width="5000" height="1000"></canvas>
+    <style>
+        
+        #menu {
+            visibility: visible;
+            border-radius: 25px;
+            position: absolute;
+            opacity: 0.5;
+            top: 20%;
+            right: 42.5%;
+            width: 15%;
+            height: 41%;
+            background-color: gray;
+        }
+        #nite {
+            visibility: visible;
+            position: absolute;
+            right: 25px;
+            top: 25px;
+        }
+        #sleep {
+            border-radius: 15px;
+            background-color: white;
+            opacity: 0.9;
+            color:black;
+            width: 150px;
+            height: 40px;
+        }
+        #selected {
+            border-radius: 25px;
+            background-color: gray;
+            position: absolute;
+            left: 20%;
+            top: 25%;
+            width: 150px;
+            height:150px;
+            opacity: 0.5;
+            font-size: 20px;
+            font-weight: bold;            
+        }
+        #imgsel {
+            border-radius: 25px;
+            background-color: #24d5e5;
+            margin-left: 25px;
+            margin-top: 25px;
+            height: 100px;
+            width: 100px;
+        }
+        .button {
+            text-align: center;
+            text-decoration: none;
+        }
+
+            .button:focus {
+                outline: 0;
+                -moz-outline: 0;
+                border: 0
+            }
+        #imgbtl {
+            border-radius: 25px 0px 0px 0px;
+        }
+        #btl {
+            border-radius: 25px 0px 0px 0px;
+            position: absolute;
+            left: -110px;
+            width: 110px;
+            height: 110px;
+            background-color: #24d5e5;
+        }                     
+        #imgbtr {
+            border-radius: 0px 25px 0px 0px;
+        }
+        #btr {
+            border-radius: 0px 25px 0px 0px;
+            position: absolute;
+            left: 0px;
+            width: 110px;
+            height: 110px;
+            background-color: #24d5e5;
+        }           
+        #imgbbl {
+            border-radius: 0px 0px 0px 25px;
+        }
+        #bbl {
+            border-radius: 0px 0px 0px 25px;
+            position: absolute;
+            left: -110px;
+            top: 110px;
+            width: 110px;
+            height: 110px;
+            background-color: #24d5e5;
+        }
+        #imgbbr {
+            border-radius: 0px 0px 25px 0px;
+        }
+        #bbr {
+            border-radius: 0px 0px 25px 0px;
+            position: absolute;
+            left: 0px;
+            top: 110px;
+            width: 110px;
+            height: 110px;
+            background-color: #24d5e5;
+        }
+        #character {            
+            visibility: visible;
+            position: absolute;
+            left: 50%;
+            top: 25px;
+            width: 220px;
+            height: 220px;
+            text-align: center;
+        }
+        #name {
+            border-color: #300ba8;
+            text-align: center;
+            font-size: large;
+            width: 200px;
+            height: 30px;
+            top: 50%;
+            border-radius: 12px;
+        }
+        #play {
+            border-radius: 12px;
+            width: 200px;
+            height: 50px;
+            background-color: #300ba8;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+        #play:hover {
+                background-color: darkblue;
+        }
+        #login {
+            visibility: visible;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+        }
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+        }        
+    </style>
+    <script src="Client.js"></script>    
+</body>
+</html>
