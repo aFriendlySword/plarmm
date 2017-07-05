@@ -1,1 +1,0 @@
-[{"ip":"wss://testserver-quakeio.herokuapp.com","type":"Test"}]
