@@ -340,9 +340,9 @@ var startGame = function (server) {
                 type: MOUSE_COORDS,
                 x: mouseX,
                 y: mouseY,
-                rot: angle;
+                rot: angle
 
-            }
+            };
             socket.send(JSON.stringify(move));
         }
     }
