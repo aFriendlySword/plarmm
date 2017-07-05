@@ -350,7 +350,7 @@ var startGame = function (server) {
     document.onkeydown = function (event) {
         switch (event.keyCode) {
             case 68:
-                if (ingame) {
+                if (inGame) {
                     var move = {
                         type: MOVE_START,
                         input: "right",
@@ -360,7 +360,7 @@ var startGame = function (server) {
                 }
                 break;
             case 65: 
-                if (ingame) {
+                if (inGame) {
                     var move = {
                         type: MOVE_START,
                         input: "left",
@@ -370,7 +370,7 @@ var startGame = function (server) {
                 }
                 break;
             case 32:
-                if (ingame) {
+                if (inGame) {
                     var move = {
                         type: MOVE_START,
                         input: "up",
@@ -383,7 +383,7 @@ var startGame = function (server) {
     document.onkeyup = function (event) {
         switch (event.keyCode) {
             case 68:
-                if (ingame) {
+                if (inGame) {
                     var move = {
                         type: MOVE_STOP,
                         input: "right",
@@ -393,7 +393,7 @@ var startGame = function (server) {
                 }
                 break;
             case 65:
-                if (ingame) {
+                if (inGame) {
                     var move = {
                         type: MOVE_STOP,
                         input: "left",
@@ -403,7 +403,7 @@ var startGame = function (server) {
                 }
                 break;
             case 32:
-                if (ingame) {
+                if (inGame) {
                     var move = {
                         type: MOVE_STOP,
                         input: "up",
@@ -450,7 +450,7 @@ var startGame = function (server) {
         c.height = window.innerHeight;
         ctx.save();
         ctx.clearRect(0, 0, c.width, c.height);
-        if (!ingame) {
+        if (!inGame) {
             if (!isNight) {
                 drawGrid(0, 0, "#FFFFFF", "#000000", c["width"], c["height"]);
                 isNight = true;
