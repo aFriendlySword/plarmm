@@ -453,11 +453,10 @@ var startGame = function (server) {
         if (!inGame) {
             if (!isNight) {
                 drawGrid(0, 0, "#FFFFFF", "#000000", c["width"], c["height"]);
-                isNight = true;
+
             }
             else {
                 drawGrid(0, 0, "#000000", "#FFFFFF", c["width"], c["height"]);
-                isNight = false;
             }
         } else {
             if (!isNight) {
