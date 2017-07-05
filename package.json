@@ -1,13 +1,13 @@
 {
   "name": "plarmm",
-  "version": "0.1",
+  "version": "0.1.9",
   "description": "Platformer",
   "engines": {
     "node": "6.11.0"
   },
   "main": "index.html",
   "scripts": {
-    "start": "node index.js"
+    "start": "node client.js"
   },
   "dependencies": {
     "ejs": "2.5.6",
