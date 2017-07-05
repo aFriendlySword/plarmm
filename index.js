@@ -3,6 +3,10 @@ var app = express();
 
 app.set('port', (process.env.PORT || 8080));
 
+app.get('/findservers',function(req, res) {
+        res.sendFile(__dirname + '/views/pages/findservers/findservers.html');
+});
+
 app.get('/',function(req, res) {
         res.sendFile(__dirname + '/views/pages/index.html');
 });
