@@ -1,26 +1,19 @@
 {
   "name": "plarmm",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "description": "Platformer",
   "engines": {
     "node": "6.11.0"
   },
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
-    "start": "node client.js"
+    "start": "node index.js"
   },
   "dependencies": {
-    "ejs": "2.5.6",
     "express": "4.15.2"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/aFriendlySword/plarmm"
   },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
-  "license": "MIT"
 }
