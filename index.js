@@ -13,8 +13,6 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
-app.set('view engine', 'js');
-
 app.get('/', function(request, response) {
   response.render('pages/client');
 });
