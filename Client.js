@@ -111,7 +111,7 @@ var startGame = function (server) {
     var mouseX = 0;
     var mouseY = 0;
     var showSkin = skin;
-    var angle = 0;
+    var angle = false;
     var username = "";
     var id = "";
     var level = "one";
@@ -328,6 +328,25 @@ var startGame = function (server) {
                 break;
         }
     }
+
+    document.onmousemove = function (event) {
+        if (inGame) {
+            var cx = c.width / 2;
+            var cy = c.height / 2;
+            mouseX = event.pageX;
+            mouseY = event.pageY;
+            angle = (cx < mouseX);
+            var move = {
+                type: MOUSE_COORDS,
+                x: mouseX,
+                y: mouseY,
+                rot: angle;
+
+            }
+            socket.send(JSON.stringify(move));
+        }
+    }
+
     document.onkeydown = function (event) {
         switch (event.keyCode) {
             case 68:
@@ -441,10 +460,49 @@ var startGame = function (server) {
                 isNight = false;
             }
         } else {
-            switch (level) {
-                case "one":
-                    drawGrid(-5000 - players[id].x + c.width/2, )
+            if (!isNight) {
+                drawGrid(-3500 - players[id].x + c.width / 2, -3000 - players[id].y + c.height / 2, "#BBBBBB", "#444444", 12000, 7000);
+                drawGrid(0 - players[id].x + c.width / 2, 0 - players[id].y + c.height / 2, "#FFFFFF", "#000000", 5000, 1000);
+            }
+            else {
+                drawGrid(0, 0, "#000000", "#FFFFFF", c["width"], c["height"]);
+                drawGrid(-3500 - players[id].x + c.width / 2, -3000 - players[id].y + c.height / 2, "#444444", "#BBBBBB", 12000, 7000);
+                drawGrid(0 - players[id].x + c.width / 2, 0 - players[id].y + c.height / 2, "#000000", "#FFFFFF", 5000, 1000);
+            }
+                             
+            
+        }
+        ctx.restore;
+        ctx.save;
+        for (var i in stones) {
+            stones[i].draw;
+        }
+        for (var i in coins) {
+            coins[i].draw;
+        }
+        for (var i in woods) {
+            woods[i].draw;
+        }
+        ctx.restore;
+
+        for (var i in players) {
+            if (players[i].me) {
+                username = players[i].name;
+                drawName(c.width / 2, c.height / 2, username);
+                ctx.save();
+                ctx.translate(c.width / 2, c.height / 2);
+                if (angle) {
+                    ctx.scale(-1, 1);
+                }
+                ctx.translate(0, 0);
+                ctx.drawImage(skin, -50, -100, 100, 200);
+                ctx.restore();
+
+            } else {
+                ctx.save();
+                players[i].draw();
+                ctx.restore();
             }
         }
-    })
+    },40)
 }
