@@ -102,7 +102,7 @@ hreq.send(null);
 
 var startGame = function (server) {
     var inGame = false;
-    var socket = new WebSocket(server);
+    var socket = new WebSocket(server, , 'echo-protocol');
     var button = document.getElementById("play");
     var selectOne = document.getElementById("btl");
     var selectTwo = document.getElementById("btr");
