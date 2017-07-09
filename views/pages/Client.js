@@ -141,7 +141,7 @@ startGame = function () {
         }
     }
 
-    createObject(type, x, y) {
+    createObject = function(type, x, y) {
         switch (type) {
             case s:
                 var obj = {
