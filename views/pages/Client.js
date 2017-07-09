@@ -94,7 +94,6 @@ startGame = function () {
     };
 
     document.getElementById("menu").style.visibility = "hidden";
-    document.getElementById("login").style.visibility = "hidden";
     document.getElementById("nite").style.visibility = "hidden";
     document.getElementById("selected").style.visibility = "hidden";
     document.getElementById("character").style.visibility = "hidden";
