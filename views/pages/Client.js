@@ -88,17 +88,23 @@ bbr.onclick = function () {
 }
 
 startGame = function () {
-    user = {
+
+    var stones = [];
+    var woods = [];
+    var coins = [];
+
+    var user = {
         x: 250,
-        y: 300,
+        y: 700,
     };
+    mapData = "ssssssssssaaaaaaasssaaaaaaasssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaassssssssssss";
 
     document.getElementById("menu").style.visibility = "hidden";
     document.getElementById("nite").style.visibility = "hidden";
     document.getElementById("selected").style.visibility = "hidden";
     document.getElementById("character").style.visibility = "hidden";
 
-    if (!isNight) {
+    if (isNight) {
         drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", 13000, 7000);
         drawGrid(0 - user.x + c.width / 2, 0 - user.y + c.height / 2, "#FFFFFF", "#000000", 5000, 1000);
         
@@ -109,7 +115,77 @@ startGame = function () {
         
     }
 
-    
+    var map = new Array(50);
+    for (var i = 0; i < 50; i++) {
+        map[i] = new Array(10);
+    }
+
+    var initialize = 0;
+
+    for (var i = 0; i < 50; i++) {
+        for (var j = 0; j < 10; j++) {
+            switch (mapData.charAt(initialize)) {
+                case s:
+                    stones[].push(createObject(s, 50 + 100 * i, 50 + 100 * j));
+                    break;
+                case w:
+                    woods[].push(createObject(w, 50 + 100 * i, 50 + 100 * j));
+                    break;
+                case c:
+                    coins[].push(createObject(c, 50 + 100 * i, 50 + 100 * j));
+                    break;
+                default:
+                    break;
+            }
+            initialize++
+        }
+    }
+
+    createObject(type, x, y) {
+        switch (type) {
+            case s:
+                var obj = {
+                    x: x,
+                    y: y,
+                    type: stone
+                };
+                obj.draw = function () {
+                    if (stone.complete) {
+                        ´ctx.drawImage(stone, obj.x - 50 - user.x + c.width / 2, obj.y - 50 - user.y + c.height / 2, 100, 100);
+                    }
+                }
+                return obj;
+                break;
+            case w:
+                var obj = {
+                    x: x,
+                    y: y,
+                    type: wood
+                };
+                obj.draw = function () {
+                    if (wood.complete) {
+                        ´ctx.drawImage(wood, obj.x - 50 - user.x + c.width / 2, obj.y - 50 - user.y + c.height / 2, 100, 100);
+                    }
+                }
+                return obj;
+                break;
+            case c:
+                var obj = {
+                    x: x,
+                    y: y,
+                    type: coin
+                };
+                obj.draw = function () {
+                    if (coin.complete) {
+                        ´ctx.drawImage(coin, obj.x - 50 - user.x + c.width / 2, obj.y - 50 - user.y + c.height / 2, 100, 100);
+                    }
+                }
+                return obj;
+                break;
+            default:
+                break;
+        }
+    }
 }
 play.onclick = function () {
     startGame();

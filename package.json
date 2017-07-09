@@ -1,6 +1,6 @@
 {
   "name": "plarmm",
-  "version": "0.1.11",
+  "version": "0.2.2",
   "description": "Platformer",
   "engines": {
     "node": "6.11.0"
