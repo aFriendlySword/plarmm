@@ -120,27 +120,6 @@ startGame = function () {
         map[i] = new Array(10);
     }
 
-    var initialize = 0;
-
-    for (var i = 0; i < 50; i++) {
-        for (var j = 0; j < 10; j++) {
-            switch (mapData.charAt(initialize)) {
-                case "s":
-                    stones.push(createObject(s, 50 + 100 * i, 50 + 100 * j));
-                    break;
-                case "w":
-                    woods.push(createObject(w, 50 + 100 * i, 50 + 100 * j));
-                    break;
-                case "c":
-                    coins.push(createObject(c, 50 + 100 * i, 50 + 100 * j));
-                    break;
-                default:
-                    break;
-            }
-            initialize++
-        }
-    }
-
     createObject = function(type, x, y) {
         switch (type) {
             case s:
@@ -184,6 +163,25 @@ startGame = function () {
                 break;
             default:
                 break;
+        }
+    }
+    var initialize = 0;
+    for (var i = 0; i < 50; i++) {
+        for (var j = 0; j < 10; j++) {
+            switch (mapData.charAt(initialize)) {
+                case "s":
+                    stones.push(createObject(s, 50 + 100 * i, 50 + 100 * j));
+                    break;
+                case "w":
+                    woods.push(createObject(w, 50 + 100 * i, 50 + 100 * j));
+                    break;
+                case "c":
+                    coins.push(createObject(c, 50 + 100 * i, 50 + 100 * j));
+                    break;
+                default:
+                    break;
+            }
+            initialize++
         }
     }
 }
