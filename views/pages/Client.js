@@ -50,7 +50,6 @@ var drawGrid = function (x, y, stroke, fill, w, h) {
 };
 drawGrid(0, 0, "#FFFFFF", "#000000", c["width"], c["height"]);
 
-var night = document.getElementById("sleep");
 var isNight = true;
 sleep.onclick = function () {
     if (!isNight) {
@@ -87,4 +86,14 @@ bbr.onclick = function () {
     document.getElementById("selimg").src = "skinFourTop.png";
 }
 
+startGame = function () {
+    username = document.getElementById("name").value;
+    document.getElementById("menu").style.visibility = "hidden";
+    document.getElementById("login").style.visibility = "hidden";
+    document.getElementById("nite").style.visibility = "hidden";
 
+
+}
+play.onclick = function () {
+    startGame();
+}
