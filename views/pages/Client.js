@@ -122,7 +122,7 @@ startGame = function () {
 
     createObject = function(type, x, y) {
         switch (type) {
-            case s:
+            case 0:
                 var obj = {
                     x: x,
                     y: y,
@@ -135,7 +135,7 @@ startGame = function () {
                 }
                 return obj;
                 break;
-            case w:
+            case 1:
                 var obj = {
                     x: x,
                     y: y,
@@ -148,7 +148,7 @@ startGame = function () {
                 }
                 return obj;
                 break;
-            case c:
+            case 2:
                 var obj = {
                     x: x,
                     y: y,
@@ -170,13 +170,13 @@ startGame = function () {
         for (var j = 0; j < 10; j++) {
             switch (mapData.charAt(initialize)) {
                 case "s":
-                    stones.push(createObject(s, 50 + 100 * i, 50 + 100 * j));
+                    stones.push(createObject(0, 50 + 100 * i, 50 + 100 * j));
                     break;
                 case "w":
-                    woods.push(createObject(w, 50 + 100 * i, 50 + 100 * j));
+                    woods.push(createObject(1, 50 + 100 * i, 50 + 100 * j));
                     break;
                 case "c":
-                    coins.push(createObject(c, 50 + 100 * i, 50 + 100 * j));
+                    coins.push(createObject(2, 50 + 100 * i, 50 + 100 * j));
                     break;
                 default:
                     break;
