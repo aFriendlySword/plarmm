@@ -125,13 +125,13 @@ startGame = function () {
     for (var i = 0; i < 50; i++) {
         for (var j = 0; j < 10; j++) {
             switch (mapData.charAt(initialize)) {
-                case s:
+                case "s":
                     stones.push(createObject(s, 50 + 100 * i, 50 + 100 * j));
                     break;
-                case w:
+                case "w":
                     woods.push(createObject(w, 50 + 100 * i, 50 + 100 * j));
                     break;
-                case c:
+                case "c":
                     coins.push(createObject(c, 50 + 100 * i, 50 + 100 * j));
                     break;
                 default:
