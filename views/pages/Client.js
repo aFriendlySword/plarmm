@@ -126,13 +126,13 @@ startGame = function () {
         for (var j = 0; j < 10; j++) {
             switch (mapData.charAt(initialize)) {
                 case s:
-                    stones[].push(createObject(s, 50 + 100 * i, 50 + 100 * j));
+                    stones.push(createObject(s, 50 + 100 * i, 50 + 100 * j));
                     break;
                 case w:
-                    woods[].push(createObject(w, 50 + 100 * i, 50 + 100 * j));
+                    woods.push(createObject(w, 50 + 100 * i, 50 + 100 * j));
                     break;
                 case c:
-                    coins[].push(createObject(c, 50 + 100 * i, 50 + 100 * j));
+                    coins.push(createObject(c, 50 + 100 * i, 50 + 100 * j));
                     break;
                 default:
                     break;
@@ -151,7 +151,7 @@ startGame = function () {
                 };
                 obj.draw = function () {
                     if (stone.complete) {
-                        ´ctx.drawImage(stone, obj.x - 50 - user.x + c.width / 2, obj.y - 50 - user.y + c.height / 2, 100, 100);
+                        ctx.drawImage(stone, obj.x - 50 - user.x + c.width / 2, obj.y - 50 - user.y + c.height / 2, 100, 100);
                     }
                 }
                 return obj;
@@ -164,7 +164,7 @@ startGame = function () {
                 };
                 obj.draw = function () {
                     if (wood.complete) {
-                        ´ctx.drawImage(wood, obj.x - 50 - user.x + c.width / 2, obj.y - 50 - user.y + c.height / 2, 100, 100);
+                        ctx.drawImage(wood, obj.x - 50 - user.x + c.width / 2, obj.y - 50 - user.y + c.height / 2, 100, 100);
                     }
                 }
                 return obj;
@@ -177,7 +177,7 @@ startGame = function () {
                 };
                 obj.draw = function () {
                     if (coin.complete) {
-                        ´ctx.drawImage(coin, obj.x - 50 - user.x + c.width / 2, obj.y - 50 - user.y + c.height / 2, 100, 100);
+                        ctx.drawImage(coin, obj.x - 50 - user.x + c.width / 2, obj.y - 50 - user.y + c.height / 2, 100, 100);
                     }
                 }
                 return obj;
