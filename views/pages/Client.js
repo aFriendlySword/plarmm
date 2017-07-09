@@ -17,7 +17,7 @@ stone.src = service + "stone.png";
 var wood = new Image();
 wood.src = service + "wood.png";
 var coin = new Image();
-coin.src = coin + "coin.png";
+coin.src = service + "coin.png";
 
 var servers = {};
 var c = document.getElementById("canvas");
