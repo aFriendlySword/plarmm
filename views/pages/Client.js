@@ -48,19 +48,20 @@ var drawGrid = function (x, y, stroke, fill, w, h) {
     ; ctx.strokeStyle = stroke;
     ctx.stroke();
 };
-drawGrid(0, 0, "#FFFFFF", "#000000", c["width"], c["height"]);
+drawGrid(0, 0, "#FFFFFF", "#000000", c.width, c.height);
 
 var isNight = true;
+
 sleep.onclick = function () {
     if (!isNight) {
-        drawGrid(0, 0, "#FFFFFF", "#000000", c["width"], c["height"]);
+        drawGrid(0, 0, "#FFFFFF", "#000000", c.width, c.height);
         isNight = true;
         document.getElementById("sleep").style.color = "black";
         document.getElementById("sleep").style.backgroundColor = "white";
         document.getElementById("sleep").textContent = "Turn Nightmode OFF";
     }
     else {
-        drawGrid(0, 0, "#000000", "#FFFFFF", c["width"], c["height"]);
+        drawGrid(0, 0, "#000000", "#FFFFFF", c.width, c.height);
         isNight = false;
         document.getElementById("sleep").style.color = "white";
         document.getElementById("sleep").style.backgroundColor = "black";
@@ -87,12 +88,29 @@ bbr.onclick = function () {
 }
 
 startGame = function () {
-    username = document.getElementById("name").value;
+    user = {
+        x: 250,
+        y: 300,
+    };
+
     document.getElementById("menu").style.visibility = "hidden";
     document.getElementById("login").style.visibility = "hidden";
     document.getElementById("nite").style.visibility = "hidden";
+    document.getElementById("selected").style.visibility = "hidden";
+    document.getElementById("character").style.visibility = "hidden";
 
+    if (!isNight) {
+        drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", 13000, 7000);
+        drawGrid(0 - user.x + c.width / 2, 0 - user.y + c.height / 2, "#FFFFFF", "#000000", 5000, 1000);
+        
+    }
+    else {
+        drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#000000", "#FFFFFF", 13000, 7000);
+        drawGrid(0 - user.x + c.width / 2, 0 - user.y + c.height / 2, "#000000", "#FFFFFF", 5000, 1000);
+        
+    }
 
+    
 }
 play.onclick = function () {
     startGame();

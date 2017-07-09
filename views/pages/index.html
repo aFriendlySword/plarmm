@@ -22,15 +22,11 @@
             <div id="br">
                 <button id="bbr" class="button" class="selection" type="button"><img id="imgbbr" src="/skinFourTop.png" /></button>
             </div>            
-            
+            <button id="play" type="button">Play</button>
         </div> 
         
     </div>
     <div id="selected"><div id="imgsel"><img id="selimg" src="/skinOneTop.png" /></div></div>
-    <div id="login">
-        <input id="name" type="text" placeholder="Nickname" maxLength="15"></input><br>
-        <button id="play" type="button">Play</button>
-    </div>
     <canvas id="canvas" width="5000" height="1000"></canvas>
     <style>
         
@@ -154,13 +150,16 @@
             border-radius: 12px;
         }
         #play {
-            border-radius: 12px;
-            width: 200px;
-            height: 50px;
+            border-radius: 30px;
+            position: absolute;
+            width: 60px;
+            height: 60px;
             background-color: #300ba8;
             color: white;
             text-align: center;
             text-decoration: none;
+            top:70px;
+            left:-30px;
         }
         #play:hover {
                 background-color: darkblue;
