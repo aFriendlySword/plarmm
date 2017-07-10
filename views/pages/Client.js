@@ -88,7 +88,7 @@ bbr.onclick = function () {
 }
 
 startGame = function () {
-
+    var inGame = true;
     var stones = [];
     var woods = [];
     var coins = [];
@@ -96,8 +96,10 @@ startGame = function () {
     var user = {
         x: 250,
         y: 700,
+        rot: false
     };
-    mapData = "ssssssssssaaaaaaasssaaaaaaasssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaassssssssssss";
+    var mapData = "ssssssssssaaaaaaasssaaaaaaasssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaassssssssssss";
+    var map = "Hub";
 
     document.getElementById("menu").style.visibility = "hidden";
     document.getElementById("nite").style.visibility = "hidden";
@@ -184,7 +186,133 @@ startGame = function () {
             initialize++
         }
     }
+
+    document.onmousemove = function (event) {
+        if (inGame) {
+            var cx = c.width / 2;
+            var mouseX = event.pageX;
+            if (cx > mouseX) {
+                rot = true;
+            } else {
+                rot = false;
+            }
+        }
+        return rot;
+    }
+
+    document.onkeypress = function (event) {
+        switch (event.keyCode) {
+            case 68:
+                if (inGame) {
+                    var move = {
+                        direction: "right",
+                        v: 1
+                    };
+                }
+                return move;
+                break;
+            case 83:
+                if (inGame) {
+                    switch (map) {
+                        case "Hub":
+                            if (user.x > 550 && user.x < 650) {
+                                map = "level1";
+                                mapData = "sssssssssssssssssssssaaasaaasssacasaaaassaaasaaaassaaaaaaaassaaaaaassssaaaascaassaasaasaassaaaaaaaasssssswwsssscaaaaaassaaasaasaasaaaaaaaaasaaasaaaaassaasaascassaasaaaaassaaaassssssasaaasaassaaaaasaassaaascaaassaaasaaasssaasaaaaassaaaaasaassasasaaaassaaaaaassssaaaasawbssaasaaawwssaaawacaassaaasaaaassaaasaaaassacasaaaassaaaaaasassaaaaaasassaaasaaaassaaasaaaassaaasssssssaaaaasaassaaasacaassaaaaasaassaaasacaassaaaaasaassaaasaaaassaaaaaaaassaaaaaasassaaaasaaasswwssssssssaaaaaaaassaaaaaaaasssssssssss";
+                                user.x = 250;
+                                user.y = 700;
+                            }
+                            break;
+                        case "level1":
+                            if (user.x > 4850) {
+                                map = "Hub";
+                                mapData = "ssssssssssaaaaaaasssaaaaaaasssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaassssssssssss";
+                                user.x = 250;
+                                user.y = 700;
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                break;
+            case 65:
+                if (inGame) {
+                    var move = {
+                        direction: "left",
+                        v: 1
+                    };
+                }
+                return move;
+                break;
+            case 87:
+                if (inGame) {
+                    var move = {
+                        direction: "up",
+                        v: 3
+                    };
+                }
+                return move;
+                break;
+            case 39:
+                if (inGame) {
+                    var move = {
+                        direction: "right",
+                        v: 1
+                    };
+                }
+                return move;
+                break;
+            case 40:
+                if (inGame) {
+                    switch (map) {
+                        case "Hub":
+                            if (user.x > 550 && user.x < 650) {
+                                map = "level1";
+                                mapData = "sssssssssssssssssssssaaasaaasssacasaaaassaaasaaaassaaaaaaaassaaaaaassssaaaascaassaasaasaassaaaaaaaasssssswwsssscaaaaaassaaasaasaasaaaaaaaaasaaasaaaaassaasaascassaasaaaaassaaaassssssasaaasaassaaaaasaassaaascaaassaaasaaasssaasaaaaassaaaaasaassasasaaaassaaaaaassssaaaasawbssaasaaawwssaaawacaassaaasaaaassaaasaaaassacasaaaassaaaaaasassaaaaaasassaaasaaaassaaasaaaassaaasssssssaaaaasaassaaasacaassaaaaasaassaaasacaassaaaaasaassaaasaaaassaaaaaaaassaaaaaasassaaaasaaasswwssssssssaaaaaaaassaaaaaaaasssssssssss";
+                                user.x = 250;
+                                user.y = 700;
+                            }
+                            break;
+                        case "level1":
+                            if (user.x > 4850) {
+                                map = "Hub";
+                                mapData = "ssssssssssaaaaaaasssaaaaaaasssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaassssssssssss";
+                                user.x = 250;
+                                user.y = 700;
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                break;
+            case 37:
+                if (inGame) {
+                    var move = {
+                        direction: "left",
+                        v: 1
+                    };
+                }
+                return move;
+                break;
+            case 38:
+                if (inGame) {
+                    var move = {
+                        direction: "up",
+                        v: 3
+                    };
+                }
+                return move;
+                break;
+        }
+    }
+
+    var game = setInterval(funtion(){
+        c.width = window.width;
+        c.height = window.height;
+    },40)
 }
+
 play.onclick = function () {
     startGame();
 }
