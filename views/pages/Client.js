@@ -91,16 +91,17 @@ bbr.onclick = function () {
 var stones = [];
 var woods = [];
 var coins = [];
+var user = {
+    x: 250,
+    y: 700,
+    rot: false
+};
 
 startGame = function () {
     inGame = true;
    
 
-    var user = {
-        x: 250,
-        y: 700,
-        rot: false
-    };
+ 
     var mapData = "ssssssssssaaaaaaasssaaaaaaasssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaassssssssssss";
     var map = "Hub";
 
