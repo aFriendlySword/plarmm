@@ -1,4 +1,5 @@
 var service = "/";
+var inGame = false;
 
 var skinOne = new Image();
 skinOne.src = service + "skinOne.png";
@@ -88,7 +89,7 @@ bbr.onclick = function () {
 }
 
 startGame = function () {
-    var inGame = true;
+    inGame = true;
     var stones = [];
     var woods = [];
     var coins = [];
