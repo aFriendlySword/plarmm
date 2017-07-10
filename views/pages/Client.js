@@ -313,7 +313,7 @@ startGame = function () {
 var game = setInterval(function () {
     c.width = window.width;
     c.height = window.height;
-    ctx.clearRect(0, 0, c.width, c.height)
+    ctx.clearRect(0, 0, c.width, c.height);
     ctx.save();
     if (!inGame) {
         if (isNight) {
@@ -348,6 +348,8 @@ var game = setInterval(function () {
 
 }, 40)
 
-play.onclick = function () {
+start = document.getElementById("play");
+
+start.onclick = function () {
     startGame();
 }
