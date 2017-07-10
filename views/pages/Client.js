@@ -307,9 +307,30 @@ startGame = function () {
         }
     }
 
-    var game = setInterval(funtion(){
+    var game = setInterval(function(){
         c.width = window.width;
         c.height = window.height;
+        ctx.clearRect(0, 0, c.width, c.height)
+        ctx.save();
+        if (!inGame) {
+            if (isNight) {
+                drawGrid(0, 0, "#FFFFFF", "#000000", c.width, c.height);                
+            }
+            else {
+                drawGrid(0, 0, "#000000", "#FFFFFF", c.width, c.height);              
+            }
+        } else {
+            if (isNight) {
+                drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", 13000, 7000);
+                drawGrid(0 - user.x + c.width / 2, 0 - user.y + c.height / 2, "#FFFFFF", "#000000", 5000, 1000);
+
+            }
+            else {
+                drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#000000", "#FFFFFF", 13000, 7000);
+                drawGrid(0 - user.x + c.width / 2, 0 - user.y + c.height / 2, "#000000", "#FFFFFF", 5000, 1000);
+
+            }
+        }
     },40)
 }
 
