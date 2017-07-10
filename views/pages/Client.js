@@ -88,11 +88,13 @@ bbr.onclick = function () {
     document.getElementById("selimg").src = "skinFourTop.png";
 }
 
+var stones = [];
+var woods = [];
+var coins = [];
+
 startGame = function () {
     inGame = true;
-    var stones = [];
-    var woods = [];
-    var coins = [];
+   
 
     var user = {
         x: 250,
