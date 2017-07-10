@@ -304,30 +304,46 @@ startGame = function () {
         }
     }
 
-    var game = setInterval(function(){
-        c.width = window.width;
-        c.height = window.height;
-        ctx.clearRect(0, 0, c.width, c.height)
-        ctx.save();
-        if (!inGame) {
-            if (isNight) {
-                drawGrid(0, 0, "#FFFFFF", "#000000", c.width, c.height);                
-            }
-            else {
-                drawGrid(0, 0, "#000000", "#FFFFFF", c.width, c.height);              
-            }
-        } else {
-            if (isNight) {
-                drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", 13000, 7000);              
-
-            }
-            else {
-                drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#000000", "#FFFFFF", 13000, 7000);                
-
-            }
-        }
-    },40)
+    
 }
+
+var game = setInterval(function () {
+    c.width = window.width;
+    c.height = window.height;
+    ctx.clearRect(0, 0, c.width, c.height)
+    ctx.save();
+    if (!inGame) {
+        if (isNight) {
+            drawGrid(0, 0, "#FFFFFF", "#000000", c.width, c.height);
+        }
+        else {
+            drawGrid(0, 0, "#000000", "#FFFFFF", c.width, c.height);
+        }
+    } else {
+        if (isNight) {
+            drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", 13000, 7000);
+
+        }
+        else {
+            drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#000000", "#FFFFFF", 13000, 7000);
+
+        }
+    }
+    ctx.globalAlpha = 1;
+
+    for (var i in stones) {
+        stones[i].draw();
+    }
+    for (var i in woods) {
+        stones[i].draw();
+    }
+    for (var i in coins) {
+        stones[i].draw();
+    }
+    ctx.restore();
+
+
+}, 40)
 
 play.onclick = function () {
     startGame();
