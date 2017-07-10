@@ -108,13 +108,10 @@ startGame = function () {
 
     if (isNight) {
         drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", 13000, 7000);
-        drawGrid(0 - user.x + c.width / 2, 0 - user.y + c.height / 2, "#FFFFFF", "#000000", 5000, 1000);
         
     }
     else {
-        drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#000000", "#FFFFFF", 13000, 7000);
-        drawGrid(0 - user.x + c.width / 2, 0 - user.y + c.height / 2, "#000000", "#FFFFFF", 5000, 1000);
-        
+        drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#000000", "#FFFFFF", 13000, 7000);       
     }
 
     var map = new Array(50);
@@ -321,13 +318,11 @@ startGame = function () {
             }
         } else {
             if (isNight) {
-                drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", 13000, 7000);
-                drawGrid(0 - user.x + c.width / 2, 0 - user.y + c.height / 2, "#FFFFFF", "#000000", 5000, 1000);
+                drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", 13000, 7000);              
 
             }
             else {
-                drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#000000", "#FFFFFF", 13000, 7000);
-                drawGrid(0 - user.x + c.width / 2, 0 - user.y + c.height / 2, "#000000", "#FFFFFF", 5000, 1000);
+                drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#000000", "#FFFFFF", 13000, 7000);                
 
             }
         }
