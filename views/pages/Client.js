@@ -317,11 +317,11 @@ var game = setInterval(function () {
     ctx.clearRect(0, 0, c.width, c.height);
     ctx.save();
     if (!inGame) {
-        if (isNight) {
-            drawGrid(0, 0, "#FFFFFF", "#000000", c.width, c.height);
+        if (!isNight) {
+            drawGrid(0, 0, "#000000", "#FFFFFF", c.width, c.height); 
         }
-        else {
-            drawGrid(0, 0, "#000000", "#FFFFFF", c.width, c.height);
+        else {           
+            drawGrid(0, 0, "#FFFFFF", "#000000", c.width, c.height);
         }
     } else {
         if (isNight) {
