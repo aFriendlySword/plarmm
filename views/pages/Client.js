@@ -264,19 +264,19 @@ startGame = function () {
                 if (inGame) {
                     for (var i in stones) {
                         if (stones[i].y - user.y == 150) {
-                            if (stones[i] - user.y < 90 && stones[i] - user.y > -90) {
-                                moveup = 20;
-                            }                            
-                        }
-                    }
-                    for (var i in woods) {
-                        if (stones[i].y - user.y==150) {
-                            if (woods[i] - user.y < 90 && woods[i] - user.y > -90) {
+                            if (stones[i].x - user.x < 90 && stones[i].x - user.x > -90) {
                                 moveup = 20;
                             }
                         }
-                    }                    
-                    
+                    }
+                    for (var i in woods) {
+                        if (stones[i].y - user.y == 150) {
+                            if (woods[i].x - user.x < 90 && woods[i].x - user.x > -90) {
+                                moveup = 20;
+                            }
+                        }
+                    }
+
                 }
                 return moveup;
                 break;
@@ -328,14 +328,14 @@ startGame = function () {
                 if (inGame) {
                     for (var i in stones) {
                         if (stones[i].y - user.y == 150) {
-                            if (stones[i] - user.y < 90 && stones[i] - user.y > -90) {
+                            if (stones[i].x - user.x < 90 && stones[i].x - user.x > -90) {
                                 moveup = 20;
                             }
                         }
                     }
                     for (var i in woods) {
                         if (stones[i].y - user.y == 150) {
-                            if (woods[i] - user.y < 90 && woods[i] - user.y > -90) {
+                            if (woods[i].x - user.x < 90 && woods[i].x - user.x > -90) {
                                 moveup = 20;
                             }
                         }
