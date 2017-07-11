@@ -300,7 +300,7 @@ startGame = function () {
 
 
 
-    document.onkeydown = function (event) {
+    document.onkeyup = function (event) {
         switch (event.keyCode) {
             case 68:
                 if (inGame) {
