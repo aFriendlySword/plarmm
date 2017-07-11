@@ -300,6 +300,40 @@ startGame = function () {
 
     
 }
+document.onkeydown = function (event) {
+    switch (event.keyCode) {
+        case 68:
+            if (inGame) {
+                moveright = 0;
+            }
+            return moveright;
+            break;        
+        case 65:
+            if (inGame) {
+                moveleft = 0;
+
+            }
+            return moveleft;
+            break;
+
+        case 39:
+            if (inGame) {
+                moveright = 0;
+            }
+            return moveright;
+            break;
+        
+        case 37:
+            if (inGame) {
+                moveleft = 0;
+            }
+            return moveleft;
+            break;
+    }
+}
+
+    
+}
 
 var game = setInterval(function () {
 
