@@ -106,11 +106,12 @@ var moveup = 0;
 
 startGame = function () {
     inGame = true;
-
+    const HUB = 00;
+    const LEVEL1 = 01;
 
 
     var mapData = mapDataHub;
-    var map = "Hub";
+    var map = HUB;
 
     document.getElementById("menu").style.visibility = "hidden";
     document.getElementById("nite").style.visibility = "hidden";
@@ -216,30 +217,27 @@ startGame = function () {
                 }
                 return moveright;
                 break;
-            case 83:
-                console.log("keydown");
+            case 83:                
                 if (inGame) {
-                    console.log("keydowninGame");
                     switch (map) {
-                        case "Hub":
-                            console.log("keydowninHub");
+                        case HUB:                            
                             if (user.x > 650 && user.x < 750) {
                                 stones = [];
                                 woods = [];
                                 coins = [];
-                                map = "level1";
+                                map = LEVEL1;
                                 mapData = mapDataLevel1;
                                 initialize();
                                 user.x = 250;
                                 user.y = 695;
                             }
                             break;
-                        case "level1":
+                        case LEVEL1:
                             if (user.x > 4850) {
                                 stones = [];
                                 woods = [];
                                 coins = [];
-                                map = "Hub";
+                                map = HUB;
                                 mapData = mapDataHub;
                                 initialize();
                                 user.x = 250;
