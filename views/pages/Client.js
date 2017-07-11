@@ -106,9 +106,9 @@ var moveup = 0;
 
 startGame = function () {
     inGame = true;
-   
 
- 
+
+
     var mapData = mapDataHub;
     var map = "Hub";
 
@@ -119,10 +119,10 @@ startGame = function () {
 
     if (isNight) {
         drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", 13000, 7000);
-        
+
     }
     else {
-        drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#000000", "#FFFFFF", 13000, 7000);       
+        drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#000000", "#FFFFFF", 13000, 7000);
     }
 
     var map = new Array(50);
@@ -130,7 +130,7 @@ startGame = function () {
         map[i] = new Array(10);
     }
 
-    createObject = function(type, x, y) {
+    createObject = function (type, x, y) {
         switch (type) {
             case 0:
                 var obj = {
@@ -243,7 +243,7 @@ startGame = function () {
             case 65:
                 if (inGame) {
                     moveleft = 5;
-                    
+
                 }
                 return moveleft;
                 break;
@@ -298,42 +298,42 @@ startGame = function () {
         }
     }
 
-    
-}
-document.onkeydown = function (event) {
-    switch (event.keyCode) {
-        case 68:
-            if (inGame) {
-                moveright = 0;
-            }
-            return moveright;
-            break;        
-        case 65:
-            if (inGame) {
-                moveleft = 0;
 
-            }
-            return moveleft;
-            break;
 
-        case 39:
-            if (inGame) {
-                moveright = 0;
-            }
-            return moveright;
-            break;
-        
-        case 37:
-            if (inGame) {
-                moveleft = 0;
-            }
-            return moveleft;
-            break;
+    document.onkeydown = function (event) {
+        switch (event.keyCode) {
+            case 68:
+                if (inGame) {
+                    moveright = 0;
+                }
+                return moveright;
+                break;
+            case 65:
+                if (inGame) {
+                    moveleft = 0;
+
+                }
+                return moveleft;
+                break;
+
+            case 39:
+                if (inGame) {
+                    moveright = 0;
+                }
+                return moveright;
+                break;
+
+            case 37:
+                if (inGame) {
+                    moveleft = 0;
+                }
+                return moveleft;
+                break;
+        }
     }
-}
 
-    
-}
+}    
+
 
 var game = setInterval(function () {
 
