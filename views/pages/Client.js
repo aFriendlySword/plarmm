@@ -176,25 +176,29 @@ startGame = function () {
                 break;
         }
     }
-    var initialize = 0;
-    for (var i = 0; i < 50; i++) {
-        for (var j = 0; j < 10; j++) {
-            switch (mapData.charAt(initialize)) {
-                case "s":
-                    stones.push(createObject(0, 50 + 100 * i, 50 + 100 * j));
-                    break;
-                case "w":
-                    woods.push(createObject(1, 50 + 100 * i, 50 + 100 * j));
-                    break;
-                case "c":
-                    coins.push(createObject(2, 50 + 100 * i, 50 + 100 * j));
-                    break;
-                default:
-                    break;
+
+    createMap = function () {
+        var initialize = 0;
+        for (var i = 0; i < 50; i++) {
+            for (var j = 0; j < 10; j++) {
+                switch (mapData.charAt(initialize)) {
+                    case "s":
+                        stones.push(createObject(0, 50 + 100 * i, 50 + 100 * j));
+                        break;
+                    case "w":
+                        woods.push(createObject(1, 50 + 100 * i, 50 + 100 * j));
+                        break;
+                    case "c":
+                        coins.push(createObject(2, 50 + 100 * i, 50 + 100 * j));
+                        break;
+                    default:
+                        break;
+                }
+                initialize++
             }
-            initialize++
         }
     }
+    createMap();
 
     document.onmousemove = function (event) {
         if (inGame) {
@@ -225,12 +229,9 @@ startGame = function () {
                                 stones = [];
                                 woods = [];
                                 coins = [];
-                                console.log("TestDelete");
                                 currentMap = LEVEL1;
                                 mapData = mapDataLevel1;
-                                console.log("TestChangeData:" + mapData + "//" + currentMap);
-                                initialize();
-                                console.log("TestInitialize");
+                                createMap();
                                 user.x = 250;
                                 user.y = 695;
                             }
@@ -242,7 +243,7 @@ startGame = function () {
                                 coins = [];
                                 currentMap = HUB;
                                 mapData = mapDataHub;
-                                initialize();
+                                createMap();
                                 user.x = 250;
                                 user.y = 695;
                             }
