@@ -274,16 +274,24 @@ startGame = function () {
                     switch (map) {
                         case "Hub":
                             if (user.x > 550 && user.x < 650) {
+                                stones = [];
+                                woods = [];
+                                coins = [];
                                 map = "level1";
                                 mapData = mapDataLevel1;
+                                initialize();
                                 user.x = 250;
                                 user.y = 695;
                             }
                             break;
                         case "level1":
                             if (user.x > 4850) {
+                                stones = [];
+                                woods = [];
+                                coins = [];
                                 map = "Hub";
                                 mapData = mapDataHub;
+                                initialize();
                                 user.x = 250;
                                 user.y = 695;
                             }
