@@ -217,20 +217,31 @@ startGame = function () {
                 return moveright;
                 break;
             case 83:
+                console.log("keydown");
                 if (inGame) {
+                    console.log("keydowninGame");
                     switch (map) {
                         case "Hub":
+                            console.log("keydowninHub");
                             if (user.x > 650 && user.x < 750) {
+                                stones = [];
+                                woods = [];
+                                coins = [];
                                 map = "level1";
                                 mapData = mapDataLevel1;
+                                initialize();
                                 user.x = 250;
                                 user.y = 695;
                             }
                             break;
                         case "level1":
                             if (user.x > 4850) {
+                                stones = [];
+                                woods = [];
+                                coins = [];
                                 map = "Hub";
                                 mapData = mapDataHub;
+                                initialize();
                                 user.x = 250;
                                 user.y = 695;
                             }
@@ -273,7 +284,7 @@ startGame = function () {
                 if (inGame) {
                     switch (map) {
                         case "Hub":
-                            if (user.x > 550 && user.x < 650) {
+                            if (user.x > 650 && user.x < 750) {
                                 stones = [];
                                 woods = [];
                                 coins = [];
