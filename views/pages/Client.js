@@ -96,7 +96,7 @@ var woods = [];
 var coins = [];
 var user = {
     x: 250,
-    y: 699,
+    y: 695,
     rot: false
 };
 var moveleft = 0;
@@ -350,14 +350,22 @@ var game = setInterval(function () {
 
 
     for (var i in stones) {
-        if (stones[i].x - user.x < 100 && user.x - stones[i].x < 100) {
+        if (stones[i].x - user.x < 95 && user.x - stones[i].x < 95) {
             if (stones[i].y - user.y < 150 && stones[i].y - user.y > 0) {
                 user.y = stones[i].y - 150;
                 moveup = 0;
             } else if (stones[i].y - user.y + moveup < 150 && stones[i].y - user.y > 0) {
                 moveup = -stones[i].y + user.y + 150;
             }
-        }    
+        }
+        if (stones[i].y - user.y < 150 && user.y - stones.y < 150) {
+            if (stones[i].x - user.x - moveright < 100) {
+                moveleft = 5;
+            }
+            if ( user.x - stones[i].x - moveleft < 100) {
+                moveright = 5;
+            }
+        }
         
     }
 
