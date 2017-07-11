@@ -220,7 +220,7 @@ startGame = function () {
                 if (inGame) {
                     switch (map) {
                         case "Hub":
-                            if (user.x > 550 && user.x < 650) {
+                            if (user.x > 650 && user.x < 750) {
                                 map = "level1";
                                 mapData = mapDataLevel1;
                                 user.x = 250;
@@ -359,10 +359,10 @@ var game = setInterval(function () {
             }
         }
         if (stones[i].y - user.y < 150 && user.y - stones.y < 150) {
-            if (stones[i].x - user.x - moveright < 100) {
+            if (stones[i].x - user.x < 100) {
                 moveleft = 5;
             }
-            if ( user.x - stones[i].x - moveleft < 100) {
+            if ( user.x - stones[i].x < 100) {
                 moveright = 5;
             }
         }
