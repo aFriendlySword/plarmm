@@ -96,7 +96,7 @@ bbr.onclick = function () {
 var stones = [];
 var woods = [];
 var coins = [];
-var jumpboosts[];
+var jumpboosts = [];
 var user = {
     coins: 0,
     jump: 20,
