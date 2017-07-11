@@ -363,13 +363,12 @@ startGame = function () {
         }
     }
 
-}   
-
-var block = false;
+}  
 
 var game = setInterval(function () {
 
-    
+    var forcemoveleft = 0;
+    var forcemoveright = 0;
 
     for (var i in stones) {
         if (stones[i].x - user.x < 90 && user.x - stones[i].x < 90) {
@@ -380,12 +379,10 @@ var game = setInterval(function () {
 
         if (stones[i].y - user.y < 150 && user.y - stones[i].y < 150) {
             if (stones[i].x - user.x < 95 && stones[i].x - user.x > 0) {                
-                moveleft = 5; 
-                block = true;
+                forcemoveleft = 5; 
             }
             if (user.x - stones[i].x < 95 && user.x - stones[i].x > 0) {
-                moveright = 5;
-                block = true;
+                forcemoveright = 5;
             }
         }
         
@@ -394,11 +391,10 @@ var game = setInterval(function () {
 
 
     if (inGame) {
-        user.x += moveright;
-        user.x -= moveleft;
+        user.x += moveright + forcemoveright ;
+        user.x -= moveleft + forcemoveleft ;
         user.y -= moveup;
         moveup -= 1;
-        block = false;
     }
 
     
