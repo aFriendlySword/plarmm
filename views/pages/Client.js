@@ -111,7 +111,7 @@ startGame = function () {
 
 
     var mapData = mapDataHub;
-    var map = HUB;
+    var currentMap = HUB;
 
     document.getElementById("menu").style.visibility = "hidden";
     document.getElementById("nite").style.visibility = "hidden";
@@ -219,13 +219,13 @@ startGame = function () {
                 break;
             case 83:                
                 if (inGame) {
-                    switch (map) {
+                    switch (currentMap) {
                         case HUB:                            
                             if (user.x > 650 && user.x < 750) {
                                 stones = [];
                                 woods = [];
                                 coins = [];
-                                map = LEVEL1;
+                                currentMap = LEVEL1;
                                 mapData = mapDataLevel1;
                                 initialize();
                                 user.x = 250;
@@ -237,7 +237,7 @@ startGame = function () {
                                 stones = [];
                                 woods = [];
                                 coins = [];
-                                map = HUB;
+                                currentMap = HUB;
                                 mapData = mapDataHub;
                                 initialize();
                                 user.x = 250;
