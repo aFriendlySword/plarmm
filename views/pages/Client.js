@@ -191,6 +191,8 @@ startGame = function () {
                         ctx.drawImage(jumpboost, obj.x - 50 - user.x + c.width / 2, obj.y - 50 - user.y + c.height / 2, 100, 100);
                     }
                 }
+                return obj;
+                break;
             default:
                 break;
         }
