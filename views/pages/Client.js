@@ -312,8 +312,8 @@ startGame = function () {
 }
 
 var game = setInterval(function () {
-    c.width = window.width;
-    c.height = window.height;
+    c.width = window.innerWidth;
+    c.height = window.innerHeight;
     ctx.clearRect(0, 0, c.width, c.height);
     ctx.save();
     if (!inGame) {
