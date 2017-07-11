@@ -96,7 +96,7 @@ var woods = [];
 var coins = [];
 var user = {
     x: 250,
-    y: 700,
+    y: 699,
     rot: false
 };
 var moveleft = 0;
@@ -232,7 +232,7 @@ startGame = function () {
                                 map = "Hub";
                                 mapData = mapDataHub;
                                 user.x = 250;
-                                user.y = 700;
+                                user.y = 699;
                             }
                             break;
                         default:
