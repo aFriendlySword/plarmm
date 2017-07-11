@@ -385,6 +385,10 @@ startGame = function () {
 
 }  
 
+for (var i in woods) {
+    woods[i].exist = true;
+}
+
 var game = setInterval(function () {
 
     var forcemoveleft = 0;
