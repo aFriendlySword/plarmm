@@ -263,13 +263,17 @@ startGame = function () {
             case 87:
                 if (inGame) {
                     for (var i in stones) {
-                        if (stones[i].y - user.y==150) {
-                            moveup = 20;
+                        if (stones[i].y - user.y == 150) {
+                            if (stones[i] - user.y < 90 && stones[i] - user.y > -90) {
+                                moveup = 20;
+                            }                            
                         }
                     }
                     for (var i in woods) {
                         if (stones[i].y - user.y==150) {
-                            moveup = 20;
+                            if (woods[i] - user.y < 90 && woods[i] - user.y > -90) {
+                                moveup = 20;
+                            }
                         }
                     }                    
                     
@@ -322,8 +326,24 @@ startGame = function () {
                 break;
             case 38:
                 if (inGame) {
-                    moveup = 20;
+                    for (var i in stones) {
+                        if (stones[i].y - user.y == 150) {
+                            if (stones[i] - user.y < 90 && stones[i] - user.y > -90) {
+                                moveup = 20;
+                            }
+                        }
+                    }
+                    for (var i in woods) {
+                        if (stones[i].y - user.y == 150) {
+                            if (woods[i] - user.y < 90 && woods[i] - user.y > -90) {
+                                moveup = 20;
+                            }
+                        }
+                    }
+
                 }
+                return moveup;
+                break;
                 return moveup;
                 break;
         }
@@ -375,8 +395,8 @@ var game = setInterval(function () {
             if (stones[i].y - user.y + moveup < 150 && stones[i].y - user.y > 0) {
                 moveup = 150 - stones[i].y + user.y;
             }
-            if (stones[i].y - user.y + moveup > -150 && stones[i].y - user.y < 0) {
-                moveup = -1;
+            if (stones[i].y - user.y + moveup > -135 && stones[i].y - user.y < 0) {
+                moveup = -0;
             }
         }
 
