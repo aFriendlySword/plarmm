@@ -204,16 +204,13 @@ startGame = function () {
         return rot;
     }
 
-    document.onkeypress = function (event) {
+    document.onkeydown = function (event) {
         switch (event.keyCode) {
             case 68:
                 if (inGame) {
-                    var move = {
-                        direction: "right",
-                        v: 1
-                    };
+                    var moveright = 1;
                 }
-                return move;
+                return moveright;
                 break;
             case 83:
                 if (inGame) {
@@ -241,30 +238,22 @@ startGame = function () {
                 break;
             case 65:
                 if (inGame) {
-                    var move = {
-                        direction: "left",
-                        v: 1
-                    };
+                    var moveleft = -1;
+                    
                 }
-                return move;
+                return moveleft;
                 break;
             case 87:
                 if (inGame) {
-                    var move = {
-                        direction: "up",
-                        v: 3
-                    };
+                    var moveup = 20;
                 }
-                return move;
+                return moveup;
                 break;
             case 39:
                 if (inGame) {
-                    var move = {
-                        direction: "right",
-                        v: 1
-                    };
+                    var moveright = 1;
                 }
-                return move;
+                return moveright;
                 break;
             case 40:
                 if (inGame) {
@@ -292,21 +281,15 @@ startGame = function () {
                 break;
             case 37:
                 if (inGame) {
-                    var move = {
-                        direction: "left",
-                        v: 1
-                    };
+                    var moveleft = -1;
                 }
-                return move;
+                return moveleft;
                 break;
             case 38:
                 if (inGame) {
-                    var move = {
-                        direction: "up",
-                        v: 3
-                    };
+                    var moveup = 3;
                 }
-                return move;
+                return moveup;
                 break;
         }
     }
@@ -315,6 +298,25 @@ startGame = function () {
 }
 
 var game = setInterval(function () {
+
+
+
+    for (var i in stones) {
+        if (stones[i].x - user.x < 100 && user.x - stones[i].x < 100) {
+            if (stones[i].y - user.y < 150) {
+                user.y = stones[i].y - 150;
+                moveup = 0;
+            } else if (stones[i].y - user.y - moveup < 150) {
+                moveup = -stones[i].y + user.y + 150;
+            }
+        }            
+    }
+
+    user.x += moveright;
+    user.x -= moveleft;
+    user.y -= moveup;
+    moveup -= 1;
+
     c.width = window.innerWidth;
     c.height = window.innerHeight;
     ctx.clearRect(0, 0, c.width, c.height);
