@@ -375,6 +375,9 @@ var game = setInterval(function () {
             if (stones[i].y - user.y + moveup < 150 && stones[i].y - user.y > 0) {
                 moveup = 150 - stones[i].y + user.y;
             }
+            if (stones[i].y - user.y + moveup > -150 && stones[i].y - user.y < 0) {
+                moveup = -1;
+            }
         }
 
         if (stones[i].y - user.y < 150 && user.y - stones[i].y < 150) {
