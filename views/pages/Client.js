@@ -221,7 +221,7 @@ startGame = function () {
                 if (user.x - c.width / 2 + mouseX - woods[i].x < 50 && user.x - c.width / 2 + mouseX - woods[i].x > - 50) {
                     if (user.y - c.height / 2 + mouseY - woods[i].y < 50 && user.y - c.height / 2 + mouseY - woods[i].y > - 50) {
                         if (woods[i].health > 0) {
-                            woods[i]--;
+                            woods[i].health--;
                         }
                     }
                 }
