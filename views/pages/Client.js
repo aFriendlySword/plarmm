@@ -148,6 +148,7 @@ startGame = function () {
                 break;
             case 1:
                 var obj = {
+                    health: 5,
                     x: x,
                     y: y,
                     type: wood
@@ -402,9 +403,6 @@ startGame = function () {
 
 }  
 
-for (var i in woods) {
-    woods[i].health = 5;
-}
 
 var game = setInterval(function () {
 
