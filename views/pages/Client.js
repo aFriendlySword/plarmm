@@ -224,7 +224,7 @@ startGame = function () {
                                 map = "level1";
                                 mapData = mapDataLevel1;
                                 user.x = 250;
-                                user.y = 700;
+                                user.y = 695;
                             }
                             break;
                         case "level1":
@@ -232,7 +232,7 @@ startGame = function () {
                                 map = "Hub";
                                 mapData = mapDataHub;
                                 user.x = 250;
-                                user.y = 699;
+                                user.y = 695;
                             }
                             break;
                         default:
@@ -275,17 +275,17 @@ startGame = function () {
                         case "Hub":
                             if (user.x > 550 && user.x < 650) {
                                 map = "level1";
-                                mapData = "sssssssssssssssssssssaaasaaasssacasaaaassaaasaaaassaaaaaaaassaaaaaassssaaaascaassaasaasaassaaaaaaaasssssswwsssscaaaaaassaaasaasaasaaaaaaaaasaaasaaaaassaasaascassaasaaaaassaaaassssssasaaasaassaaaaasaassaaascaaassaaasaaasssaasaaaaassaaaaasaassasasaaaassaaaaaassssaaaasawbssaasaaawwssaaawacaassaaasaaaassaaasaaaassacasaaaassaaaaaasassaaaaaasassaaasaaaassaaasaaaassaaasssssssaaaaasaassaaasacaassaaaaasaassaaasacaassaaaaasaassaaasaaaassaaaaaaaassaaaaaasassaaaasaaasswwssssssssaaaaaaaassaaaaaaaasssssssssss";
+                                mapData = mapDataLevel1;
                                 user.x = 250;
-                                user.y = 700;
+                                user.y = 695;
                             }
                             break;
                         case "level1":
                             if (user.x > 4850) {
                                 map = "Hub";
-                                mapData = "ssssssssssaaaaaaasssaaaaaaasssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaassssssssssss";
+                                mapData = mapDataHub;
                                 user.x = 250;
-                                user.y = 700;
+                                user.y = 695;
                             }
                             break;
                         default:
@@ -350,7 +350,7 @@ var game = setInterval(function () {
 
 
     for (var i in stones) {
-        if (stones[i].x - user.x < 90 && user.x - stones[i].x < 90) {
+        if (stones[i].x - user.x < 90 && user.x - stones[i].x < 85) {
             if (stones[i].y - user.y < 150 && stones[i].y - user.y > 0) {
                 user.y = stones[i].y - 150;
                 moveup = 0;
