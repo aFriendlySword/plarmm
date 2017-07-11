@@ -371,18 +371,17 @@ var game = setInterval(function () {
 
 
     for (var i in stones) {
-        if (stones[i].x - user.x < 90 && user.x - stones[i].x < 85) {
+        if (stones[i].x - user.x < 90 && user.x - stones[i].x < 90) {
             if (stones[i].y - user.y + moveup < 150 && stones[i].y - user.y > 0) {
                 moveup = 150 - stones[i].y + user.y;
             }
         }
 
         if (stones[i].y - user.y < 150 && user.y - stones[i].y < 150) {
-            console.log("hello");
-            if (stones[i].x - user.x < 100) {
+            if (stones[i].x - user.x < 100 && stones[i].x - user.x > 0) {
                 moveleft = 5;
             }
-            if ( user.x - stones[i].x < 100) {
+            if (user.x - stones[i].x < 100 && user.x - stones[i].x > 0) {
                 moveright = 5;
             }
         }
