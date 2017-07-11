@@ -401,10 +401,10 @@ var game = setInterval(function () {
         }
 
         if (stones[i].y - user.y < 150 && user.y - stones[i].y < 150) {
-            if (stones[i].x - user.x < 90 && stones[i].x - user.x > 0) {                
+            if (stones[i].x - user.x < 91 && stones[i].x - user.x > 0) {                
                 forcemoveleft = 5; 
             }
-            if (user.x - stones[i].x < 90 && user.x - stones[i].x > 0) {
+            if (user.x - stones[i].x < 91 && user.x - stones[i].x > 0) {
                 forcemoveright = 5;
             }
         }
@@ -458,12 +458,13 @@ var game = setInterval(function () {
     if (inGame) {
         ctx.save();
         ctx.translate(c.width / 2, c.height / 2);
-        ctx.drawImage(skin, -50, -100, 100, 200)
+        
         if (user.rot) {
             ctx.scale(-1, 1);
         } else {
             ctx.scale(1, 1);
         }        
+        ctx.drawImage(skin, -50, -100, 100, 200);
         ctx.restore();
     }
     
