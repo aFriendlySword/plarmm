@@ -349,7 +349,15 @@ var game = setInterval(function () {
     }
     ctx.restore();
 
-
+    ctx.save();
+    ctx.translate(c.width / 2, c.height / 2);
+    if (user.rot) {
+        ctx.scale(-1, 1);
+    } else {
+        ctx.scale(1, 1);
+    }
+    ctx.drawImage(skin, -50, -100, 100, 200)
+    ctx.restore();
 }, 40)
 
 start = document.getElementById("play");
