@@ -250,12 +250,12 @@ startGame = function () {
             case 87:
                 if (inGame) {
                     for (var i in stones) {
-                        if (stones[i].y - user.y=150) {
+                        if (stones[i].y - user.y==150) {
                             moveup = 20;
                         }
                     }
                     for (var i in woods) {
-                        if (stones[i].y - user.y=150) {
+                        if (stones[i].y - user.y==150) {
                             moveup = 20;
                         }
                     }                    
