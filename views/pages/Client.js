@@ -225,9 +225,12 @@ startGame = function () {
                                 stones = [];
                                 woods = [];
                                 coins = [];
+                                console.log("TestDelete");
                                 currentMap = LEVEL1;
                                 mapData = mapDataLevel1;
+                                console.log("TestChangeData:" + mapData + "//" + currentMap);
                                 initialize();
+                                console.log("TestInitialize");
                                 user.x = 250;
                                 user.y = 695;
                             }
