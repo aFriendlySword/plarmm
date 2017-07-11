@@ -212,7 +212,7 @@ startGame = function () {
         switch (event.keyCode) {
             case 68:
                 if (inGame) {
-                    moveright = 1;
+                    moveright = 5;
                 }
                 return moveright;
                 break;
@@ -242,7 +242,7 @@ startGame = function () {
                 break;
             case 65:
                 if (inGame) {
-                    moveleft = -1;
+                    moveleft = 5;
                     
                 }
                 return moveleft;
@@ -255,7 +255,7 @@ startGame = function () {
                 break;
             case 39:
                 if (inGame) {
-                    moveright = 1;
+                    moveright = 5;
                 }
                 return moveright;
                 break;
@@ -285,13 +285,13 @@ startGame = function () {
                 break;
             case 37:
                 if (inGame) {
-                    moveleft = -1;
+                    moveleft = 5;
                 }
                 return moveleft;
                 break;
             case 38:
                 if (inGame) {
-                    moveup = 3;
+                    moveup = 20;
                 }
                 return moveup;
                 break;
@@ -307,10 +307,10 @@ var game = setInterval(function () {
 
     for (var i in stones) {
         if (stones[i].x - user.x < 100 && user.x - stones[i].x < 100) {
-            if (stones[i].y - user.y < 150) {
+            if (stones[i].y - user.y < 150 && stones[i].y - user.y > 0) {
                 user.y = stones[i].y - 150;
                 moveup = 0;
-            } else if (stones[i].y - user.y - moveup < 150) {
+            } else if (stones[i].y - user.y - moveup < 150 && stones[i].y - user.y > 0) {
                 moveup = -stones[i].y + user.y + 150;
             }
         }    
