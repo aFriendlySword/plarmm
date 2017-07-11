@@ -267,6 +267,7 @@ startGame = function () {
                                 stones = [];
                                 woods = [];
                                 coins = [];
+                                jumpboosts = [];
                                 currentMap = LEVEL1;
                                 mapData = mapDataLevel1;
                                 createMap();
@@ -279,6 +280,7 @@ startGame = function () {
                                 stones = [];
                                 woods = [];
                                 coins = [];
+                                jumpboosts = [];
                                 currentMap = HUB;
                                 mapData = mapDataHub;
                                 createMap();
@@ -332,6 +334,7 @@ startGame = function () {
                                 stones = [];
                                 woods = [];
                                 coins = [];
+                                jumpboosts = [];
                                 map = "level1";
                                 mapData = mapDataLevel1;
                                 initialize();
@@ -344,6 +347,7 @@ startGame = function () {
                                 stones = [];
                                 woods = [];
                                 coins = [];
+                                jumpboosts = [];
                                 map = "Hub";
                                 mapData = mapDataHub;
                                 initialize();
