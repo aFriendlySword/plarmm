@@ -237,7 +237,7 @@ startGame = function () {
                             }
                             break;
                         case LEVEL1:
-                            if (user.x > 4850) {
+                            if (user.x > 4750) {
                                 stones = [];
                                 woods = [];
                                 coins = [];
@@ -372,13 +372,11 @@ var game = setInterval(function () {
 
     for (var i in stones) {
         if (stones[i].x - user.x < 90 && user.x - stones[i].x < 85) {
-            if (stones[i].y - user.y < 150 && stones[i].y - user.y > 0) {
-                user.y = stones[i].y - 150;
-                moveup = 0;
-            } else if (stones[i].y - user.y + moveup < 150 && stones[i].y - user.y > 0) {
+            if (stones[i].y - user.y + moveup < 150 && stones[i].y - user.y > 0) {
                 moveup = -stones[i].y + user.y + 150;
             }
         }
+
         if (stones[i].y - user.y < 150 && user.y - stones.y < 150) {
             if (stones[i].x - user.x < 100) {
                 moveleft = 5;
@@ -428,10 +426,10 @@ var game = setInterval(function () {
         stones[i].draw();
     }
     for (var i in woods) {
-        stones[i].draw();
+        woods[i].draw();
     }
     for (var i in coins) {
-        stones[i].draw();
+        coins[i].draw();
     }
     ctx.restore();
     if (inGame) {
