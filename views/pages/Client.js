@@ -13,7 +13,7 @@ skinFour.src = service + "skinFour.png";
 var skin = skinOne;
 
 var mapDataHub = "sssssssssssaaaaaaasssaaaaaaasssaaaaaaasssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaassssssssssssss";
-var mapDataLevel1 = "sssssssssssssssssssssaaasaaasssacasaaaassaaasaaaassaaaaaaaassaaaaaassssaaaascaassaasaasaassaaaaaaaasssssswwsssscaasaaassaaaaaaasasaaaaasaaasaaasaaaaassaasaascassaasaaaaassaaaassssssasaaasaassaaaaasaassaaascaaassaaasaaasssaasaaaaassaaaaasaassasasaaaassaaaaaassssaaaasawbssaasaaawwssaaawacaassaaasaaaassaaasaaaassacasaaaassaaaaaasassaaaaaasassaaasaaaassaaasaaaassaaasssssssaaaaasaassaaasacaassaaaaasaassaaasacaassaaaaasaassaaasaaaassaaaaaaaassaaaaaasassaaaasaaasswwssssssssaaaaaaaassaaaaaaaasssssssssss";
+var mapDataLevel1 = "sssssssssssssssssssssaaasaaasssacasaaaassaaasaaaassaaaaaaaassaaaaaassssaaaascaassaasaasaassaaaaaaaasssssswwsssscaasaaassaaaaaaasasaaaaasaaasaaasaaaaassaasaascassaasaaaaassaaaassssssasaaasaassaaaaasaassaaascaaassaaasaaasssaasaaaaassaaaaasaassasasaaaassaaaaaassssaaaasawjssaasaaawwssaaawacaassaaasaaaassaaasaaaassacasaaaassaaaaaasassaaaaaasassaaasaaaassaaasaaaassaaasssssssaaaaasaassaaasacaassaaaaasaassaaasacaassaaaaasaassaaasaaaassaaaaaaaassaaaaaasassaaaasaaasswwssssssssaaaaaaaassaaaaaaaasssssssssss";
 
 
 var stone = new Image();
@@ -22,6 +22,8 @@ var wood = new Image();
 wood.src = service + "wood.png";
 var coin = new Image();
 coin.src = service + "coin.png";
+var jumpboost = new Image();
+jumpboost.src = service + "jumpboost.png";
 
 var servers = {};
 var c = document.getElementById("canvas");
@@ -94,7 +96,10 @@ bbr.onclick = function () {
 var stones = [];
 var woods = [];
 var coins = [];
+var jumpboosts[];
 var user = {
+    coins: 0,
+    jump: 20,
     x: 250,
     y: 695,
     rot: false
@@ -162,6 +167,7 @@ startGame = function () {
                 break;
             case 2:
                 var obj = {
+                    collect: false,
                     x: x,
                     y: y,
                     type: coin
@@ -173,6 +179,18 @@ startGame = function () {
                 }
                 return obj;
                 break;
+            case 3:
+                var obj = {
+                    collect: false,
+                    x: x,
+                    y: y,
+                    type: jumpboost
+                };
+                obj.draw = function () {
+                    if (jumpboost.complete) {
+                        ctx.drawImage(jumpboost, obj.x - 50 - user.x + c.width / 2, obj.y - 50 - user.y + c.height / 2, 100, 100);
+                    }
+                }
             default:
                 break;
         }
@@ -192,6 +210,8 @@ startGame = function () {
                     case "c":
                         coins.push(createObject(2, 50 + 100 * i, 50 + 100 * j));
                         break;
+                    case "j":
+                        jumpboosts.push(createObject(3, 50 + 100 * i, 50 + 100 * j));
                     default:
                         break;
                 }
@@ -283,14 +303,14 @@ startGame = function () {
                     for (var i in stones) {
                         if (stones[i].y - user.y == 150) {
                             if (stones[i].x - user.x < 90 && stones[i].x - user.x > -90) {
-                                moveup = 20;
+                                moveup = user.jump;
                             }
                         }
                     }
                     for (var i in woods) {
                         if (stones[i].y - user.y == 150) {
                             if (woods[i].x - user.x < 90 && woods[i].x - user.x > -90) {
-                                moveup = 20;
+                                moveup = user.jump;
                             }
                         }
                     }
@@ -347,14 +367,14 @@ startGame = function () {
                     for (var i in stones) {
                         if (stones[i].y - user.y == 150) {
                             if (stones[i].x - user.x < 90 && stones[i].x - user.x > -90) {
-                                moveup = 20;
+                                moveup = user.jump;
                             }
                         }
                     }
                     for (var i in woods) {
                         if (stones[i].y - user.y == 150) {
                             if (woods[i].x - user.x < 90 && woods[i].x - user.x > -90) {
-                                moveup = 20;
+                                moveup = user.jump;
                             }
                         }
                     }
@@ -461,8 +481,6 @@ var game = setInterval(function () {
         moveup -= 1;
     }
 
-    
-
     c.width = window.innerWidth;
     c.height = window.innerHeight;
     ctx.clearRect(0, 0, c.width, c.height);
@@ -495,7 +513,14 @@ var game = setInterval(function () {
         }        
     }
     for (var i in coins) {
-        coins[i].draw();
+        if (!coins[i].collect) {
+            coins[i].draw();
+        }       
+    }
+    for (var i in jumpboosts) {
+        if (!jumpboosts[i].collect) {
+            jumpboosts[i].draw();
+        }
     }
     ctx.restore();
     if (inGame) {
