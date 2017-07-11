@@ -210,8 +210,25 @@ startGame = function () {
                 user.rot = false;
             }
         }
-        return rot;
     }
+
+    document.onclick = function (event) {
+        if (inGame) {
+            var mouseX = event.pageX;
+            var mouseY = event.pageY;
+            for (var i in woods) {
+                if (user.x - c.width / 2 + mouseX - woods[i].x < 50 && user.x - c.width / 2 + mouseX - woods[i].x > - 50) {
+                    if (user.y - c.height / 2 + mouseY - woods[i].y < 50 && user.y - c.height / 2 + mouseY - woods[i].y > - 50) {
+                        if (woods[i].health > 0) {
+                            woods[i]--;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
 
     document.onkeydown = function (event) {
         switch (event.keyCode) {
@@ -386,7 +403,7 @@ startGame = function () {
 }  
 
 for (var i in woods) {
-    woods[i].exist = true;
+    woods[i].health = 5;
 }
 
 var game = setInterval(function () {
@@ -414,6 +431,28 @@ var game = setInterval(function () {
         }
         
     }
+    for (var i in woods) {
+        if (woods[i].health > 0) {
+            if (woods[i].x - user.x < 90 && user.x - woods[i].x < 90) {
+                if (woods[i].y - user.y + moveup < 150 && woods[i].y - user.y > 0) {
+                    moveup = 150 - woods[i].y + user.y;
+                }
+                if (woods[i].y - user.y + moveup > -135 && woods[i].y - user.y < 0) {
+                    moveup = -0;
+                }
+            }
+
+            if (woods[i].y - user.y < 150 && user.y - woods[i].y < 150) {
+                if (woods[i].x - user.x < 91 && woods[i].x - user.x > 0) {
+                    forcemoveleft = 5;
+                }
+                if (user.x - woods[i].x < 91 && user.x - woods[i].x > 0) {
+                    forcemoveright = 5;
+                }
+            }
+        }
+    }
+
 
 
 
@@ -453,7 +492,9 @@ var game = setInterval(function () {
         stones[i].draw();
     }
     for (var i in woods) {
-        woods[i].draw();
+        if (woods[i].health > 0) {
+            woods[i].draw();
+        }        
     }
     for (var i in coins) {
         coins[i].draw();
