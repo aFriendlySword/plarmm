@@ -625,11 +625,11 @@ var game = setInterval(function () {
         }
 
         document.getElementById("level1-inner").innerHTML = "Level 1: " + user.level1time / 25 + "sec";
-        document.getElementById("level2-inner").innerHTML = "Level 2: " + user.level1time / 25 + "sec";
-        document.getElementById("level3-inner").innerHTML = "Level 3: " + user.level1time / 25 + "sec";
-        document.getElementById("level4-inner").innerHTML = "Level 4: " + user.level1time / 25 + "sec";
-        document.getElementById("level5-inner").innerHTML = "Level 5: " + user.level1time / 25 + "sec";
-        document.getElementById("level6-inner").innerHTML = "Level 6: " + user.level1time / 25 + "sec";
+        document.getElementById("level2-inner").innerHTML = "Level 2: " + user.level2time / 25 + "sec";
+        document.getElementById("level3-inner").innerHTML = "Level 3: " + user.level3time / 25 + "sec";
+        document.getElementById("level4-inner").innerHTML = "Level 4: " + user.level4time / 25 + "sec";
+        document.getElementById("level5-inner").innerHTML = "Level 5: " + user.level5time / 25 + "sec";
+        document.getElementById("level6-inner").innerHTML = "Level 6: " + user.level6time / 25 + "sec";
 
 
     } else {
