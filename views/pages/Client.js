@@ -114,10 +114,11 @@ bbr.onclick = function () {
 btnswitch.onclick = function() {
     if (display == "times") {
         display == "coins";
-        document.getElementById("switch").style.right = "155px";       
+        document.getElementById("switch").style.right = "155px";
         var polyline = document.getElementById("arrow");
         points = polyline.getAttribute('points');
-        console.log(points);
+        points = '13 9 7 15 13 21';
+        polyline.setAttribute('points', points);
     }
 }
 
