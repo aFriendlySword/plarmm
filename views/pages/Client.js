@@ -220,6 +220,20 @@ startGame = function () {
     document.getElementById("coins").style.visibility = "hidden";
     document.getElementById("times").style.visibility = "hidden";
 
+    document.keydown(function (event) {
+        if (event.ctrlKey == true && (event.which == '61' || event.which == '107' || event.which == '173' || event.which == '109' || event.which == '187' || event.which == '189')) {
+            event.preventDefault();
+        }
+
+    });
+
+    window.bind('mousewheel DOMMouseScroll', function (event) {
+        if (event.ctrlKey == true) {
+            event.preventDefault();
+        }
+    });
+
+
     if (isNight) {
         drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", 13000, 7000);
 
