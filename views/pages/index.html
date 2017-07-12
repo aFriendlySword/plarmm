@@ -8,24 +8,25 @@
     <div id="nite">
         <button id="sleep" class="button" > Turn Nightmode OFF</button>
     </div>
-    <div id="menu">
-        <div id="character">
-            <div id="tl">
-                <button id="btl" class="button" class="selection" type="button"><img id="imgbtl" src="/skinOneTop.png" /></button>                
+    <div style="position: absolute; right: 50%; top:20%;">
+        <div id="menu">
+            <div id="character">
+                <div id="tl">
+                    <button id="btl" class="button" class="selection" type="button"><img id="imgbtl" src="/skinOneTop.png" /></button>
+                </div>
+                <div id="tr">
+                    <button id="btr" class="button" class="selection" type="button"><img id="imgbtr" src="/skinTwoTop.png" /></button>
+                </div>
+                <div id="bl">
+                    <button id="bbl" class="button" class="selection" type="button"><img id="imgbbl" src="/skinThreeTop.png" /></button>
+                </div>
+                <div id="br">
+                    <button id="bbr" class="button" class="selection" type="button"><img id="imgbbr" src="/skinFourTop.png" /></button>
+                </div>
+                <button id="play" type="button">Play</button>
             </div>
-            <div id="tr">
-                <button id="btr" class="button" class="selection" type="button"><img id="imgbtr" src="/skinTwoTop.png" /></button>
-            </div>
-            <div id="bl">
-                <button id="bbl" class="button" class="selection" type="button"><img id="imgbbl" src="/skinThreeTop.png" /></button>
-            </div>
-            <div id="br">
-                <button id="bbr" class="button" class="selection" type="button"><img id="imgbbr" src="/skinFourTop.png" /></button>
-            </div>            
-            <button id="play" type="button">Play</button>
-        </div> 
-        <div id="stats"></div>
-        
+            <div id="stats"></div>
+        </div>
     </div>
     <div id="selected"><div id="imgsel"><img id="selimg" src="/skinOneTop.png" /></div></div>
     <canvas id="canvas" width="5000" height="1000"></canvas>
@@ -36,8 +37,7 @@
             border-radius: 25px;
             position: absolute;
             opacity: 0.5;
-            top: 20%;
-            margin:auto;
+            right: -50%;
             width: 470px;
             height: 270px;
             background-color: gray;
