@@ -176,7 +176,7 @@ if (typeof (Storage) !== "undefined") {
         finishedTut = tut;
         currentMap = last;
     }
-
+}
 
 showInstructions = function () {
     if (!finishedTut) {
