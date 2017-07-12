@@ -8,8 +8,8 @@ if (typeof (Storage) !== "undefined") {
             localStorage.setItem("userdata", "test");
             localStorage.setItem("playedbefore", "test");
         } 
-        
-    }
+
+    } 
     
 }
 
@@ -168,7 +168,8 @@ var currentMap = HUB;
 var finishedTut = false;
 
 if (typeof (Storage) !== "undefined") {
-    if (!(localStorage.userdata == "test")) {        
+    if (!(localStorage.userdata == "test")) {
+        try {
             userdata = (JSON.parse(atob(localStorage.userdata)));
             tut = atob(JSON.parse(localStorage.playedbefore));
             last = parseInt(atob(JSON.parse(localStorage.lastmap)));
@@ -192,7 +193,11 @@ if (typeof (Storage) !== "undefined") {
             user.rot = userdata.rot;
             finishedTut = tut;
             currentMap = last;
-            mapData = lastData;          
+            mapData = lastData;
+        }
+        catch (err) {
+            localStorage.userdata = "test";
+        }
     }
 }
 
