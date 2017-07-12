@@ -103,6 +103,18 @@ var woods = [];
 var coins = [];
 var jumpboosts = [];
 var user = {
+    level1: 0,
+    level1time: 0,
+    level2: 0,
+    level2time: 0,
+    level3: 0,
+    level3time: 0,
+    level4: 0,
+    level4time: 0,
+    level5: 0,
+    level5time: 0,
+    level6: 0,
+    level6time: 0,
     coins: 0,
     jump: 20,
     x: 250,
@@ -113,9 +125,18 @@ var moveleft = 0;
 var moveright = 0;
 var moveup = 0;
 var jumptime = 0;
+var runtime = 0;
 
 const HUB = 00;
 const LEVEL1 = 01;
+const LEVEL2 = 02;
+const LEVEL3 = 03;
+const LEVEL4 = 04;
+const LEVEL5 = 05;
+const LEVEL6 = 06;
+
+var mapData = mapDataHub;
+var currentMap = HUB;
 
 var finishedTut = false;
 
@@ -134,10 +155,6 @@ showInstructions = function () {
 
 startGame = function () {
     inGame = true;
-
-
-    var mapData = mapDataHub;
-    var currentMap = HUB;
 
     document.getElementById("menu").style.visibility = "hidden";
     document.getElementById("nite").style.visibility = "hidden";
@@ -273,7 +290,6 @@ startGame = function () {
     }
 
 
-
     document.onkeydown = function (event) {
         switch (event.keyCode) {
             case 68:
@@ -286,7 +302,8 @@ startGame = function () {
                 if (inGame) {
                     switch (currentMap) {
                         case HUB:                            
-                            if (user.x > 650 && user.x < 750) {
+                            if (user.x > 650 && user.x < 750) {   
+                                runtime = 0;
                                 stones = [];
                                 woods = [];
                                 coins = [];
@@ -300,6 +317,13 @@ startGame = function () {
                             break;
                         case LEVEL1:
                             if (user.x > 4750) {
+                                if (runtime < user.level1time || user.level1time == 0) {
+                                    user.level1time = runtime;
+                                }
+                                if (user.level1 < user.coins) {
+                                    user.level1 = user.coins;
+                                }
+                                runtime = 0;
                                 finishedTut = true;
                                 stones = [];
                                 woods = [];
@@ -310,6 +334,7 @@ startGame = function () {
                                 createMap();
                                 user.x = 250;
                                 user.y = 695;
+                                user.coins = 0;
                             }
                             break;
                         default:
@@ -453,7 +478,7 @@ startGame = function () {
 }  
 
 var game = setInterval(function () {
-    
+    runtime += 1;
 
     var forcemoveleft = 0;
     var forcemoveright = 0;
