@@ -11,6 +11,8 @@ if (typeof (Storage) !== "undefined") {
     
 }
 
+var display = "times";
+
 
 var instr = new Image();
 instr.src = service + "instructions.png";
@@ -612,6 +614,7 @@ var game = setInterval(function () {
         moveup -= 1;
     }
 
+
     c.width = window.innerWidth;
     c.height = window.innerHeight;
     ctx.clearRect(0, 0, c.width, c.height);
@@ -623,6 +626,15 @@ var game = setInterval(function () {
         else {           
             drawGrid(0, 0, "#FFFFFF", "#000000", c.width, c.height);
         }
+
+        if (display == "times") {
+            document.getElementById("times").style.visibility = "visible";
+            document.getElementById("coins").style.visibility = "hidden";
+        } else {
+            document.getElementById("times").style.visibility = "hidden";
+            document.getElementById("coins").style.visibility = "visible";
+        }
+
         if (user.level1time > 0) {
             document.getElementById("level1-inner").innerHTML = "Level 1: " + user.level1time / 25 + "sec";
         } else {
@@ -652,6 +664,37 @@ var game = setInterval(function () {
             document.getElementById("level6-inner").innerHTML = "Level 6: " + user.level6time / 25 + "sec";
         } else {
             document.getElementById("level6-inner").innerHTML = "Level 6: Not Played";
+        }
+
+        if (user.level1 > 0) {
+            document.getElementById("level1c-inner").innerHTML = "Level 1: " + user.level1 + "/9";
+        } else {
+            document.getElementById("level1c-inner").innerHTML = "Level 1: Not Played";
+        }
+        if (user.level2 > 0) {
+            document.getElementById("level2c-inner").innerHTML = "Level 2: " + user.level2 + "/0";
+        } else {
+            document.getElementById("level2c-inner").innerHTML = "Level 2: Not Played";
+        }
+        if (user.level3 > 0) {
+            document.getElementById("level3c-inner").innerHTML = "Level 3: " + user.level3+ "/0";
+        } else {
+            document.getElementById("level3c-inner").innerHTML = "Level 3: Not Played";
+        }
+        if (user.level4e > 0) {
+            document.getElementById("level4c-inner").innerHTML = "Level 4: " + user.level4+"/0";
+        } else {
+            document.getElementById("level4c-inner").innerHTML = "Level 4: Not Played";
+        }
+        if (user.level5e > 0) {
+            document.getElementById("level5c-inner").innerHTML = "Level 5: " + user.level5 +"/0";
+        } else {
+            document.getElementById("level5c-inner").innerHTML = "Level 5: Not Played";
+        }
+        if (user.level6 > 0) {
+            document.getElementById("level6c-inner").innerHTML = "Level 6: " + user.level6  + "/0";
+        } else {
+            document.getElementById("level6c-inner").innerHTML = "Level 6: Not Played";
         }
 
 
