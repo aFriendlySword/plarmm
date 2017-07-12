@@ -626,32 +626,32 @@ var game = setInterval(function () {
         if (user.level1time > 0) {
             document.getElementById("level1-inner").innerHTML = "Level 1: " + user.level1time / 25 + "sec";
         } else {
-            document.getElementById("level1-inner").innerHTML = "Level 1: Not Played yet";
+            document.getElementById("level1-inner").innerHTML = "Level 1: Not Played";
         }
         if (user.level2time > 0) {
             document.getElementById("level2-inner").innerHTML = "Level 2: " + user.level2time / 25 + "sec";
         } else {
-            document.getElementById("level2-inner").innerHTML = "Level 2: Not Played yet";
+            document.getElementById("level2-inner").innerHTML = "Level 2: Not Played";
         }
         if (user.level3time > 0) {
             document.getElementById("level3-inner").innerHTML = "Level 3: " + user.level3time / 25 + "sec";
         } else {
-            document.getElementById("level3-inner").innerHTML = "Level 3: Not Played yet";
+            document.getElementById("level3-inner").innerHTML = "Level 3: Not Played";
         }
         if (user.level4time > 0) {
             document.getElementById("level4-inner").innerHTML = "Level 4: " + user.level4time / 25 + "sec";
         } else {
-            document.getElementById("level4-inner").innerHTML = "Level 4: Not Played yet";
+            document.getElementById("level4-inner").innerHTML = "Level 4: Not Played";
         }
         if (user.level5time > 0) {
             document.getElementById("level5-inner").innerHTML = "Level 5: " + user.level5time / 25 + "sec";
         } else {
-            document.getElementById("level5-inner").innerHTML = "Level 5: Not Played yet";
+            document.getElementById("level5-inner").innerHTML = "Level 5: Not Played";
         }
         if (user.level6time > 0) {
             document.getElementById("level6-inner").innerHTML = "Level 6: " + user.level6time / 25 + "sec";
         } else {
-            document.getElementById("level6-inner").innerHTML = "Level 6: Not Played yet";
+            document.getElementById("level6-inner").innerHTML = "Level 6: Not Played";
         }
 
 
