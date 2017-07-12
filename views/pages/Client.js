@@ -624,12 +624,12 @@ var game = setInterval(function () {
             drawGrid(0, 0, "#FFFFFF", "#000000", c.width, c.height);
         }
 
-        document.getElementById("level1-inner").value = "Level 1: " + user.level1time / 25 + "sec";
-        document.getElementById("level2-inner").value = "Level 2: " + user.level1time / 25 + "sec";
-        document.getElementById("level3-inner").value = "Level 3: " + user.level1time / 25 + "sec";
-        document.getElementById("level4-inner").value = "Level 4: " + user.level1time / 25 + "sec";
-        document.getElementById("level5-inner").value = "Level 5: " + user.level1time / 25 + "sec";
-        document.getElementById("level6-inner").value = "Level 6: " + user.level1time / 25 + "sec";
+        document.getElementById("level1-inner").innerHTML = "Level 1: " + user.level1time / 25 + "sec";
+        document.getElementById("level2-inner").innerHTML = "Level 2: " + user.level1time / 25 + "sec";
+        document.getElementById("level3-inner").innerHTML = "Level 3: " + user.level1time / 25 + "sec";
+        document.getElementById("level4-inner").innerHTML = "Level 4: " + user.level1time / 25 + "sec";
+        document.getElementById("level5-inner").innerHTML = "Level 5: " + user.level1time / 25 + "sec";
+        document.getElementById("level6-inner").innerHTML = "Level 6: " + user.level1time / 25 + "sec";
 
 
     } else {
