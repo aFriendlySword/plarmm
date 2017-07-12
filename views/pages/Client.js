@@ -183,6 +183,9 @@ if (typeof (Storage) !== "undefined") {
             tut = atob(JSON.parse(localStorage.playedbefore));
             last = parseInt(atob(JSON.parse(localStorage.lastmap)));
             lastData = atob(JSON.parse(localStorage.lastmapData));
+            lastTime = atob(JSON.parse(localStorage.time));
+            healthArr = JSON.parse(atob(localStorage.health));
+
             user.level1 = userdata.level1;
             user.level1time = userdata.level1time;
             user.level2 = userdata.level2;
@@ -203,6 +206,8 @@ if (typeof (Storage) !== "undefined") {
             finishedTut = tut;
             currentMap = last;
             mapData = lastData;
+            runtime = lastTime;
+            return healthArr;
         }
         catch (err) {
             localStorage.userdata = "test";
@@ -352,6 +357,16 @@ startGame = function () {
         }
     }
     createMap();
+
+    if (typeof (Storage) !== "undefined") {
+        if (!(localStorage.userdata == "test")) {
+            try {
+                for (var i in woods) {
+                    woods[i].health = healthArr[i];
+                }
+            }
+        }
+    }
 
     document.onmousemove = function (event) {
         if (inGame) {
@@ -870,11 +885,21 @@ start.onclick = function () {
 
 
 var save = setInterval(function () {
+    healthfunc = function () {
+        var health = [];
+        for (var i in woods) {
+            health.push(woods[i].health);
+        }
+        return health;
+    }
+    health();
     if (typeof (Storage) !== "undefined") {
         localStorage.setItem("userdata", btoa(JSON.stringify(user)));
         localStorage.setItem("playedbefore", JSON.stringify(btoa(finishedTut)));
         localStorage.setItem("lastmap", JSON.stringify(btoa(currentMap)));
         localStorage.setItem("lastmapData", JSON.stringify(btoa(mapData)));
         localStorage.setItem("version", JSON.stringify(btoa(version)));
+        localStorage.setItem("time", JSON.stringify(btoa(runtime)));
+        localStorage.setItem("health", btoa(JSON.stringify(health)));
     }
-},5000)
+},1000)
