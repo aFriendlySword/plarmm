@@ -221,7 +221,7 @@ startGame = function () {
     document.getElementById("times").style.visibility = "hidden";
 
     document.keydown = function (event) {
-        if (event.ctrlKey == true && (event.which == '61' || event.which == '107' || event.which == '173' || event.which == '109' || event.which == '187' || event.which == '189')) {
+        if (event.keyCode == 17 && (event.keyCode == 61 || event.keyCode == 107 || event.keyCode == 173 || event.keyCode == 109 || event.keyCode == 187 || event.keyCode == 189)) {
             event.preventDefault();
         }
 
