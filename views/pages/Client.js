@@ -2,7 +2,9 @@ var service = "/";
 var inGame = false;
 
 var instr = new Image();
-instr.src = service + "instructions.png"
+instr.src = service + "instructions.png";
+var instr2 = new Image();
+instr2.src = service + "instructions2.png";
 
 var skinOne = new Image();
 skinOne.src = service + "skinOne.png";
@@ -114,6 +116,7 @@ var jumptime = 0;
 
 showInstructions = function () {
     ctx.drawImage(instr, 200 - user.x + c.width / 2, 400 - user.y + + c.height / 2, 200, 200);
+    ctx.drawImage(instr2, 600 - user.x + c.width / 2, 200 - user.y + + c.height / 2, 200, 200);
 }
 
 
