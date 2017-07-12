@@ -112,6 +112,10 @@ var moveright = 0;
 var moveup = 0;
 var jumptime = 0;
 
+showInstructions = function () {
+    ctx.drawImage(instr, 200 - user.x, 400 - user.y, 200, 200);
+}
+
 
 startGame = function () {
     inGame = true;
@@ -134,12 +138,6 @@ startGame = function () {
     else {
         drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#000000", "#FFFFFF", 13000, 7000);
     }
-
-    showInstructions = function () {
-        ctx.drawImage(instr, 200 - user.x, 400 - user.y, 200, 200);
-    }
-
-
 
     var map = new Array(50);
     for (var i = 0; i < 50; i++) {
