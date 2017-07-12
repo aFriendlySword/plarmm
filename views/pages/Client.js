@@ -677,7 +677,33 @@ var game = setInterval(function () {
             jumpboosts[i].collect = false;  
         }
     }
+    for (var i in lavas) {
+        if (lavas[i].x - user.x < 90 && user.x - lavas[i].x < 90) {
+            if (lavas[i].y - user.y + moveup < 150 && lavas[i].y - user.y > 0) {
+                user.x = 250;
+                user.y = 695;
+                moveup = 0;
+            }
+            if (lavas[i].y - user.y + moveup > -135 && lavas[i].y - user.y < 0) {
+                user.x = 250;
+                user.y = 695;
+                moveup = 0;
+            }
+        }
 
+        if (lavas[i].y - user.y < 150 && user.y - lavas[i].y < 150) {
+            if (lavas[i].x - user.x < 91 && lavas[i].x - user.x > 0) {
+                user.x = 250;
+                user.y = 695;
+                moveup = 0;
+            }
+            if (user.x - lavas[i].x < 91 && user.x - lavas[i].x > 0) {
+                user.x = 250;
+                user.y = 695;
+                moveup = 0;
+            }
+        }
+    }
 
 
     if (jumptime > 0) {
@@ -810,6 +836,9 @@ var game = setInterval(function () {
         if (!jumpboosts[i].collect) {
             jumpboosts[i].draw();
         }
+    }
+    for (var i in lavas) {        
+         lavas[i].draw();        
     }
     ctx.restore();
     if (inGame) {
