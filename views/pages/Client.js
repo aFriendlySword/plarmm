@@ -1,6 +1,15 @@
 var service = "/";
 var inGame = false;
 
+if (typeof (Storage) !== "undefined") {
+    if (localStorage.userdata == null) {
+        localStorage.setItem("userdata", "test");
+        localStorage.setItem("playedbefore", "test");
+    }
+    
+}
+
+
 var instr = new Image();
 instr.src = service + "instructions.png";
 var instr2 = new Image();
@@ -121,6 +130,37 @@ var user = {
     y: 695,
     rot: false
 };
+
+if (typeof (Storage) !== "undefined") {
+    if (localStorage.userdata != "Test") {
+        userdata = JSON.parse(localStorage.userdata);
+        tut = JSON.parse(localStorage.playedbefore);
+        last = JSON.parse(localStorage.lastmap);
+        user.level1 = userdata.level1;
+        user.level1time = userdata.level1time;
+        user.level2 = userdata.level2;
+        user.level2time = userdata.level2time;
+        user.level3 = userdata.level3;
+        user.level3time = userdata.level3time;
+        user.level4 = userdata.level4;
+        user.level4time = userdata.level4time;
+        user.level5 = userdata.level5;
+        user.level5time = userdata.level5time;
+        user.level6 = userdata.level6;
+        user.level6time = userdata.level6time;
+        user.coins = userdata.coins;
+        user.jump = userdata.jump;
+        user.x = userdata.x;
+        user.y = userdata.y;
+        user.rot = userdata.rot;
+        finishedTut = tut;
+        currentMap = last;
+    }
+   
+}
+
+
+
 var moveleft = 0;
 var moveright = 0;
 var moveup = 0;
@@ -624,3 +664,12 @@ start = document.getElementById("play");
 start.onclick = function () {
     startGame();
 }
+
+
+var save = setInterval(function () {
+    if (typeof (Storage) !== "undefined") {
+        localStorage.setItem("userdata", JSON.stringify(user));
+        localStorage.setItem("playedbefore", JSON.stringify(finishedTut));
+        localStorage.setItem("lastmap", JSON.stringify(currentMap));
+    }
+},5000)
