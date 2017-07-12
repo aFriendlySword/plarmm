@@ -533,7 +533,7 @@ var game = setInterval(function () {
             }
         }
 
-        if (stones[i].y - user.y < 150 && user.y - stones[i].y < 150) {
+        if (stones[i].y - user.y < 150 && user.y - stones[i].y < 135) {
             if (stones[i].x - user.x < 91 && stones[i].x - user.x > 0) {                
                 forcemoveleft = 5; 
             }
