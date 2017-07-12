@@ -261,6 +261,7 @@ startGame = function () {
             case 3:
                 var obj = {
                     collect: false,
+                    cooldown: 750,
                     x: x,
                     y: y,
                     type: jumpboost
@@ -581,11 +582,20 @@ var game = setInterval(function () {
                 if (!jumpboosts[i].collect) {
                     jumpboosts[i].collect = true;
                     jumptime = 250;
+                    jumpboosts[i].cooldown = 750;
                 }                
             }
         }
+        if (jumpboosts[i].cooldown > 0) {
+            jumpboosts[i].cooldown--
+        }
+        if (jumpboosts[i].cooldown == 0) {
+            jumpboosts[i].collect = false;
+        }
     }
-    
+
+
+
     if (jumptime > 0) {
         user.jump = 25;
         jumptime -= 1;
