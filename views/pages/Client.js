@@ -225,7 +225,7 @@ startGame = function () {
             event.preventDefault();
         }
 
-    });
+    };
 
     window.bind('mousewheel DOMMouseScroll', function (event) {
         if (event.ctrlKey == true) {
