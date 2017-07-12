@@ -111,6 +111,16 @@ bbr.onclick = function () {
     document.getElementById("selimg").src = "skinFourTop.png";
 }
 
+btnswitch.onclick = fucntion() {
+    if (display == "times") {
+        display == "coins";
+        document.getElementById("switch").style.right = "155px";       
+        var polyline = document.getElementById("arrow");
+        points = polyline.getAttribute('points');
+        console.log(points);
+    }
+}
+
 var stones = [];
 var woods = [];
 var coins = [];
