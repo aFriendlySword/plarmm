@@ -365,6 +365,9 @@ startGame = function () {
                     woods[i].health = healthArr[i];
                 }
             }
+            catch (err) {
+                console.log(err.message);
+            }
         }
     }
 
