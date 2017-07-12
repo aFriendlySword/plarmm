@@ -113,7 +113,7 @@ var moveup = 0;
 var jumptime = 0;
 
 showInstructions = function () {
-    ctx.drawImage(instr, 200 - user.x, 400 - user.y, 200, 200);
+    ctx.drawImage(instr, 200 - user.x + c.width / 2, 400 - user.y + + c.height / 2, 200, 200);
 }
 
 
