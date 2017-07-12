@@ -541,11 +541,12 @@ var game = setInterval(function () {
         }
     }
     ctx.globalAlpha = 1;
-
-    if (time > 0) {
-        time -= 1
-        showInstructions();
-    }
+    if (inGame) {
+        if (time > 0) {
+            time -= 1
+            showInstructions();
+        }
+    }    
 
     for (var i in stones) {
         stones[i].draw();
