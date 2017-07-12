@@ -24,6 +24,8 @@ var instr3 = new Image();
 instr3.src = service + "instructions3.png";
 var instr4 = new Image();
 instr4.src = service + "instructions4.png";
+var instr5 = new Image();
+instr5.src = service + "instructions5.png";
 
 var skinOne = new Image();
 skinOne.src = service + "skinOne.png";
@@ -213,6 +215,7 @@ showInstructions = function () {
         } else if (currentMap == LEVEL1) {
             ctx.drawImage(instr3, 500 - user.x + c.width / 2, 200 - user.y + + c.height / 2, 300, 100);
             ctx.drawImage(instr4, 1100 - user.x + c.width / 2, 550 - user.y + + c.height / 2, 300, 100);
+            ctx.drawImage(instr5, 2800 - user.x + c.width / 2, 800 - user.y + + c.height / 2, 300, 100);
         }
     }   
 }
