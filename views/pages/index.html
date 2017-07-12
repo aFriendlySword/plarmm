@@ -26,6 +26,9 @@
                 <button id="play" type="button">Play</button>
             </div>
             <div id="stats">
+                <div id="switch">
+                    <button id="btnswitch" type="button" class="button"></button>
+                </div>
                 <div id="stats-inner">
                     <div id="times">
                         <div id="level1">
@@ -183,6 +186,20 @@
             background-color: darkgray;
             width: 175px;
             height: 220px;
+        }
+        #switch {
+            position:absolute;
+            width: 20px;
+            right: 0px;
+            height: 30px;
+            top: 95px;
+        }
+        #btnswitch {
+            border-radius: 10px;
+            position: absolute;
+            width: 20px;
+            height: 30px;
+            background-color: #300ba8;
         }
         #stats-inner {
             position:absolute;

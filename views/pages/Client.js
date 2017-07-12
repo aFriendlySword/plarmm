@@ -205,6 +205,8 @@ startGame = function () {
     document.getElementById("nite").style.visibility = "hidden";
     document.getElementById("selected").style.visibility = "hidden";
     document.getElementById("character").style.visibility = "hidden";
+    document.getElementById("coins").style.visibility = "hidden";
+    document.getElementById("times").style.visibility = "hidden";
 
     if (isNight) {
         drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", 13000, 7000);
