@@ -895,7 +895,7 @@ var save = setInterval(function () {
         }
         return health;
     }
-    health();
+    healthfunc();
     if (typeof (Storage) !== "undefined") {
         localStorage.setItem("userdata", btoa(JSON.stringify(user)));
         localStorage.setItem("playedbefore", JSON.stringify(btoa(finishedTut)));
