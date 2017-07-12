@@ -476,9 +476,24 @@ var game = setInterval(function () {
             }
         }
     }
-
-
-
+    for (var i in coins) {
+        if (user.x - coins[i].x < 50 && user.x - coins[i].x > 50) {
+            if (user.y - coins[i].y < 75 && user.y - coins[i].y > 75) {
+                user.coins += 1;
+                coins[i].collect = true;
+            }
+        }
+    }
+    for (var i in jumpboosts) {
+        if (user.x - jumpboosts[i].x < 50 && user.x - jumpboosts[i].x > 50) {
+            if (user.y - jumpboosts[i].y < 75 && user.y - jumpboosts[i].y > 75) {
+                user.jumpheight += 5;
+                jumpboosts[i].collect = true;
+                jumptime = 250;
+            }
+        }
+    }
+    jumptime -= 1;
 
     if (inGame) {
         user.x += moveright + forcemoveright ;
