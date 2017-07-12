@@ -784,7 +784,7 @@ var game = setInterval(function () {
             document.getElementById("level1c-inner").innerHTML = "Level 1: Not Played";
         }
         if (user.level2 > 0) {
-            document.getElementById("level2c-inner").innerHTML = "Level 2: " + user.level2 + "/0";
+            document.getElementById("level2c-inner").innerHTML = "Level 2: " + user.level2 + "/6";
         } else {
             document.getElementById("level2c-inner").innerHTML = "Level 2: Not Played";
         }
