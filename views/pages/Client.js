@@ -6,11 +6,10 @@ if (typeof (Storage) !== "undefined") {
     if (localStorage.userdata == null) {
         if ((localStorage.version == undefined) || (atob(JSON.parse(localStorage.version)) !== version)) {
             localStorage.setItem("userdata", "test");
-            localStorage.setItem("playedbefore", "test");
         } 
 
     } 
-    
+    var tested = true;
 }
 
 var display = "times";
@@ -888,20 +887,22 @@ start.onclick = function () {
 
 
 var save = setInterval(function () {
-    var health = [];
-    healthfunc = function () {       
-        for (var i in woods) {
-            health.push(woods[i].health);
+    if (tested) {
+        var health = [];
+        healthfunc = function () {
+            for (var i in woods) {
+                health.push(woods[i].health);
+            }
         }
-    }
-    healthfunc();
-    if (typeof (Storage) !== "undefined") {
-        localStorage.setItem("userdata", btoa(JSON.stringify(user)));
-        localStorage.setItem("playedbefore", JSON.stringify(btoa(finishedTut)));
-        localStorage.setItem("lastmap", JSON.stringify(btoa(currentMap)));
-        localStorage.setItem("lastmapData", JSON.stringify(btoa(mapData)));
-        localStorage.setItem("version", JSON.stringify(btoa(version)));
-        localStorage.setItem("time", JSON.stringify(btoa(runtime)));
-        localStorage.setItem("health", btoa(JSON.stringify(health)));
-    }
+        healthfunc();
+        if (typeof (Storage) !== "undefined") {
+            localStorage.setItem("userdata", btoa(JSON.stringify(user)));
+            localStorage.setItem("playedbefore", JSON.stringify(btoa(finishedTut)));
+            localStorage.setItem("lastmap", JSON.stringify(btoa(currentMap)));
+            localStorage.setItem("lastmapData", JSON.stringify(btoa(mapData)));
+            localStorage.setItem("version", JSON.stringify(btoa(version)));
+            localStorage.setItem("time", JSON.stringify(btoa(runtime)));
+            localStorage.setItem("health", btoa(JSON.stringify(health)));
+        }
+    }   
 },1000)
