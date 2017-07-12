@@ -888,12 +888,11 @@ start.onclick = function () {
 
 
 var save = setInterval(function () {
-    healthfunc = function () {
-        var health = [];
+    var health = [];
+    healthfunc = function () {       
         for (var i in woods) {
             health.push(woods[i].health);
         }
-        return health;
     }
     healthfunc();
     if (typeof (Storage) !== "undefined") {
