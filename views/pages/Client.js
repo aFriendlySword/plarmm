@@ -206,7 +206,7 @@ if (typeof (Storage) !== "undefined") {
             finishedTut = tut;
             currentMap = last;
             mapData = lastData;
-            runtime = lastTime;            
+            runtime = parseInt(lastTime);            
         }
         catch (err) {
             localStorage.userdata = "test";
