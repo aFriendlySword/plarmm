@@ -496,6 +496,8 @@ var game = setInterval(function () {
     jumptime -= 1;
     if (jumptime > 0) {
         user.jump = 25;
+    } else {
+        user.jump = 20;
     }
 
     if (inGame) {
