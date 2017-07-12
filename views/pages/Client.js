@@ -1,1 +1,690 @@
-var _0x403c=["\x2F","\x31\x2E\x30\x2E\x30","\x75\x6E\x64\x65\x66\x69\x6E\x65\x64","\x75\x73\x65\x72\x64\x61\x74\x61","\x76\x65\x72\x73\x69\x6F\x6E","\x70\x61\x72\x73\x65","\x74\x65\x73\x74","\x73\x65\x74\x49\x74\x65\x6D","\x70\x6C\x61\x79\x65\x64\x62\x65\x66\x6F\x72\x65","\x73\x72\x63","\x69\x6E\x73\x74\x72\x75\x63\x74\x69\x6F\x6E\x73\x2E\x70\x6E\x67","\x69\x6E\x73\x74\x72\x75\x63\x74\x69\x6F\x6E\x73\x32\x2E\x70\x6E\x67","\x73\x6B\x69\x6E\x4F\x6E\x65\x2E\x70\x6E\x67","\x73\x6B\x69\x6E\x54\x77\x6F\x2E\x70\x6E\x67","\x73\x6B\x69\x6E\x54\x68\x72\x65\x65\x2E\x70\x6E\x67","\x73\x6B\x69\x6E\x46\x6F\x75\x72\x2E\x70\x6E\x67","\x73\x73\x73\x73\x73\x73\x73\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x61\x73\x73\x73\x61\x61\x61\x61\x61\x61\x61\x73\x73\x73\x61\x61\x61\x61\x61\x61\x61\x73\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x61\x73\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x61\x73\x73\x73\x61\x61\x61\x61\x61\x61\x61\x73\x73\x73\x61\x61\x61\x61\x61\x73\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x61\x73\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x61\x73\x73\x73\x61\x61\x61\x61\x61\x61\x61\x73\x73\x73\x61\x61\x61\x61\x61\x73\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x61\x73\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x61\x73\x73\x73\x61\x61\x61\x61\x61\x61\x61\x73\x73\x73\x61\x61\x61\x61\x61\x73\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x61\x73\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x61\x73\x73\x73\x61\x61\x61\x61\x61\x61\x61\x73\x73\x73\x61\x61\x61\x61\x61\x73\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x61\x73\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x61\x73\x73\x73\x61\x61\x61\x61\x61\x61\x61\x73\x73\x73\x61\x61\x61\x61\x61\x73\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x61\x73\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x61\x73\x73\x73\x61\x61\x61\x61\x61\x61\x61\x73\x73\x73\x61\x61\x61\x61\x61\x73\x73\x73\x73\x73\x73\x73\x73\x73\x73\x73\x73\x73\x73","\x73\x73\x73\x73\x73\x73\x73\x73\x73\x73\x73\x73\x73\x73\x73\x73\x73\x73\x73\x73\x73\x61\x61\x61\x73\x61\x61\x61\x73\x73\x73\x61\x63\x61\x73\x61\x61\x61\x61\x73\x73\x61\x61\x61\x73\x61\x61\x61\x61\x73\x73\x61\x61\x61\x61\x61\x61\x61\x61\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x73\x63\x61\x61\x73\x73\x61\x61\x73\x61\x61\x73\x61\x61\x73\x73\x61\x61\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x73\x73\x77\x77\x73\x73\x73\x73\x63\x61\x61\x73\x61\x61\x61\x73\x73\x73\x61\x61\x61\x61\x61\x61\x73\x61\x73\x61\x61\x61\x73\x61\x61\x61\x61\x61\x73\x61\x61\x61\x61\x61\x61\x73\x61\x61\x73\x61\x61\x61\x61\x61\x73\x61\x63\x61\x73\x61\x61\x61\x73\x61\x61\x61\x61\x61\x73\x73\x61\x61\x61\x61\x73\x73\x73\x73\x73\x73\x61\x73\x61\x61\x61\x73\x61\x61\x73\x73\x61\x61\x61\x61\x61\x73\x61\x61\x73\x73\x61\x61\x61\x73\x63\x61\x61\x61\x73\x73\x61\x61\x61\x73\x61\x61\x61\x73\x73\x73\x61\x61\x73\x61\x61\x61\x61\x61\x73\x73\x61\x61\x61\x61\x61\x73\x61\x61\x73\x73\x61\x73\x61\x73\x61\x61\x61\x61\x73\x73\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x61\x61\x61\x61\x73\x61\x77\x6A\x73\x73\x61\x61\x73\x61\x61\x61\x77\x77\x73\x73\x61\x61\x61\x77\x61\x63\x61\x61\x73\x73\x61\x61\x61\x73\x61\x61\x61\x61\x73\x73\x61\x61\x61\x73\x61\x61\x61\x61\x73\x73\x61\x63\x61\x73\x61\x61\x61\x61\x73\x73\x61\x61\x61\x61\x61\x61\x73\x61\x73\x73\x61\x61\x61\x61\x61\x61\x73\x61\x73\x73\x61\x61\x61\x73\x61\x61\x61\x61\x73\x73\x61\x61\x61\x73\x61\x61\x61\x61\x73\x73\x61\x61\x61\x73\x73\x73\x73\x73\x73\x73\x61\x61\x61\x61\x61\x73\x61\x61\x73\x73\x61\x61\x61\x73\x61\x63\x61\x61\x73\x73\x61\x61\x61\x61\x61\x73\x61\x61\x73\x73\x61\x61\x61\x73\x61\x63\x61\x61\x73\x73\x61\x61\x61\x61\x61\x73\x61\x61\x73\x73\x61\x61\x61\x73\x61\x61\x61\x61\x73\x73\x61\x61\x61\x61\x61\x61\x61\x61\x73\x73\x61\x61\x61\x61\x61\x61\x73\x61\x73\x73\x61\x61\x61\x61\x73\x61\x61\x61\x73\x73\x77\x77\x73\x73\x73\x73\x73\x73\x73\x73\x61\x61\x61\x61\x61\x61\x61\x61\x73\x73\x61\x61\x61\x61\x61\x61\x61\x61\x73\x73\x73\x73\x73\x73\x73\x73\x73\x73\x73","\x73\x74\x6F\x6E\x65\x2E\x70\x6E\x67","\x77\x6F\x6F\x64\x2E\x70\x6E\x67","\x63\x6F\x69\x6E\x2E\x70\x6E\x67","\x6A\x75\x6D\x70\x62\x6F\x6F\x73\x74\x2E\x70\x6E\x67","\x63\x61\x6E\x76\x61\x73","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x32\x64","\x67\x65\x74\x43\x6F\x6E\x74\x65\x78\x74","\x77\x69\x64\x74\x68","\x69\x6E\x6E\x65\x72\x57\x69\x64\x74\x68","\x68\x65\x69\x67\x68\x74","\x69\x6E\x6E\x65\x72\x48\x65\x69\x67\x68\x74","\x67\x6C\x6F\x62\x61\x6C\x41\x6C\x70\x68\x61","\x6C\x69\x6E\x65\x57\x69\x64\x74\x68","\x66\x69\x6C\x6C\x53\x74\x79\x6C\x65","\x66\x69\x6C\x6C\x52\x65\x63\x74","\x62\x65\x67\x69\x6E\x50\x61\x74\x68","\x72\x6F\x75\x6E\x64","\x6D\x6F\x76\x65\x54\x6F","\x6C\x69\x6E\x65\x54\x6F","\x73\x74\x72\x6F\x6B\x65\x53\x74\x79\x6C\x65","\x73\x74\x72\x6F\x6B\x65","\x23\x46\x46\x46\x46\x46\x46","\x23\x30\x30\x30\x30\x30\x30","\x6F\x6E\x63\x6C\x69\x63\x6B","\x63\x6F\x6C\x6F\x72","\x73\x74\x79\x6C\x65","\x73\x6C\x65\x65\x70","\x62\x6C\x61\x63\x6B","\x62\x61\x63\x6B\x67\x72\x6F\x75\x6E\x64\x43\x6F\x6C\x6F\x72","\x77\x68\x69\x74\x65","\x74\x65\x78\x74\x43\x6F\x6E\x74\x65\x6E\x74","\x54\x75\x72\x6E\x20\x4E\x69\x67\x68\x74\x6D\x6F\x64\x65\x20\x4F\x46\x46","\x54\x75\x72\x6E\x20\x4E\x69\x67\x68\x74\x6D\x6F\x64\x65\x20\x4F\x4E","\x73\x65\x6C\x69\x6D\x67","\x73\x6B\x69\x6E\x4F\x6E\x65\x54\x6F\x70\x2E\x70\x6E\x67","\x73\x6B\x69\x6E\x54\x77\x6F\x54\x6F\x70\x2E\x70\x6E\x67","\x73\x6B\x69\x6E\x54\x68\x72\x65\x65\x54\x6F\x70\x2E\x70\x6E\x67","\x73\x6B\x69\x6E\x46\x6F\x75\x72\x54\x6F\x70\x2E\x70\x6E\x67","\x6C\x61\x73\x74\x6D\x61\x70","\x6C\x61\x73\x74\x6D\x61\x70\x44\x61\x74\x61","\x6C\x65\x76\x65\x6C\x31","\x6C\x65\x76\x65\x6C\x31\x74\x69\x6D\x65","\x6C\x65\x76\x65\x6C\x32","\x6C\x65\x76\x65\x6C\x32\x74\x69\x6D\x65","\x6C\x65\x76\x65\x6C\x33","\x6C\x65\x76\x65\x6C\x33\x74\x69\x6D\x65","\x6C\x65\x76\x65\x6C\x34","\x6C\x65\x76\x65\x6C\x34\x74\x69\x6D\x65","\x6C\x65\x76\x65\x6C\x35","\x6C\x65\x76\x65\x6C\x35\x74\x69\x6D\x65","\x6C\x65\x76\x65\x6C\x36","\x6C\x65\x76\x65\x6C\x36\x74\x69\x6D\x65","\x63\x6F\x69\x6E\x73","\x6A\x75\x6D\x70","\x78","\x79","\x72\x6F\x74","\x64\x72\x61\x77\x49\x6D\x61\x67\x65","\x76\x69\x73\x69\x62\x69\x6C\x69\x74\x79","\x6D\x65\x6E\x75","\x68\x69\x64\x64\x65\x6E","\x6E\x69\x74\x65","\x73\x65\x6C\x65\x63\x74\x65\x64","\x63\x68\x61\x72\x61\x63\x74\x65\x72","\x64\x72\x61\x77","\x63\x6F\x6D\x70\x6C\x65\x74\x65","\x70\x75\x73\x68","\x73","\x77","\x63","\x6A","\x63\x68\x61\x72\x41\x74","\x6F\x6E\x6D\x6F\x75\x73\x65\x6D\x6F\x76\x65","\x70\x61\x67\x65\x58","\x70\x61\x67\x65\x59","\x68\x65\x61\x6C\x74\x68","\x6F\x6E\x6B\x65\x79\x64\x6F\x77\x6E","\x48\x75\x62","\x6B\x65\x79\x43\x6F\x64\x65","\x6F\x6E\x6B\x65\x79\x75\x70","\x63\x6F\x6C\x6C\x65\x63\x74","\x63\x6F\x6F\x6C\x64\x6F\x77\x6E","\x63\x6C\x65\x61\x72\x52\x65\x63\x74","\x73\x61\x76\x65","\x72\x65\x73\x74\x6F\x72\x65","\x74\x72\x61\x6E\x73\x6C\x61\x74\x65","\x73\x63\x61\x6C\x65","\x70\x6C\x61\x79","\x73\x74\x72\x69\x6E\x67\x69\x66\x79"];var service=_0x403c[0];var inGame=false;var version=_0x403c[1];if( typeof (Storage)!== _0x403c[2]){if(localStorage[_0x403c[3]]== null){if(atob(JSON[_0x403c[5]](localStorage[_0x403c[4]]))== _0x403c[2]|| atob(JSON[_0x403c[5]](localStorage[_0x403c[4]]))!== version){localStorage[_0x403c[7]](_0x403c[3],_0x403c[6])};localStorage[_0x403c[7]](_0x403c[8],_0x403c[6])}};var instr= new Image();instr[_0x403c[9]]= service+ _0x403c[10];var instr2= new Image();instr2[_0x403c[9]]= service+ _0x403c[11];var skinOne= new Image();skinOne[_0x403c[9]]= service+ _0x403c[12];var skinTwo= new Image();skinTwo[_0x403c[9]]= service+ _0x403c[13];var skinThree= new Image();skinThree[_0x403c[9]]= service+ _0x403c[14];var skinFour= new Image();skinFour[_0x403c[9]]= service+ _0x403c[15];var skin=skinOne;var mapDataHub=_0x403c[16];var mapDataLevel1=_0x403c[17];var stone= new Image();stone[_0x403c[9]]= service+ _0x403c[18];var wood= new Image();wood[_0x403c[9]]= service+ _0x403c[19];var coin= new Image();coin[_0x403c[9]]= service+ _0x403c[20];var jumpboost= new Image();jumpboost[_0x403c[9]]= service+ _0x403c[21];var servers={};var c=document[_0x403c[23]](_0x403c[22]);var ctx=c[_0x403c[25]](_0x403c[24]);c[_0x403c[26]]= window[_0x403c[27]];c[_0x403c[28]]= window[_0x403c[29]];var drawGrid=function(_0xba41x15,_0xba41x16,_0xba41x17,_0xba41x18,_0xba41x19,_0xba41x1a){ctx[_0x403c[30]]= 1;ctx[_0x403c[31]]= 0.3;ctx[_0x403c[32]]= _0xba41x18;ctx[_0x403c[33]](_0xba41x15,_0xba41x16,_0xba41x19,_0xba41x1a);ctx[_0x403c[34]]();var _0xba41x1b=0;var _0xba41x1c=0;for(var _0xba41x1d=0;_0xba41x1d< Math[_0x403c[35]](_0xba41x19/ 100);_0xba41x1d++){_0xba41x1b= _0xba41x15+ _0xba41x1d* 100;_0xba41x1c= _0xba41x16+ 0;ctx[_0x403c[36]](_0xba41x1b,_0xba41x1c);ctx[_0x403c[37]](_0xba41x1b,_0xba41x1c+ _0xba41x1a)};;;for(var _0xba41x1e=0;_0xba41x1e< Math[_0x403c[35]](_0xba41x1a/ 100);_0xba41x1e++){_0xba41x1b= _0xba41x15+ 0;_0xba41x1c= _0xba41x16+ _0xba41x1e* 100;ctx[_0x403c[36]](_0xba41x1b,_0xba41x1c);ctx[_0x403c[37]](_0xba41x1b+ _0xba41x19,_0xba41x1c)};;;ctx[_0x403c[38]]= _0xba41x17;ctx[_0x403c[39]]()};drawGrid(0,0,_0x403c[40],_0x403c[41],c[_0x403c[26]],c[_0x403c[28]]);var isNight=true;sleep[_0x403c[42]]= function(){if(!isNight){drawGrid(0,0,_0x403c[40],_0x403c[41],c[_0x403c[26]],c[_0x403c[28]]);isNight= true;document[_0x403c[23]](_0x403c[45])[_0x403c[44]][_0x403c[43]]= _0x403c[46];document[_0x403c[23]](_0x403c[45])[_0x403c[44]][_0x403c[47]]= _0x403c[48];document[_0x403c[23]](_0x403c[45])[_0x403c[49]]= _0x403c[50]}else {drawGrid(0,0,_0x403c[41],_0x403c[40],c[_0x403c[26]],c[_0x403c[28]]);isNight= false;document[_0x403c[23]](_0x403c[45])[_0x403c[44]][_0x403c[43]]= _0x403c[48];document[_0x403c[23]](_0x403c[45])[_0x403c[44]][_0x403c[47]]= _0x403c[46];document[_0x403c[23]](_0x403c[45])[_0x403c[49]]= _0x403c[51]}};btl[_0x403c[42]]= function(){skin= skinOne;document[_0x403c[23]](_0x403c[52])[_0x403c[9]]= _0x403c[53]};btr[_0x403c[42]]= function(){skin= skinTwo;document[_0x403c[23]](_0x403c[52])[_0x403c[9]]= _0x403c[54]};bbl[_0x403c[42]]= function(){skin= skinThree;document[_0x403c[23]](_0x403c[52])[_0x403c[9]]= _0x403c[55]};bbr[_0x403c[42]]= function(){skin= skinFour;document[_0x403c[23]](_0x403c[52])[_0x403c[9]]= _0x403c[56]};var stones=[];var woods=[];var coins=[];var jumpboosts=[];var user={level1:0,level1time:0,level2:0,level2time:0,level3:0,level3time:0,level4:0,level4time:0,level5:0,level5time:0,level6:0,level6time:0,coins:0,jump:20,x:250,y:695,rot:false};var moveleft=0;var moveright=0;var moveup=0;var jumptime=0;var runtime=0;const HUB=0;const LEVEL1=1;const LEVEL2=2;const LEVEL3=3;const LEVEL4=4;const LEVEL5=5;const LEVEL6=6;var mapData=mapDataHub;var currentMap=HUB;var finishedTut=false;if( typeof (Storage)!== _0x403c[2]){if(!(localStorage[_0x403c[3]]== _0x403c[6])){userdata= (JSON[_0x403c[5]](atob(localStorage[_0x403c[3]])));tut= atob(JSON[_0x403c[5]](localStorage[_0x403c[8]]));last= parseInt(atob(JSON[_0x403c[5]](localStorage[_0x403c[57]])));lastData= atob(JSON[_0x403c[5]](localStorage[_0x403c[58]]));user[_0x403c[59]]= userdata[_0x403c[59]];user[_0x403c[60]]= userdata[_0x403c[60]];user[_0x403c[61]]= userdata[_0x403c[61]];user[_0x403c[62]]= userdata[_0x403c[62]];user[_0x403c[63]]= userdata[_0x403c[63]];user[_0x403c[64]]= userdata[_0x403c[64]];user[_0x403c[65]]= userdata[_0x403c[65]];user[_0x403c[66]]= userdata[_0x403c[66]];user[_0x403c[67]]= userdata[_0x403c[67]];user[_0x403c[68]]= userdata[_0x403c[68]];user[_0x403c[69]]= userdata[_0x403c[69]];user[_0x403c[70]]= userdata[_0x403c[70]];user[_0x403c[71]]= userdata[_0x403c[71]];user[_0x403c[72]]= userdata[_0x403c[72]];user[_0x403c[73]]= userdata[_0x403c[73]];user[_0x403c[74]]= userdata[_0x403c[74]];user[_0x403c[75]]= userdata[_0x403c[75]];finishedTut= tut;currentMap= last;mapData= lastData}};showInstructions= function(){if(!finishedTut){if(currentMap== HUB){ctx[_0x403c[76]](instr,200- user[_0x403c[73]]+ c[_0x403c[26]]/ 2,400- user[_0x403c[74]]+ +c[_0x403c[28]]/ 2,200,200);ctx[_0x403c[76]](instr2,600- user[_0x403c[73]]+ c[_0x403c[26]]/ 2,200- user[_0x403c[74]]+ +c[_0x403c[28]]/ 2,200,200)}else {if(currentMap== LEVEL1){ctx[_0x403c[76]](instr,200- user[_0x403c[73]]+ c[_0x403c[26]]/ 2,400- user[_0x403c[74]]+ +c[_0x403c[28]]/ 2,200,200);ctx[_0x403c[76]](instr2,600- user[_0x403c[73]]+ c[_0x403c[26]]/ 2,200- user[_0x403c[74]]+ +c[_0x403c[28]]/ 2,200,200)}}}};startGame= function(){inGame= true;document[_0x403c[23]](_0x403c[78])[_0x403c[44]][_0x403c[77]]= _0x403c[79];document[_0x403c[23]](_0x403c[80])[_0x403c[44]][_0x403c[77]]= _0x403c[79];document[_0x403c[23]](_0x403c[81])[_0x403c[44]][_0x403c[77]]= _0x403c[79];document[_0x403c[23]](_0x403c[82])[_0x403c[44]][_0x403c[77]]= _0x403c[79];if(isNight){drawGrid(-4000- user[_0x403c[73]] + c[_0x403c[26]]/ 2,-3000- user[_0x403c[74]] + c[_0x403c[28]]/ 2,_0x403c[40],_0x403c[41],13000,7000)}else {drawGrid(-4000- user[_0x403c[73]] + c[_0x403c[26]]/ 2,-3000- user[_0x403c[74]] + c[_0x403c[28]]/ 2,_0x403c[41],_0x403c[40],13000,7000)};var _0xba41x34= new Array(50);for(var _0xba41x1d=0;_0xba41x1d< 50;_0xba41x1d++){_0xba41x34[_0xba41x1d]=  new Array(10)};createObject= function(_0xba41x35,_0xba41x15,_0xba41x16){switch(_0xba41x35){case 0:var _0xba41x36={x:_0xba41x15,y:_0xba41x16,type:stone};_0xba41x36[_0x403c[83]]= function(){if(stone[_0x403c[84]]){ctx[_0x403c[76]](stone,_0xba41x36[_0x403c[73]]- 50- user[_0x403c[73]]+ c[_0x403c[26]]/ 2,_0xba41x36[_0x403c[74]]- 50- user[_0x403c[74]]+ c[_0x403c[28]]/ 2,100,100)}};return _0xba41x36;break;case 1:var _0xba41x36={health:5,x:_0xba41x15,y:_0xba41x16,type:wood};_0xba41x36[_0x403c[83]]= function(){if(wood[_0x403c[84]]){ctx[_0x403c[76]](wood,_0xba41x36[_0x403c[73]]- 50- user[_0x403c[73]]+ c[_0x403c[26]]/ 2,_0xba41x36[_0x403c[74]]- 50- user[_0x403c[74]]+ c[_0x403c[28]]/ 2,100,100)}};return _0xba41x36;break;case 2:var _0xba41x36={collect:false,x:_0xba41x15,y:_0xba41x16,type:coin};_0xba41x36[_0x403c[83]]= function(){if(coin[_0x403c[84]]){ctx[_0x403c[76]](coin,_0xba41x36[_0x403c[73]]- 50- user[_0x403c[73]]+ c[_0x403c[26]]/ 2,_0xba41x36[_0x403c[74]]- 50- user[_0x403c[74]]+ c[_0x403c[28]]/ 2,100,100)}};return _0xba41x36;break;case 3:var _0xba41x36={collect:false,cooldown:750,x:_0xba41x15,y:_0xba41x16,type:jumpboost};_0xba41x36[_0x403c[83]]= function(){if(jumpboost[_0x403c[84]]){ctx[_0x403c[76]](jumpboost,_0xba41x36[_0x403c[73]]- 50- user[_0x403c[73]]+ c[_0x403c[26]]/ 2,_0xba41x36[_0x403c[74]]- 50- user[_0x403c[74]]+ c[_0x403c[28]]/ 2,100,100)}};return _0xba41x36;break;default:break}};createMap= function(){var _0xba41x37=0;for(var _0xba41x1d=0;_0xba41x1d< 50;_0xba41x1d++){for(var _0xba41x1e=0;_0xba41x1e< 10;_0xba41x1e++){switch(mapData[_0x403c[90]](_0xba41x37)){case _0x403c[86]:stones[_0x403c[85]](createObject(0,50+ 100* _0xba41x1d,50+ 100* _0xba41x1e));break;case _0x403c[87]:woods[_0x403c[85]](createObject(1,50+ 100* _0xba41x1d,50+ 100* _0xba41x1e));break;case _0x403c[88]:coins[_0x403c[85]](createObject(2,50+ 100* _0xba41x1d,50+ 100* _0xba41x1e));break;case _0x403c[89]:jumpboosts[_0x403c[85]](createObject(3,50+ 100* _0xba41x1d,50+ 100* _0xba41x1e));default:break};_0xba41x37++}}};createMap();document[_0x403c[91]]= function(_0xba41x38){if(inGame){var _0xba41x39=c[_0x403c[26]]/ 2;var _0xba41x3a=_0xba41x38[_0x403c[92]];if(_0xba41x39> _0xba41x3a){user[_0x403c[75]]= true}else {user[_0x403c[75]]= false}}};document[_0x403c[42]]= function(_0xba41x38){if(inGame){var _0xba41x3a=_0xba41x38[_0x403c[92]];var _0xba41x3b=_0xba41x38[_0x403c[93]];for(var _0xba41x1d in woods){if(user[_0x403c[73]]- c[_0x403c[26]]/ 2+ _0xba41x3a- woods[_0xba41x1d][_0x403c[73]]< 50&& user[_0x403c[73]]- c[_0x403c[26]]/ 2+ _0xba41x3a- woods[_0xba41x1d][_0x403c[73]]>  -50){if(user[_0x403c[74]]- c[_0x403c[28]]/ 2+ _0xba41x3b- woods[_0xba41x1d][_0x403c[74]]< 50&& user[_0x403c[74]]- c[_0x403c[28]]/ 2+ _0xba41x3b- woods[_0xba41x1d][_0x403c[74]]>  -50){if(woods[_0xba41x1d][_0x403c[94]]> 0){woods[_0xba41x1d][_0x403c[94]]--}}}}}};document[_0x403c[95]]= function(_0xba41x38){switch(_0xba41x38[_0x403c[97]]){case 68:if(inGame){moveright= 5};return moveright;break;case 83:if(inGame){switch(currentMap){case HUB:if(user[_0x403c[73]]> 650&& user[_0x403c[73]]< 750){runtime= 0;stones= [];woods= [];coins= [];jumpboosts= [];currentMap= LEVEL1;mapData= mapDataLevel1;createMap();user[_0x403c[73]]= 250;user[_0x403c[74]]= 695};break;case LEVEL1:if(user[_0x403c[73]]> 4750){if(runtime< user[_0x403c[60]]|| user[_0x403c[60]]== 0){user[_0x403c[60]]= runtime};if(user[_0x403c[59]]< user[_0x403c[71]]){user[_0x403c[59]]= user[_0x403c[71]]};runtime= 0;finishedTut= true;stones= [];woods= [];coins= [];jumpboosts= [];currentMap= HUB;mapData= mapDataHub;createMap();user[_0x403c[73]]= 250;user[_0x403c[74]]= 695;user[_0x403c[71]]= 0};break;default:break}};break;case 65:if(inGame){moveleft= 5};return moveleft;break;case 87:if(inGame){for(var _0xba41x1d in stones){if(stones[_0xba41x1d][_0x403c[74]]- user[_0x403c[74]]== 150){if(stones[_0xba41x1d][_0x403c[73]]- user[_0x403c[73]]< 90&& stones[_0xba41x1d][_0x403c[73]]- user[_0x403c[73]]>  -90){moveup= user[_0x403c[72]]}}};for(var _0xba41x1d in woods){if(stones[_0xba41x1d][_0x403c[74]]- user[_0x403c[74]]== 150){if(woods[_0xba41x1d][_0x403c[73]]- user[_0x403c[73]]< 90&& woods[_0xba41x1d][_0x403c[73]]- user[_0x403c[73]]>  -90){moveup= user[_0x403c[72]]}}}};return moveup;break;case 39:if(inGame){moveright= 5};return moveright;break;case 40:if(inGame){switch(_0xba41x34){case _0x403c[96]:if(user[_0x403c[73]]> 650&& user[_0x403c[73]]< 750){stones= [];woods= [];coins= [];jumpboosts= [];_0xba41x34= _0x403c[59];mapData= mapDataLevel1;initialize();user[_0x403c[73]]= 250;user[_0x403c[74]]= 695};break;case _0x403c[59]:if(user[_0x403c[73]]> 4750){finishedTut= true;stones= [];woods= [];coins= [];jumpboosts= [];_0xba41x34= _0x403c[96];mapData= mapDataHub;initialize();user[_0x403c[73]]= 250;user[_0x403c[74]]= 695};break;default:break}};break;case 37:if(inGame){moveleft= 5};return moveleft;break;case 38:if(inGame){for(var _0xba41x1d in stones){if(stones[_0xba41x1d][_0x403c[74]]- user[_0x403c[74]]== 150){if(stones[_0xba41x1d][_0x403c[73]]- user[_0x403c[73]]< 90&& stones[_0xba41x1d][_0x403c[73]]- user[_0x403c[73]]>  -90){moveup= user[_0x403c[72]]}}};for(var _0xba41x1d in woods){if(stones[_0xba41x1d][_0x403c[74]]- user[_0x403c[74]]== 150){if(woods[_0xba41x1d][_0x403c[73]]- user[_0x403c[73]]< 90&& woods[_0xba41x1d][_0x403c[73]]- user[_0x403c[73]]>  -90){moveup= user[_0x403c[72]]}}}};return moveup;break;return moveup;break}};document[_0x403c[98]]= function(_0xba41x38){switch(_0xba41x38[_0x403c[97]]){case 68:if(inGame){moveright= 0};return moveright;break;case 65:if(inGame){moveleft= 0};return moveleft;break;case 39:if(inGame){moveright= 0};return moveright;break;case 37:if(inGame){moveleft= 0};return moveleft;break}}};var game=setInterval(function(){runtime+= 1;var _0xba41x3d=0;var _0xba41x3e=0;for(var _0xba41x1d in stones){if(stones[_0xba41x1d][_0x403c[73]]- user[_0x403c[73]]< 90&& user[_0x403c[73]]- stones[_0xba41x1d][_0x403c[73]]< 90){if(stones[_0xba41x1d][_0x403c[74]]- user[_0x403c[74]]+ moveup< 150&& stones[_0xba41x1d][_0x403c[74]]- user[_0x403c[74]]> 0){moveup= 150- stones[_0xba41x1d][_0x403c[74]]+ user[_0x403c[74]]};if(stones[_0xba41x1d][_0x403c[74]]- user[_0x403c[74]]+ moveup>  -135&& stones[_0xba41x1d][_0x403c[74]]- user[_0x403c[74]]< 0){moveup=  -0}};if(stones[_0xba41x1d][_0x403c[74]]- user[_0x403c[74]]< 150&& user[_0x403c[74]]- stones[_0xba41x1d][_0x403c[74]]< 135){if(stones[_0xba41x1d][_0x403c[73]]- user[_0x403c[73]]< 91&& stones[_0xba41x1d][_0x403c[73]]- user[_0x403c[73]]> 0){_0xba41x3d= 5};if(user[_0x403c[73]]- stones[_0xba41x1d][_0x403c[73]]< 91&& user[_0x403c[73]]- stones[_0xba41x1d][_0x403c[73]]> 0){_0xba41x3e= 5}}};for(var _0xba41x1d in woods){if(woods[_0xba41x1d][_0x403c[94]]> 0){if(woods[_0xba41x1d][_0x403c[73]]- user[_0x403c[73]]< 90&& user[_0x403c[73]]- woods[_0xba41x1d][_0x403c[73]]< 90){if(woods[_0xba41x1d][_0x403c[74]]- user[_0x403c[74]]+ moveup< 150&& woods[_0xba41x1d][_0x403c[74]]- user[_0x403c[74]]> 0){moveup= 150- woods[_0xba41x1d][_0x403c[74]]+ user[_0x403c[74]]};if(woods[_0xba41x1d][_0x403c[74]]- user[_0x403c[74]]+ moveup>  -135&& woods[_0xba41x1d][_0x403c[74]]- user[_0x403c[74]]< 0){moveup=  -0}};if(woods[_0xba41x1d][_0x403c[74]]- user[_0x403c[74]]< 150&& user[_0x403c[74]]- woods[_0xba41x1d][_0x403c[74]]< 150){if(woods[_0xba41x1d][_0x403c[73]]- user[_0x403c[73]]< 91&& woods[_0xba41x1d][_0x403c[73]]- user[_0x403c[73]]> 0){_0xba41x3d= 5};if(user[_0x403c[73]]- woods[_0xba41x1d][_0x403c[73]]< 91&& user[_0x403c[73]]- woods[_0xba41x1d][_0x403c[73]]> 0){_0xba41x3e= 5}}}};for(var _0xba41x1d in coins){if(user[_0x403c[73]]- coins[_0xba41x1d][_0x403c[73]]< 50&& user[_0x403c[73]]- coins[_0xba41x1d][_0x403c[73]]>  -50){if(user[_0x403c[74]]- coins[_0xba41x1d][_0x403c[74]]< 100&& user[_0x403c[74]]- coins[_0xba41x1d][_0x403c[74]]>  -100){if(!coins[_0xba41x1d][_0x403c[99]]){user[_0x403c[71]]+= 1;coins[_0xba41x1d][_0x403c[99]]= true}}}};for(var _0xba41x1d in jumpboosts){if(user[_0x403c[73]]- jumpboosts[_0xba41x1d][_0x403c[73]]< 50&& user[_0x403c[73]]- jumpboosts[_0xba41x1d][_0x403c[73]]>  -50){if(user[_0x403c[74]]- jumpboosts[_0xba41x1d][_0x403c[74]]< 100&& user[_0x403c[74]]- jumpboosts[_0xba41x1d][_0x403c[74]]>  -100){if(!jumpboosts[_0xba41x1d][_0x403c[99]]){jumpboosts[_0xba41x1d][_0x403c[99]]= true;jumptime= 250;jumpboosts[_0xba41x1d][_0x403c[100]]= 750}}};if(jumpboosts[_0xba41x1d][_0x403c[100]]> 0){jumpboosts[_0xba41x1d][_0x403c[100]]--};if(jumpboosts[_0xba41x1d][_0x403c[100]]== 0){jumpboosts[_0xba41x1d][_0x403c[99]]= false}};if(jumptime> 0){user[_0x403c[72]]= 25;jumptime-= 1}else {user[_0x403c[72]]= 20};if(inGame){user[_0x403c[73]]+= moveright+ _0xba41x3e;user[_0x403c[73]]-= moveleft+ _0xba41x3d;user[_0x403c[74]]-= moveup;moveup-= 1};c[_0x403c[26]]= window[_0x403c[27]];c[_0x403c[28]]= window[_0x403c[29]];ctx[_0x403c[101]](0,0,c[_0x403c[26]],c[_0x403c[28]]);ctx[_0x403c[102]]();if(!inGame){if(!isNight){drawGrid(0,0,_0x403c[41],_0x403c[40],c[_0x403c[26]],c[_0x403c[28]])}else {drawGrid(0,0,_0x403c[40],_0x403c[41],c[_0x403c[26]],c[_0x403c[28]])}}else {if(isNight){drawGrid(-4000- user[_0x403c[73]] + c[_0x403c[26]]/ 2,-3000- user[_0x403c[74]] + c[_0x403c[28]]/ 2,_0x403c[40],_0x403c[41],13000,7000)}else {drawGrid(-4000- user[_0x403c[73]] + c[_0x403c[26]]/ 2,-3000- user[_0x403c[74]] + c[_0x403c[28]]/ 2,_0x403c[41],_0x403c[40],13000,7000)}};ctx[_0x403c[30]]= 1;if(inGame){showInstructions()};for(var _0xba41x1d in stones){stones[_0xba41x1d][_0x403c[83]]()};for(var _0xba41x1d in woods){if(woods[_0xba41x1d][_0x403c[94]]> 0){woods[_0xba41x1d][_0x403c[83]]()}};for(var _0xba41x1d in coins){if(!coins[_0xba41x1d][_0x403c[99]]){coins[_0xba41x1d][_0x403c[83]]()}};for(var _0xba41x1d in jumpboosts){if(!jumpboosts[_0xba41x1d][_0x403c[99]]){jumpboosts[_0xba41x1d][_0x403c[83]]()}};ctx[_0x403c[103]]();if(inGame){ctx[_0x403c[102]]();ctx[_0x403c[104]](c[_0x403c[26]]/ 2,c[_0x403c[28]]/ 2);if(user[_0x403c[75]]){ctx[_0x403c[105]](-1,1)}else {ctx[_0x403c[105]](1,1)};ctx[_0x403c[76]](skin,-50,-100,100,200);ctx[_0x403c[103]]()}},40);start= document[_0x403c[23]](_0x403c[106]);start[_0x403c[42]]= function(){startGame()};var save=setInterval(function(){if( typeof (Storage)!== _0x403c[2]){localStorage[_0x403c[7]](_0x403c[3],btoa(JSON[_0x403c[107]](user)));localStorage[_0x403c[7]](_0x403c[8],JSON[_0x403c[107]](btoa(finishedTut)));localStorage[_0x403c[7]](_0x403c[57],JSON[_0x403c[107]](btoa(currentMap)));localStorage[_0x403c[7]](_0x403c[58],JSON[_0x403c[107]](btoa(mapData)));localStorage[_0x403c[7]](_0x403c[4],JSON[_0x403c[107]](btoa(version)))}},5000)
+var service = "/";
+var inGame = false;
+var version = "1.0.0";
+
+if (typeof (Storage) !== "undefined") {
+    if (localStorage.userdata == null) {
+        if (localStorage.version == undefined || atob(JSON.parse(localStorage.version)) !== version)
+        localStorage.setItem("userdata", "test");
+        localStorage.setItem("playedbefore", "test");
+    }
+    
+}
+
+
+var instr = new Image();
+instr.src = service + "instructions.png";
+var instr2 = new Image();
+instr2.src = service + "instructions2.png";
+
+var skinOne = new Image();
+skinOne.src = service + "skinOne.png";
+var skinTwo = new Image();
+skinTwo.src = service + "skinTwo.png";
+var skinThree = new Image();
+skinThree.src = service + "skinThree.png";
+var skinFour = new Image();
+skinFour.src = service + "skinFour.png";
+
+var skin = skinOne;
+
+var mapDataHub = "sssssssssssaaaaaaasssaaaaaaasssaaaaaaasssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaassssssssssssss";
+var mapDataLevel1 = "sssssssssssssssssssssaaasaaasssacasaaaassaaasaaaassaaaaaaaassaaaaaassssaaaascaassaasaasaassaaaaaaaasssssswwsssscaasaaasssaaaaaasasaaasaaaaasaaaaaasaasaaaaasacasaaasaaaaassaaaassssssasaaasaassaaaaasaassaaascaaassaaasaaasssaasaaaaassaaaaasaassasasaaaassaaaaaassssaaaasawjssaasaaawwssaaawacaassaaasaaaassaaasaaaassacasaaaassaaaaaasassaaaaaasassaaasaaaassaaasaaaassaaasssssssaaaaasaassaaasacaassaaaaasaassaaasacaassaaaaasaassaaasaaaassaaaaaaaassaaaaaasassaaaasaaasswwssssssssaaaaaaaassaaaaaaaasssssssssss";
+
+
+var stone = new Image();
+stone.src = service + "stone.png";
+var wood = new Image();
+wood.src = service + "wood.png";
+var coin = new Image();
+coin.src = service + "coin.png";
+var jumpboost = new Image();
+jumpboost.src = service + "jumpboost.png";
+
+var servers = {};
+var c = document.getElementById("canvas");
+var ctx = c.getContext("2d");
+c.width = window.innerWidth;
+c.height = window.innerHeight;
+
+var drawGrid = function (x, y, stroke, fill, w, h) {
+    ctx.globalAlpha= 1;
+    ctx.lineWidth = 0.3;
+    ctx.fillStyle = fill;
+    ctx.fillRect(x, y, w, h);
+    ctx.beginPath();
+    var xi = 0;
+    var yi = 0;
+    for (var i = 0; i < Math.round(w / 100); i++) {
+        xi = x + i * 100;
+        yi = y + 0;
+        ctx.moveTo(xi, yi);
+        ctx.lineTo(xi, yi + h);
+    }
+    ; for (var j = 0; j < Math.round(h / 100); j++) {
+        xi = x + 0;
+        yi = y + j * 100;
+        ctx.moveTo(xi, yi);
+        ctx.lineTo(xi + w, yi);
+    }
+    ; ctx.strokeStyle = stroke;
+    ctx.stroke();
+};
+drawGrid(0, 0, "#FFFFFF", "#000000", c.width, c.height);
+
+var isNight = true;
+
+sleep.onclick = function () {
+    if (!isNight) {
+        drawGrid(0, 0, "#FFFFFF", "#000000", c.width, c.height);
+        isNight = true;
+        document.getElementById("sleep").style.color = "black";
+        document.getElementById("sleep").style.backgroundColor = "white";
+        document.getElementById("sleep").textContent = "Turn Nightmode OFF";
+    }
+    else {
+        drawGrid(0, 0, "#000000", "#FFFFFF", c.width, c.height);
+        isNight = false;
+        document.getElementById("sleep").style.color = "white";
+        document.getElementById("sleep").style.backgroundColor = "black";
+        document.getElementById("sleep").textContent = "Turn Nightmode ON";
+    }
+    
+}
+
+btl.onclick = function () {
+    skin = skinOne;
+    document.getElementById("selimg").src = "skinOneTop.png";
+}
+btr.onclick = function () {
+    skin = skinTwo;
+    document.getElementById("selimg").src = "skinTwoTop.png";   
+}
+bbl.onclick = function () {
+    skin = skinThree;
+    document.getElementById("selimg").src = "skinThreeTop.png";   
+}
+bbr.onclick = function () {
+    skin = skinFour;
+    document.getElementById("selimg").src = "skinFourTop.png";
+}
+
+var stones = [];
+var woods = [];
+var coins = [];
+var jumpboosts = [];
+var user = {
+    level1: 0,
+    level1time: 0,
+    level2: 0,
+    level2time: 0,
+    level3: 0,
+    level3time: 0,
+    level4: 0,
+    level4time: 0,
+    level5: 0,
+    level5time: 0,
+    level6: 0,
+    level6time: 0,
+    coins: 0,
+    jump: 20,
+    x: 250,
+    y: 695,
+    rot: false
+};
+
+
+var moveleft = 0;
+var moveright = 0;
+var moveup = 0;
+var jumptime = 0;
+var runtime = 0;
+
+const HUB = 00;
+const LEVEL1 = 01;
+const LEVEL2 = 02;
+const LEVEL3 = 03;
+const LEVEL4 = 04;
+const LEVEL5 = 05;
+const LEVEL6 = 06;
+
+var mapData = mapDataHub;
+var currentMap = HUB;
+
+var finishedTut = false;
+
+if (typeof (Storage) !== "undefined") {
+    if (!(localStorage.userdata == "test")) {        
+            userdata = (JSON.parse(atob(localStorage.userdata)));
+            tut = atob(JSON.parse(localStorage.playedbefore));
+            last = parseInt(atob(JSON.parse(localStorage.lastmap)));
+            lastData = atob(JSON.parse(localStorage.lastmapData));
+            user.level1 = userdata.level1;
+            user.level1time = userdata.level1time;
+            user.level2 = userdata.level2;
+            user.level2time = userdata.level2time;
+            user.level3 = userdata.level3;
+            user.level3time = userdata.level3time;
+            user.level4 = userdata.level4;
+            user.level4time = userdata.level4time;
+            user.level5 = userdata.level5;
+            user.level5time = userdata.level5time;
+            user.level6 = userdata.level6;
+            user.level6time = userdata.level6time;
+            user.coins = userdata.coins;
+            user.jump = userdata.jump;
+            user.x = userdata.x;
+            user.y = userdata.y;
+            user.rot = userdata.rot;
+            finishedTut = tut;
+            currentMap = last;
+            mapData = lastData;          
+    }
+}
+
+showInstructions = function () {
+    if (!finishedTut) {
+        if (currentMap == HUB) {
+            ctx.drawImage(instr, 200 - user.x + c.width / 2, 400 - user.y + + c.height / 2, 200, 200);
+            ctx.drawImage(instr2, 600 - user.x + c.width / 2, 200 - user.y + + c.height / 2, 200, 200);
+        } else if (currentMap == LEVEL1) {
+            ctx.drawImage(instr, 200 - user.x + c.width / 2, 400 - user.y + + c.height / 2, 200, 200);
+            ctx.drawImage(instr2, 600 - user.x + c.width / 2, 200 - user.y + + c.height / 2, 200, 200);
+        }
+    }   
+}
+
+
+
+startGame = function () {
+    inGame = true;
+
+    document.getElementById("menu").style.visibility = "hidden";
+    document.getElementById("nite").style.visibility = "hidden";
+    document.getElementById("selected").style.visibility = "hidden";
+    document.getElementById("character").style.visibility = "hidden";
+
+    if (isNight) {
+        drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", 13000, 7000);
+
+    }
+    else {
+        drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#000000", "#FFFFFF", 13000, 7000);
+    }
+
+    var map = new Array(50);
+    for (var i = 0; i < 50; i++) {
+        map[i] = new Array(10);
+    }
+
+    createObject = function (type, x, y) {
+        switch (type) {
+            case 0:
+                var obj = {
+                    x: x,
+                    y: y,
+                    type: stone
+                };
+                obj.draw = function () {
+                    if (stone.complete) {
+                        ctx.drawImage(stone, obj.x - 50 - user.x + c.width / 2, obj.y - 50 - user.y + c.height / 2, 100, 100);
+                    }
+                }
+                return obj;
+                break;
+            case 1:
+                var obj = {
+                    health: 5,
+                    x: x,
+                    y: y,
+                    type: wood
+                };
+                obj.draw = function () {
+                    if (wood.complete) {
+                        ctx.drawImage(wood, obj.x - 50 - user.x + c.width / 2, obj.y - 50 - user.y + c.height / 2, 100, 100);
+                    }
+                }
+                return obj;
+                break;
+            case 2:
+                var obj = {
+                    collect: false,
+                    x: x,
+                    y: y,
+                    type: coin
+                };
+                obj.draw = function () {
+                    if (coin.complete) {
+                        ctx.drawImage(coin, obj.x - 50 - user.x + c.width / 2, obj.y - 50 - user.y + c.height / 2, 100, 100);
+                    }
+                }
+                return obj;
+                break;
+            case 3:
+                var obj = {
+                    collect: false,
+                    cooldown: 750,
+                    x: x,
+                    y: y,
+                    type: jumpboost
+                };
+                obj.draw = function () {
+                    if (jumpboost.complete) {
+                        ctx.drawImage(jumpboost, obj.x - 50 - user.x + c.width / 2, obj.y - 50 - user.y + c.height / 2, 100, 100);
+                    }
+                }
+                return obj;
+                break;
+            default:
+                break;
+        }
+    }
+
+    createMap = function () {
+        var initialize = 0;
+        for (var i = 0; i < 50; i++) {
+            for (var j = 0; j < 10; j++) {
+                switch (mapData.charAt(initialize)) {
+                    case "s":
+                        stones.push(createObject(0, 50 + 100 * i, 50 + 100 * j));
+                        break;
+                    case "w":
+                        woods.push(createObject(1, 50 + 100 * i, 50 + 100 * j));
+                        break;
+                    case "c":
+                        coins.push(createObject(2, 50 + 100 * i, 50 + 100 * j));
+                        break;
+                    case "j":
+                        jumpboosts.push(createObject(3, 50 + 100 * i, 50 + 100 * j));
+                    default:
+                        break;
+                }
+                initialize++
+            }
+        }
+    }
+    createMap();
+
+    document.onmousemove = function (event) {
+        if (inGame) {
+            var cx = c.width / 2;
+            var mouseX = event.pageX;
+            if (cx > mouseX) {
+                user.rot = true;
+            } else {
+                user.rot = false;
+            }
+        }
+    }
+
+    document.onclick = function (event) {
+        if (inGame) {
+            var mouseX = event.pageX;
+            var mouseY = event.pageY;
+            for (var i in woods) {
+                if (user.x - c.width / 2 + mouseX - woods[i].x < 50 && user.x - c.width / 2 + mouseX - woods[i].x > - 50) {
+                    if (user.y - c.height / 2 + mouseY - woods[i].y < 50 && user.y - c.height / 2 + mouseY - woods[i].y > - 50) {
+                        if (woods[i].health > 0) {
+                            woods[i].health--;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    document.onkeydown = function (event) {
+        switch (event.keyCode) {
+            case 68:
+                if (inGame) {
+                    moveright = 5;
+                }
+                return moveright;
+                break;
+            case 83:                
+                if (inGame) {
+                    switch (currentMap) {
+                        case HUB:                            
+                            if (user.x > 650 && user.x < 750) {   
+                                runtime = 0;
+                                stones = [];
+                                woods = [];
+                                coins = [];
+                                jumpboosts = [];
+                                currentMap = LEVEL1;
+                                mapData = mapDataLevel1;
+                                createMap();
+                                user.x = 250;
+                                user.y = 695;
+                            }
+                            break;
+                        case LEVEL1:
+                            if (user.x > 4750) {
+                                if (runtime < user.level1time || user.level1time == 0) {
+                                    user.level1time = runtime;
+                                }
+                                if (user.level1 < user.coins) {
+                                    user.level1 = user.coins;
+                                }
+                                runtime = 0;
+                                finishedTut = true;
+                                stones = [];
+                                woods = [];
+                                coins = [];
+                                jumpboosts = [];
+                                currentMap = HUB;
+                                mapData = mapDataHub;
+                                createMap();
+                                user.x = 250;
+                                user.y = 695;
+                                user.coins = 0;
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                break;
+            case 65:
+                if (inGame) {
+                    moveleft = 5;
+
+                }
+                return moveleft;
+                break;
+            case 87:
+                if (inGame) {
+                    for (var i in stones) {
+                        if (stones[i].y - user.y == 150) {
+                            if (stones[i].x - user.x < 90 && stones[i].x - user.x > -90) {
+                                moveup = user.jump;
+                            }
+                        }
+                    }
+                    for (var i in woods) {
+                        if (stones[i].y - user.y == 150) {
+                            if (woods[i].x - user.x < 90 && woods[i].x - user.x > -90) {
+                                moveup = user.jump;
+                            }
+                        }
+                    }
+
+                }
+                return moveup;
+                break;
+            case 39:
+                if (inGame) {
+                    moveright = 5;
+                }
+                return moveright;
+                break;
+            case 40:
+                if (inGame) {
+                    switch (map) {
+                        case "Hub":
+                            if (user.x > 650 && user.x < 750) {
+                                stones = [];
+                                woods = [];
+                                coins = [];
+                                jumpboosts = [];
+                                map = "level1";
+                                mapData = mapDataLevel1;
+                                initialize();
+                                user.x = 250;
+                                user.y = 695;
+                            }
+                            break;
+                        case "level1":
+                            if (user.x > 4750) {
+                                finishedTut = true;
+                                stones = [];
+                                woods = [];
+                                coins = [];
+                                jumpboosts = [];
+                                map = "Hub";
+                                mapData = mapDataHub;
+                                initialize();
+                                user.x = 250;
+                                user.y = 695;
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                break;
+            case 37:
+                if (inGame) {
+                    moveleft = 5;
+                }
+                return moveleft;
+                break;
+            case 38:
+                if (inGame) {
+                    for (var i in stones) {
+                        if (stones[i].y - user.y == 150) {
+                            if (stones[i].x - user.x < 90 && stones[i].x - user.x > -90) {
+                                moveup = user.jump;
+                            }
+                        }
+                    }
+                    for (var i in woods) {
+                        if (stones[i].y - user.y == 150) {
+                            if (woods[i].x - user.x < 90 && woods[i].x - user.x > -90) {
+                                moveup = user.jump;
+                            }
+                        }
+                    }
+
+                }
+                return moveup;
+                break;
+                return moveup;
+                break;
+        }
+    }
+
+
+
+    document.onkeyup = function (event) {
+        switch (event.keyCode) {
+            case 68:
+                if (inGame) {
+                    moveright = 0;
+                }
+                return moveright;
+                break;
+            case 65:
+                if (inGame) {
+                    moveleft = 0;
+
+                }
+                return moveleft;
+                break;
+
+            case 39:
+                if (inGame) {
+                    moveright = 0;
+                }
+                return moveright;
+                break;
+
+            case 37:
+                if (inGame) {
+                    moveleft = 0;
+                }
+                return moveleft;
+                break;
+        }
+    }
+
+}  
+
+var game = setInterval(function () {
+    runtime += 1;
+
+    var forcemoveleft = 0;
+    var forcemoveright = 0;
+
+    for (var i in stones) {
+        if (stones[i].x - user.x < 90 && user.x - stones[i].x < 90) {
+            if (stones[i].y - user.y + moveup < 150 && stones[i].y - user.y > 0) {
+                moveup = 150 - stones[i].y + user.y;
+            }
+            if (stones[i].y - user.y + moveup > -135 && stones[i].y - user.y < 0) {
+                moveup = -0;
+            }
+        }
+
+        if (stones[i].y - user.y < 150 && user.y - stones[i].y < 135) {
+            if (stones[i].x - user.x < 91 && stones[i].x - user.x > 0) {                
+                forcemoveleft = 5; 
+            }
+            if (user.x - stones[i].x < 91 && user.x - stones[i].x > 0) {
+                forcemoveright = 5;
+            }
+        }
+        
+    }
+    for (var i in woods) {
+        if (woods[i].health > 0) {
+            if (woods[i].x - user.x < 90 && user.x - woods[i].x < 90) {
+                if (woods[i].y - user.y + moveup < 150 && woods[i].y - user.y > 0) {
+                    moveup = 150 - woods[i].y + user.y;
+                }
+                if (woods[i].y - user.y + moveup > -135 && woods[i].y - user.y < 0) {
+                    moveup = -0;
+                }
+            }
+
+            if (woods[i].y - user.y < 150 && user.y - woods[i].y < 150) {
+                if (woods[i].x - user.x < 91 && woods[i].x - user.x > 0) {
+                    forcemoveleft = 5;
+                }
+                if (user.x - woods[i].x < 91 && user.x - woods[i].x > 0) {
+                    forcemoveright = 5;
+                }
+            }
+        }
+    }
+    for (var i in coins) {
+        if (user.x - coins[i].x < 50 && user.x - coins[i].x > -50) {
+            if (user.y - coins[i].y < 100 && user.y - coins[i].y > -100) {
+                if (!coins[i].collect) {
+                    user.coins += 1;
+                    coins[i].collect = true;
+                }               
+            }
+        }
+    }
+    for (var i in jumpboosts) {
+        if (user.x - jumpboosts[i].x < 50 && user.x - jumpboosts[i].x > -50) {
+            if (user.y - jumpboosts[i].y < 100 && user.y - jumpboosts[i].y > -100) {
+                if (!jumpboosts[i].collect) {
+                    jumpboosts[i].collect = true;
+                    jumptime = 250;
+                    jumpboosts[i].cooldown = 750;
+                }                
+            }
+        }
+        if (jumpboosts[i].cooldown > 0) {
+            jumpboosts[i].cooldown--
+        }
+        if (jumpboosts[i].cooldown == 0) {
+            jumpboosts[i].collect = false;  
+        }
+    }
+
+
+
+    if (jumptime > 0) {
+        user.jump = 25;
+        jumptime -= 1;
+    } else {
+        user.jump = 20;
+    }
+
+    if (inGame) {
+        user.x += moveright + forcemoveright ;
+        user.x -= moveleft + forcemoveleft ;
+        user.y -= moveup;
+        moveup -= 1;
+    }
+
+    c.width = window.innerWidth;
+    c.height = window.innerHeight;
+    ctx.clearRect(0, 0, c.width, c.height);
+    ctx.save();
+    if (!inGame) {
+        if (!isNight) {
+            drawGrid(0, 0, "#000000", "#FFFFFF", c.width, c.height); 
+        }
+        else {           
+            drawGrid(0, 0, "#FFFFFF", "#000000", c.width, c.height);
+        }
+    } else {
+        if (isNight) {
+            drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", 13000, 7000);
+
+        }
+        else {
+            drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#000000", "#FFFFFF", 13000, 7000);
+
+        }
+    }
+    ctx.globalAlpha = 1;
+    if (inGame ) {        
+            showInstructions();
+    }    
+
+    for (var i in stones) {
+        stones[i].draw();
+    }
+    for (var i in woods) {
+        if (woods[i].health > 0) {
+            woods[i].draw();
+        }        
+    }
+    for (var i in coins) {
+        if (!coins[i].collect) {
+            coins[i].draw();
+        }       
+    }
+    for (var i in jumpboosts) {
+        if (!jumpboosts[i].collect) {
+            jumpboosts[i].draw();
+        }
+    }
+    ctx.restore();
+    if (inGame) {
+        ctx.save();
+        ctx.translate(c.width / 2, c.height / 2);
+        
+        if (user.rot) {
+            ctx.scale(-1, 1);
+        } else {
+            ctx.scale(1, 1);
+        }        
+        ctx.drawImage(skin, -50, -100, 100, 200);
+        ctx.restore();
+    }
+    
+}, 40)
+
+start = document.getElementById("play");
+
+start.onclick = function () {
+    startGame();
+}
+
+
+var save = setInterval(function () {
+    if (typeof (Storage) !== "undefined") {
+        localStorage.setItem("userdata", btoa(JSON.stringify(user)));
+        localStorage.setItem("playedbefore", JSON.stringify(btoa(finishedTut)));
+        localStorage.setItem("lastmap", JSON.stringify(btoa(currentMap)));
+        localStorage.setItem("lastmapData", JSON.stringify(btoa(mapData)));
+        localStorage.setItem("version", JSON.stringify(btoa(version)));
+    }
+},5000)
