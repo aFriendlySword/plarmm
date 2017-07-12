@@ -156,6 +156,7 @@ if (typeof (Storage) !== "undefined") {
         userdata = JSON.parse(localStorage.userdata);
         tut = JSON.parse(localStorage.playedbefore);
         last = JSON.parse(localStorage.lastmap);
+        lastData = JSON.parse(localStorage.lastmapData)
         user.level1 = userdata.level1;
         user.level1time = userdata.level1time;
         user.level2 = userdata.level2;
@@ -175,6 +176,7 @@ if (typeof (Storage) !== "undefined") {
         user.rot = userdata.rot;
         finishedTut = tut;
         currentMap = last;
+        mapData = lastData;
     }
 }
 
@@ -670,5 +672,6 @@ var save = setInterval(function () {
         localStorage.setItem("userdata", JSON.stringify(user));
         localStorage.setItem("playedbefore", JSON.stringify(finishedTut));
         localStorage.setItem("lastmap", JSON.stringify(currentMap));
+        localStorage.setItem("lastmapData", JSON.stringify(mapData));
     }
 },5000)
