@@ -107,6 +107,7 @@ var user = {
 var moveleft = 0;
 var moveright = 0;
 var moveup = 0;
+var jumptime = 0;
 
 
 startGame = function () {
