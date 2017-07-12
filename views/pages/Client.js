@@ -220,15 +220,6 @@ startGame = function () {
     document.getElementById("coins").style.visibility = "hidden";
     document.getElementById("times").style.visibility = "hidden";
 
-    document.keydown = function (event) {
-        if (event.keyCode == 17 && (event.keyCode == 61 || event.keyCode == 107 || event.keyCode == 173 || event.keyCode == 109 || event.keyCode == 187 || event.keyCode == 189)) {
-            event.preventDefault();
-        }
-
-    };
-
-
-
     if (isNight) {
         drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", 13000, 7000);
 
