@@ -40,7 +40,7 @@ var skin = skinOne;
 
 var mapDataHub = "sssssssssssaaaaaaasssaaaaaaasssaaaaaaasssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaassssssssssssss";
 var mapDataLevel1 = "sssssssssssssssssssssaaasaaasssacasaaaassaaasaaaassaaaaaaaassaaaaaassssaaaascaassaasaasaassaaaaaaaasssssswwsssscaasaaasssaaaaaasasaaasaaaaasaaaaaasaasaaaaasacasaaasaaaaassaaaassssssasaaasaassaaaaasaassaaascaaassaaasaaasssaasaaaaassaaaaasaassasasaaaassaaaaaassssaaaasawjssaasaaawwssaaawacaassaaasaaaassaaasaaaassacasaaaassaaaaaasassaaaaaasassaaasaaaassaaasaaaassaaasssssssaaaaasaassaaasacaassaaaaasaassaaasacaassaaaaasaassaaasaaaassaaaaaaaassaaaaaasassaaaasaaasswwssssssssaaaaaaaassaaaaaaaasssssssssss";
-
+var mapDataLevel2 = "sssssssssssaaaacawjssaaaaaaawssaaaaaaaassaaaaaaaassaaaasssssaaaaaaaalsaaaaassssaaaaaaaalsaaaaaasssaaaaaaaassaaaaaaaassaaacaaasssaaaaaassssaaaaaaasssaaaaaaaassaaaaaasassaaaaasaassaacasaaassaaaaaaaassaaaaaaaalsaassaaaalsaaaaaaaassaaaaaassssaaaaaaacsssssswwssssacsaaassssaaaaaaasssaaasaaaassaaaaaasassaaaaaaaalsaaaasaaalsaaaaaaaalsaaaaaasalsaaaaaaaalsaaaasaaalaaasaaaaalaaaaaaaaalaaaaaaaaalaaaaaaaaalsaaaaaaasssaaaaasaassaaaaaaaalsaaaaaasassaaaaaaaassaaaaasssssaaaassssssaaaaaaaassaacaaaaasssssssssss";
 
 var stone = new Image();
 stone.src = service + "stone.png";
@@ -50,6 +50,8 @@ var coin = new Image();
 coin.src = service + "coin.png";
 var jumpboost = new Image();
 jumpboost.src = service + "jumpboost.png";
+var lava = new Image();
+lava.src = service + "lava.png";
 
 var servers = {};
 var c = document.getElementById("canvas");
@@ -133,6 +135,7 @@ var stones = [];
 var woods = [];
 var coins = [];
 var jumpboosts = [];
+var lavas = [];
 var user = {
     level1: 0,
     level1time: 0,
@@ -303,6 +306,19 @@ startGame = function () {
                 }
                 return obj;
                 break;
+            case 4:
+                var obj = {
+                    x: x,
+                    y: y,
+                    type: lava
+                };
+                obj.draw = function () {
+                    if (lava.complete) {
+                        ctx.drawImage(lava, obj.x - 50 - user.x + c.width / 2, obj.y - 50 - user.y + c.height / 2, 100, 100);
+                    }
+                }
+                return obj;
+                break;
             default:
                 break;
         }
@@ -324,6 +340,8 @@ startGame = function () {
                         break;
                     case "j":
                         jumpboosts.push(createObject(3, 50 + 100 * i, 50 + 100 * j));
+                    case "l":
+                        lavas.push(createObject(4, 50 + 100 * i, 50 + 100 * j));
                     default:
                         break;
                 }
@@ -386,6 +404,19 @@ startGame = function () {
                                 user.x = 250;
                                 user.y = 695;
                             }
+                            if (user.x > 1450 && user.x < 1550) {
+                                runtime = 0;
+                                stones = [];
+                                woods = [];
+                                coins = [];
+                                jumpboosts = [];
+                                currentMap = LEVEL2;
+                                mapData = mapDataLevel2;
+                                createMap();
+                                user.x = 250;
+                                user.y = 695;
+                            }
+
                             break;
                         case LEVEL1:
                             if (user.x > 4750) {
@@ -409,6 +440,29 @@ startGame = function () {
                                 user.coins = 0;
                             }
                             break;
+                        case LEVEL2:
+                            if (user.x > 4750) {
+                                if (runtime < user.level2time || user.level2time == 0) {
+                                    user.level2time = runtime;
+                                }
+                                if (user.level2 < user.coins) {
+                                    user.level2 = user.coins;
+                                }
+                                runtime = 0;
+                                finishedTut = true;
+                                stones = [];
+                                woods = [];
+                                coins = [];
+                                jumpboosts = [];
+                                currentMap = HUB;
+                                mapData = mapDataHub;
+                                createMap();
+                                user.x = 250;
+                                user.y = 695;
+                                user.coins = 0;
+                            }
+                            break;
+
                         default:
                             break;
                     }
