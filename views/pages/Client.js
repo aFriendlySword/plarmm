@@ -4,7 +4,7 @@ var version = "1.0.0";
 
 if (typeof (Storage) !== "undefined") {
     if (localStorage.userdata == null) {
-        if ((localStorage.version == undefined) || (atob(JSON.parse(localStorage.version)) !== version) {
+        if ((localStorage.version == undefined) || (atob(JSON.parse(localStorage.version)) !== version)) {
             localStorage.setItem("userdata", "test");
             localStorage.setItem("playedbefore", "test");
         } 
