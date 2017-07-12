@@ -340,8 +340,10 @@ startGame = function () {
                         break;
                     case "j":
                         jumpboosts.push(createObject(3, 50 + 100 * i, 50 + 100 * j));
+                        break;
                     case "l":
                         lavas.push(createObject(4, 50 + 100 * i, 50 + 100 * j));
+                        break;
                     default:
                         break;
                 }
