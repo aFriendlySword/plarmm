@@ -227,11 +227,6 @@ startGame = function () {
 
     };
 
-    window.bind('mousewheel DOMMouseScroll', function (event) {
-        if (event.ctrlKey == true) {
-            event.preventDefault();
-        }
-    });
 
 
     if (isNight) {
