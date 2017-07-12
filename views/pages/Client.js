@@ -111,7 +111,7 @@ bbr.onclick = function () {
     document.getElementById("selimg").src = "skinFourTop.png";
 }
 
-btnswitch.onclick = fucntion() {
+btnswitch.onclick = function() {
     if (display == "times") {
         display == "coins";
         document.getElementById("switch").style.right = "155px";       
