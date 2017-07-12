@@ -25,7 +25,33 @@
                 </div>
                 <button id="play" type="button">Play</button>
             </div>
-            <div id="stats"></div>
+            <div id="stats">
+                <div id="stats-inner">
+                    <div id="times">
+                        <div id="level1">
+                            <div id="level1-inner" class="level-inner">Level 1:</div>
+                        </div>
+                        <div id="level2">
+                            <div id="level2-inner" class="level-inner"> Level 2:</div>
+                        </div>
+                        <div id="level3">
+                            <div id="level3-inner" class="level-inner"> Level 3:</div>
+                        </div>
+                        <div id="level4">
+                            <div id="level4-inner" class="level-inner"> Level 4:</div>
+                        </div>
+                        <div id="level5">
+                            <div id="level5-inner" class="level-inner"> Level 5:</div>
+                        </div>
+                        <div id="level6">
+                            <div id="level6-inner" class="level-inner"> Level 6:</div>
+                        </div>
+                    </div>
+                    <div id="coins">
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div id="selected"><div id="imgsel"><img id="selimg" src="/skinOneTop.png" /></div></div>
@@ -134,12 +160,68 @@
         }
         #stats {
             position: absolute;
-            border-radius:25px;
+            border-radius:20px;
             top: 25px;
             left: 270px;
             background-color: darkgray;
             width: 175px;
             height: 220px;
+        }
+        #stats-inner {
+            position:absolute;
+            top:20px;
+            left:20px;
+        }
+        #level1 {
+            position: absolute;
+            background-color: #24d5e5;
+            border-radius: 10px 10px 0px 0px;
+            width:135px;
+            height: 30px;
+            
+        }
+        #level2 {
+            position: absolute;
+            background-color: #24d5e5;
+            top: 30px;
+            width: 135px;
+            height: 30px;
+        }
+        #level3 {
+            position: absolute;
+            background-color: #24d5e5;
+            top: 60px;
+            width: 135px;
+            height: 30px;
+        }
+        #level4 {
+            position: absolute;
+            background-color: #24d5e5;
+            top: 90px;
+            width: 135px;
+            height: 30px;
+        }
+        #level5 {
+            position: absolute;
+            background-color: #24d5e5;
+            top: 120px;
+            width: 135px;
+            height: 30px;
+        }
+        #level6 {
+            position: absolute;
+            background-color: #24d5e5;
+            border-radius: 0px 0px 10px 10px;
+            width: 135px;
+            height: 30px;
+            top: 150px;
+        }
+        .level-inner {
+            position: absolute;
+            top:8px;
+            left:10px;
+            font-size: 14px;
+            width: 115px;
         }
         #character {            
             visibility: visible;

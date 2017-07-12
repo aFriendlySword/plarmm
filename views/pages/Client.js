@@ -623,6 +623,15 @@ var game = setInterval(function () {
         else {           
             drawGrid(0, 0, "#FFFFFF", "#000000", c.width, c.height);
         }
+
+        document.getElementById("level1-inner").value = "Level 1: " + user.level1time / 25 + "sec";
+        document.getElementById("level2-inner").value = "Level 2: " + user.level1time / 25 + "sec";
+        document.getElementById("level3-inner").value = "Level 3: " + user.level1time / 25 + "sec";
+        document.getElementById("level4-inner").value = "Level 4: " + user.level1time / 25 + "sec";
+        document.getElementById("level5-inner").value = "Level 5: " + user.level1time / 25 + "sec";
+        document.getElementById("level6-inner").value = "Level 6: " + user.level1time / 25 + "sec";
+
+
     } else {
         if (isNight) {
             drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", 13000, 7000);
