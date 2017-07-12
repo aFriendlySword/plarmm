@@ -131,6 +131,26 @@ var user = {
     rot: false
 };
 
+
+var moveleft = 0;
+var moveright = 0;
+var moveup = 0;
+var jumptime = 0;
+var runtime = 0;
+
+const HUB = 00;
+const LEVEL1 = 01;
+const LEVEL2 = 02;
+const LEVEL3 = 03;
+const LEVEL4 = 04;
+const LEVEL5 = 05;
+const LEVEL6 = 06;
+
+var mapData = mapDataHub;
+var currentMap = HUB;
+
+var finishedTut = false;
+
 if (typeof (Storage) !== "undefined") {
     if (!(localStorage.userdata == "test")) {
         userdata = JSON.parse(localStorage.userdata);
@@ -156,29 +176,7 @@ if (typeof (Storage) !== "undefined") {
         finishedTut = tut;
         currentMap = last;
     }
-   
-}
 
-
-
-var moveleft = 0;
-var moveright = 0;
-var moveup = 0;
-var jumptime = 0;
-var runtime = 0;
-
-const HUB = 00;
-const LEVEL1 = 01;
-const LEVEL2 = 02;
-const LEVEL3 = 03;
-const LEVEL4 = 04;
-const LEVEL5 = 05;
-const LEVEL6 = 06;
-
-var mapData = mapDataHub;
-var currentMap = HUB;
-
-var finishedTut = false;
 
 showInstructions = function () {
     if (!finishedTut) {
@@ -191,6 +189,7 @@ showInstructions = function () {
         }
     }   
 }
+
 
 
 startGame = function () {
