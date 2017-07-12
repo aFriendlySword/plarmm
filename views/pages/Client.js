@@ -212,7 +212,7 @@ showInstructions = function () {
             ctx.drawImage(instr2, 600 - user.x + c.width / 2, 200 - user.y + + c.height / 2, 200, 200);
         } else if (currentMap == LEVEL1) {
             ctx.drawImage(instr3, 500 - user.x + c.width / 2, 200 - user.y + + c.height / 2, 300, 100);
-            ctx.drawImage(instr4, 1100 - user.x + c.width / 2, 550 - user.y + + c.height / 2, 200, 200);
+            ctx.drawImage(instr4, 1100 - user.x + c.width / 2, 550 - user.y + + c.height / 2, 300, 100);
         }
     }   
 }
