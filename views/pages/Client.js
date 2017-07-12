@@ -527,16 +527,20 @@ var game = setInterval(function () {
     for (var i in coins) {
         if (user.x - coins[i].x < 50 && user.x - coins[i].x > -50) {
             if (user.y - coins[i].y < 100 && user.y - coins[i].y > -100) {
-                user.coins += 1;
-                coins[i].collect = true;
+                if (!coins[i].collect) {
+                    user.coins += 1;
+                    coins[i].collect = true;
+                }               
             }
         }
     }
     for (var i in jumpboosts) {
         if (user.x - jumpboosts[i].x < 50 && user.x - jumpboosts[i].x > -50) {
             if (user.y - jumpboosts[i].y < 100 && user.y - jumpboosts[i].y > -100) {
-                jumpboosts[i].collect = true;
-                jumptime = 250;
+                if (!jumpboosts[i].collect) {
+                    jumpboosts[i].collect = true;
+                    jumptime = 250;
+                }                
             }
         }
     }
