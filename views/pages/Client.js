@@ -488,13 +488,15 @@ var game = setInterval(function () {
     for (var i in jumpboosts) {
         if (user.x - jumpboosts[i].x < 50 && user.x - jumpboosts[i].x > -50) {
             if (user.y - jumpboosts[i].y < 100 && user.y - jumpboosts[i].y > -100) {
-                user.jump += 5;
                 jumpboosts[i].collect = true;
                 jumptime = 250;
             }
         }
     }
     jumptime -= 1;
+    if (jumptime > 0) {
+        user.jump = 25;
+    }
 
     if (inGame) {
         user.x += moveright + forcemoveright ;
