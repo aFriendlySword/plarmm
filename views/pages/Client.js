@@ -179,12 +179,12 @@ var finishedTut = false;
 if (typeof (Storage) !== "undefined") {
     if (!(localStorage.userdata == "test")) {
         try {
-            userdata = (JSON.parse(atob(localStorage.userdata)));
-            tut = atob(JSON.parse(localStorage.playedbefore));
-            last = parseInt(atob(JSON.parse(localStorage.lastmap)));
-            lastData = atob(JSON.parse(localStorage.lastmapData));
-            lastTime = atob(JSON.parse(localStorage.time));
-            healthArr = JSON.parse(atob(localStorage.health));
+            var userdata = (JSON.parse(atob(localStorage.userdata)));
+            var tut = atob(JSON.parse(localStorage.playedbefore));
+            var last = parseInt(atob(JSON.parse(localStorage.lastmap)));
+            var lastData = atob(JSON.parse(localStorage.lastmapData));
+            var lastTime = atob(JSON.parse(localStorage.time));
+            var healthArr = JSON.parse(atob(localStorage.health));
 
             user.level1 = userdata.level1;
             user.level1time = userdata.level1time;
