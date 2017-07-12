@@ -206,12 +206,12 @@ if (typeof (Storage) !== "undefined") {
             finishedTut = tut;
             currentMap = last;
             mapData = lastData;
-            runtime = lastTime;
-            return healthArr;
+            runtime = lastTime;            
         }
         catch (err) {
             localStorage.userdata = "test";
         }
+        
     }
 }
 
