@@ -114,16 +114,26 @@ var moveright = 0;
 var moveup = 0;
 var jumptime = 0;
 
+const HUB = 00;
+const LEVEL1 = 01;
+
+var finishedTut = false;
+
 showInstructions = function () {
-    ctx.drawImage(instr, 200 - user.x + c.width / 2, 400 - user.y + + c.height / 2, 200, 200);
-    ctx.drawImage(instr2, 600 - user.x + c.width / 2, 200 - user.y + + c.height / 2, 200, 200);
+    if (!finishedTut) {
+        if (currentMap == HUB) {
+            ctx.drawImage(instr, 200 - user.x + c.width / 2, 400 - user.y + + c.height / 2, 200, 200);
+            ctx.drawImage(instr2, 600 - user.x + c.width / 2, 200 - user.y + + c.height / 2, 200, 200);
+        } else if (currentMap == LEVEL1) {
+            ctx.drawImage(instr, 200 - user.x + c.width / 2, 400 - user.y + + c.height / 2, 200, 200);
+            ctx.drawImage(instr2, 600 - user.x + c.width / 2, 200 - user.y + + c.height / 2, 200, 200);
+        }
+    }   
 }
 
 
 startGame = function () {
     inGame = true;
-    const HUB = 00;
-    const LEVEL1 = 01;
 
 
     var mapData = mapDataHub;
@@ -290,6 +300,7 @@ startGame = function () {
                             break;
                         case LEVEL1:
                             if (user.x > 4750) {
+                                finishedTut = true;
                                 stones = [];
                                 woods = [];
                                 coins = [];
@@ -357,6 +368,7 @@ startGame = function () {
                             break;
                         case "level1":
                             if (user.x > 4750) {
+                                finishedTut = true;
                                 stones = [];
                                 woods = [];
                                 coins = [];
@@ -440,7 +452,6 @@ startGame = function () {
 
 }  
 
-var time = 1000;
 var game = setInterval(function () {
     
 
@@ -541,11 +552,8 @@ var game = setInterval(function () {
         }
     }
     ctx.globalAlpha = 1;
-    if (inGame) {
-        if (time > 0) {
-            time -= 1
+    if (inGame ) {        
             showInstructions();
-        }
     }    
 
     for (var i in stones) {
