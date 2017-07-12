@@ -113,9 +113,11 @@ bbr.onclick = function () {
 
 btnswitch.onclick = function() {
     if (display == "times") {
-        display = "coins";              
+        display = "coins";
+        document.getElementById("switch").style.right = "155px";
     } else {
         display = "times";
+        document.getElementById("switch").style.right = "0px";
     }
 }
 
