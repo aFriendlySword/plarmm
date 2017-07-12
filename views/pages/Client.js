@@ -487,7 +487,7 @@ var game = setInterval(function () {
     }
     for (var i in jumpboosts) {
         if (user.x - jumpboosts[i].x < 50 && user.x - jumpboosts[i].x > 50) {
-            if (user.y - jumpboosts[i].y < 75 && user.y - jumpboosts[i].y > 75) {
+            if (user.y - jumpboosts[i].y < 100 && user.y - jumpboosts[i].y > 100) {
                 user.jumpheight += 5;
                 jumpboosts[i].collect = true;
                 jumptime = 250;
