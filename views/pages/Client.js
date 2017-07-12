@@ -132,7 +132,7 @@ var user = {
 };
 
 if (typeof (Storage) !== "undefined") {
-    if (localStorage.userdata !== "Test") {
+    if (!(localStorage.userdata == "Test")) {
         userdata = JSON.parse(localStorage.userdata);
         tut = JSON.parse(localStorage.playedbefore);
         last = JSON.parse(localStorage.lastmap);
