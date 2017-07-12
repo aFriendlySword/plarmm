@@ -1,6 +1,9 @@
 var service = "/";
 var inGame = false;
 
+var instr = new Image();
+instr.src = service + "instructions.png"
+
 var skinOne = new Image();
 skinOne.src = service + "skinOne.png";
 var skinTwo = new Image();
@@ -131,6 +134,12 @@ startGame = function () {
     else {
         drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#000000", "#FFFFFF", 13000, 7000);
     }
+
+    showInstructions = function () {
+        ctx.drawImage(instr, 200 - user.x, 400 - user.y, 200, 200);
+    }
+
+
 
     var map = new Array(50);
     for (var i = 0; i < 50; i++) {
@@ -346,7 +355,7 @@ startGame = function () {
                             }
                             break;
                         case "level1":
-                            if (user.x > 4850) {
+                            if (user.x > 4750) {
                                 stones = [];
                                 woods = [];
                                 coins = [];
@@ -430,8 +439,12 @@ startGame = function () {
 
 }  
 
-
+var time = 1000;
 var game = setInterval(function () {
+    if (time > 0) {
+        time -= 1
+        showInstructions();
+    }
 
     var forcemoveleft = 0;
     var forcemoveright = 0;
@@ -493,9 +506,10 @@ var game = setInterval(function () {
             }
         }
     }
-    jumptime -= 1;
+    
     if (jumptime > 0) {
         user.jump = 25;
+        jumptime -= 1;
     } else {
         user.jump = 20;
     }
