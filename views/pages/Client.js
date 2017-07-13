@@ -415,7 +415,7 @@ startGame = function () {
 }  
 
 stopGame = function () {
-    inGame = true;
+    inGame = false;
 
     document.getElementById("menu").style.visibility = "visible";
     document.getElementById("nite").style.visibility = "visible";
@@ -614,7 +614,9 @@ document.onkeydown = function (event) {
     }
 
     var game = setInterval(function () {
-        runtime += 1;
+        if (inGame) {
+            runtime += 1;
+        }        
 
         var forcemoveleft = 0;
         var forcemoveright = 0;
