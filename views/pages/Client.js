@@ -184,6 +184,9 @@ if (typeof (Storage) !== "undefined") {
             var lastData = atob(JSON.parse(localStorage.lastmapData));
             var lastTime = atob(JSON.parse(localStorage.time));
             var healthArr = JSON.parse(atob(localStorage.health));
+            var coinCollArr = JSON.parse(atob(localStorage.coins));
+            var jumpCollArr = JSON.parse(atob(localStorage.jumps));
+
 
             user.level1 = userdata.level1;
             user.level1time = userdata.level1time;
@@ -362,6 +365,12 @@ startGame = function () {
             try {
                 for (var i in woods) {
                     woods[i].health = healthArr[i];
+                }
+                for (var i in coins) {
+                    coins[i].collect = coinCollArr[i];
+                }
+                for (var i in jumpboosts) {
+                    jumpboosts[i].collect = jumpCollArr[i];
                 }
             }
             catch (err) {
@@ -902,12 +911,26 @@ start.onclick = function () {
 var save = setInterval(function () {
     if (tested) {
         var health = [];
+        var coinCollected = [];
+        var jumpBoostCollected = [];
         healthfunc = function () {
             for (var i in woods) {
                 health.push(woods[i].health);
             }
         }
+        var didCollectCoin = function () {
+            for (var i in coins) {
+                coinCollected.push(coins[i].collect);
+            }
+        }
+        var didCollectJump = function () {
+            for (var i in coins) {
+                jumpBoostCollected.push(jumpboosts[i].collect);
+            }
+        }
         healthfunc();
+        didCollectCoin();
+        didCollectJump();
         if (typeof (Storage) !== "undefined") {
             localStorage.setItem("userdata", btoa(JSON.stringify(user)));
             localStorage.setItem("playedbefore", JSON.stringify(btoa(finishedTut)));
@@ -916,6 +939,8 @@ var save = setInterval(function () {
             localStorage.setItem("version", JSON.stringify(btoa(version)));
             localStorage.setItem("time", JSON.stringify(btoa(runtime)));
             localStorage.setItem("health", btoa(JSON.stringify(health)));
+            localStorage.setItem("coins", btoa(JSON.stringify(coinCollected)));
+            localStorage.setItem("jumps", btoa(JSON.stringify(jumpBoostCollected)));
         }
     }   
 },1000)
