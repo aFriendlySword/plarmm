@@ -565,6 +565,7 @@ document.onkeydown = function (event) {
             return moveup;
             break;
     }
+}
 
     document.onkeyup = function (event) {
         switch (event.keyCode) {
@@ -596,301 +597,301 @@ document.onkeydown = function (event) {
                 return moveleft;
                 break;
         }
-    }    
-
-var game = setInterval(function () {
-    runtime += 1;
-
-    var forcemoveleft = 0;
-    var forcemoveright = 0;
-
-    for (var i in stones) {
-        if (stones[i].x - user.x < 90 && user.x - stones[i].x < 90) {
-            if (stones[i].y - user.y + moveup < 150 && stones[i].y - user.y > 0) {
-                moveup = 150 - stones[i].y + user.y;
-            }
-            if (stones[i].y - user.y + moveup > -135 && stones[i].y - user.y < 0) {
-                moveup = -0;
-            }
-        }
-
-        if (stones[i].y - user.y < 150 && user.y - stones[i].y < 135) {
-            if (stones[i].x - user.x < 91 && stones[i].x - user.x > 0) {                
-                forcemoveleft = 5; 
-            }
-            if (user.x - stones[i].x < 91 && user.x - stones[i].x > 0) {
-                forcemoveright = 5;
-            }
-        }
-        
     }
-    for (var i in woods) {
-        if (woods[i].health > 0) {
-            if (woods[i].x - user.x < 90 && user.x - woods[i].x < 90) {
-                if (woods[i].y - user.y + moveup < 150 && woods[i].y - user.y > 0) {
-                    moveup = 150 - woods[i].y + user.y;
+
+    var game = setInterval(function () {
+        runtime += 1;
+
+        var forcemoveleft = 0;
+        var forcemoveright = 0;
+
+        for (var i in stones) {
+            if (stones[i].x - user.x < 90 && user.x - stones[i].x < 90) {
+                if (stones[i].y - user.y + moveup < 150 && stones[i].y - user.y > 0) {
+                    moveup = 150 - stones[i].y + user.y;
                 }
-                if (woods[i].y - user.y + moveup > -135 && woods[i].y - user.y < 0) {
+                if (stones[i].y - user.y + moveup > -135 && stones[i].y - user.y < 0) {
                     moveup = -0;
                 }
             }
 
-            if (woods[i].y - user.y < 150 && user.y - woods[i].y < 150) {
-                if (woods[i].x - user.x < 91 && woods[i].x - user.x > 0) {
+            if (stones[i].y - user.y < 150 && user.y - stones[i].y < 135) {
+                if (stones[i].x - user.x < 91 && stones[i].x - user.x > 0) {
                     forcemoveleft = 5;
                 }
-                if (user.x - woods[i].x < 91 && user.x - woods[i].x > 0) {
+                if (user.x - stones[i].x < 91 && user.x - stones[i].x > 0) {
                     forcemoveright = 5;
                 }
             }
+
         }
-    }
-    for (var i in coins) {
-        if (user.x - coins[i].x < 50 && user.x - coins[i].x > -50) {
-            if (user.y - coins[i].y < 100 && user.y - coins[i].y > -100) {
-                if (!coins[i].collect) {
-                    user.coins += 1;
-                    coins[i].collect = true;
-                }               
+        for (var i in woods) {
+            if (woods[i].health > 0) {
+                if (woods[i].x - user.x < 90 && user.x - woods[i].x < 90) {
+                    if (woods[i].y - user.y + moveup < 150 && woods[i].y - user.y > 0) {
+                        moveup = 150 - woods[i].y + user.y;
+                    }
+                    if (woods[i].y - user.y + moveup > -135 && woods[i].y - user.y < 0) {
+                        moveup = -0;
+                    }
+                }
+
+                if (woods[i].y - user.y < 150 && user.y - woods[i].y < 150) {
+                    if (woods[i].x - user.x < 91 && woods[i].x - user.x > 0) {
+                        forcemoveleft = 5;
+                    }
+                    if (user.x - woods[i].x < 91 && user.x - woods[i].x > 0) {
+                        forcemoveright = 5;
+                    }
+                }
             }
         }
-    }
-    for (var i in jumpboosts) {
-        if (user.x - jumpboosts[i].x < 50 && user.x - jumpboosts[i].x > -50) {
-            if (user.y - jumpboosts[i].y < 100 && user.y - jumpboosts[i].y > -100) {
-                if (!jumpboosts[i].collect) {
-                    jumpboosts[i].collect = true;
-                    jumptime = 250;
-                    jumpboosts[i].cooldown = 750;
-                }                
+        for (var i in coins) {
+            if (user.x - coins[i].x < 50 && user.x - coins[i].x > -50) {
+                if (user.y - coins[i].y < 100 && user.y - coins[i].y > -100) {
+                    if (!coins[i].collect) {
+                        user.coins += 1;
+                        coins[i].collect = true;
+                    }
+                }
             }
         }
-        if (jumpboosts[i].cooldown > 0) {
-            jumpboosts[i].cooldown--
-        }
-        if (jumpboosts[i].cooldown == 0) {
-            jumpboosts[i].collect = false;  
-        }
-    }
-    for (var i in lavas) {
-        if (lavas[i].x - user.x < 90 && user.x - lavas[i].x < 90) {
-            if (lavas[i].y - user.y + moveup < 150 && lavas[i].y - user.y > 0) {
-                user.x = 250;
-                user.y = 695;
-                moveup = 0;
+        for (var i in jumpboosts) {
+            if (user.x - jumpboosts[i].x < 50 && user.x - jumpboosts[i].x > -50) {
+                if (user.y - jumpboosts[i].y < 100 && user.y - jumpboosts[i].y > -100) {
+                    if (!jumpboosts[i].collect) {
+                        jumpboosts[i].collect = true;
+                        jumptime = 250;
+                        jumpboosts[i].cooldown = 750;
+                    }
+                }
             }
-            if (lavas[i].y - user.y + moveup > -135 && lavas[i].y - user.y < 0) {
-                user.x = 250;
-                user.y = 695;
-                moveup = 0;
+            if (jumpboosts[i].cooldown > 0) {
+                jumpboosts[i].cooldown--
+            }
+            if (jumpboosts[i].cooldown == 0) {
+                jumpboosts[i].collect = false;
             }
         }
-
-        if (lavas[i].y - user.y < 150 && user.y - lavas[i].y < 150) {
-            if (lavas[i].x - user.x < 91 && lavas[i].x - user.x > 0) {
-                user.x = 250;
-                user.y = 695;
-                moveup = 0;
+        for (var i in lavas) {
+            if (lavas[i].x - user.x < 90 && user.x - lavas[i].x < 90) {
+                if (lavas[i].y - user.y + moveup < 150 && lavas[i].y - user.y > 0) {
+                    user.x = 250;
+                    user.y = 695;
+                    moveup = 0;
+                }
+                if (lavas[i].y - user.y + moveup > -135 && lavas[i].y - user.y < 0) {
+                    user.x = 250;
+                    user.y = 695;
+                    moveup = 0;
+                }
             }
-            if (user.x - lavas[i].x < 91 && user.x - lavas[i].x > 0) {
-                user.x = 250;
-                user.y = 695;
-                moveup = 0;
+
+            if (lavas[i].y - user.y < 150 && user.y - lavas[i].y < 150) {
+                if (lavas[i].x - user.x < 91 && lavas[i].x - user.x > 0) {
+                    user.x = 250;
+                    user.y = 695;
+                    moveup = 0;
+                }
+                if (user.x - lavas[i].x < 91 && user.x - lavas[i].x > 0) {
+                    user.x = 250;
+                    user.y = 695;
+                    moveup = 0;
+                }
             }
         }
-    }
 
 
-    if (jumptime > 0) {
-        user.jump = 25;
-        jumptime -= 1;
-    } else {
-        user.jump = 20;
-    }
-
-    if (inGame) {
-        user.x += moveright + forcemoveright ;
-        user.x -= moveleft + forcemoveleft ;
-        user.y -= moveup;
-        moveup -= 1;
-    }
-
-
-    c.width = window.innerWidth;
-    c.height = window.innerHeight;
-    ctx.clearRect(0, 0, c.width, c.height);
-    ctx.save();
-    if (!inGame) {
-        if (!isNight) {
-            drawGrid(0, 0, "#000000", "#FFFFFF", c.width, c.height); 
-        }
-        else {           
-            drawGrid(0, 0, "#FFFFFF", "#000000", c.width, c.height);
+        if (jumptime > 0) {
+            user.jump = 25;
+            jumptime -= 1;
+        } else {
+            user.jump = 20;
         }
 
-        if (display == "times") {
-            document.getElementById("times").style.visibility = "visible";
-            document.getElementById("coins").style.visibility = "hidden";
-        } else {
-            document.getElementById("times").style.visibility = "hidden";
-            document.getElementById("coins").style.visibility = "visible";
-        }
-
-        if (user.level1time > 0) {
-            document.getElementById("level1-inner").innerHTML = "Level 1: " + user.level1time / 25 + "sec";
-        } else {
-            document.getElementById("level1-inner").innerHTML = "Level 1: Not Played";
-        }
-        if (user.level2time > 0) {
-            document.getElementById("level2-inner").innerHTML = "Level 2: " + user.level2time / 25 + "sec";
-        } else {
-            document.getElementById("level2-inner").innerHTML = "Level 2: Not Played";
-        }
-        if (user.level3time > 0) {
-            document.getElementById("level3-inner").innerHTML = "Level 3: " + user.level3time / 25 + "sec";
-        } else {
-            document.getElementById("level3-inner").innerHTML = "Level 3: Not Played";
-        }
-        if (user.level4time > 0) {
-            document.getElementById("level4-inner").innerHTML = "Level 4: " + user.level4time / 25 + "sec";
-        } else {
-            document.getElementById("level4-inner").innerHTML = "Level 4: Not Played";
-        }
-        if (user.level5time > 0) {
-            document.getElementById("level5-inner").innerHTML = "Level 5: " + user.level5time / 25 + "sec";
-        } else {
-            document.getElementById("level5-inner").innerHTML = "Level 5: Not Played";
-        }
-        if (user.level6time > 0) {
-            document.getElementById("level6-inner").innerHTML = "Level 6: " + user.level6time / 25 + "sec";
-        } else {
-            document.getElementById("level6-inner").innerHTML = "Level 6: Not Played";
-        }
-
-        if (user.level1 > 0) {
-            document.getElementById("level1c-inner").innerHTML = "Level 1: " + user.level1 + "/9";
-        } else {
-            document.getElementById("level1c-inner").innerHTML = "Level 1: Not Played";
-        }
-        if (user.level2 > 0) {
-            document.getElementById("level2c-inner").innerHTML = "Level 2: " + user.level2 + "/6";
-        } else {
-            document.getElementById("level2c-inner").innerHTML = "Level 2: Not Played";
-        }
-        if (user.level3 > 0) {
-            document.getElementById("level3c-inner").innerHTML = "Level 3: " + user.level3+ "/0";
-        } else {
-            document.getElementById("level3c-inner").innerHTML = "Level 3: Not Played";
-        }
-        if (user.level4e > 0) {
-            document.getElementById("level4c-inner").innerHTML = "Level 4: " + user.level4+"/0";
-        } else {
-            document.getElementById("level4c-inner").innerHTML = "Level 4: Not Played";
-        }
-        if (user.level5e > 0) {
-            document.getElementById("level5c-inner").innerHTML = "Level 5: " + user.level5 +"/0";
-        } else {
-            document.getElementById("level5c-inner").innerHTML = "Level 5: Not Played";
-        }
-        if (user.level6 > 0) {
-            document.getElementById("level6c-inner").innerHTML = "Level 6: " + user.level6  + "/0";
-        } else {
-            document.getElementById("level6c-inner").innerHTML = "Level 6: Not Played";
+        if (inGame) {
+            user.x += moveright + forcemoveright;
+            user.x -= moveleft + forcemoveleft;
+            user.y -= moveup;
+            moveup -= 1;
         }
 
 
-    } else {
-        if (isNight) {
-            drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", 13000, 7000);
-
-        }
-        else {
-            drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#000000", "#FFFFFF", 13000, 7000);
-
-        }
-    }
-    ctx.globalAlpha = 1;
-    if (inGame ) {        
-            showInstructions();
-    }    
-
-    for (var i in stones) {
-        stones[i].draw();
-    }
-    for (var i in woods) {
-        if (woods[i].health > 0) {
-            woods[i].draw();
-        }        
-    }
-    for (var i in coins) {
-        if (!coins[i].collect) {
-            coins[i].draw();
-        }       
-    }
-    for (var i in jumpboosts) {
-        if (!jumpboosts[i].collect) {
-            jumpboosts[i].draw();
-        }
-    }
-    for (var i in lavas) {        
-         lavas[i].draw();        
-    }
-    ctx.restore();
-    if (inGame) {
+        c.width = window.innerWidth;
+        c.height = window.innerHeight;
+        ctx.clearRect(0, 0, c.width, c.height);
         ctx.save();
-        ctx.translate(c.width / 2, c.height / 2);
-        
-        if (user.rot) {
-            ctx.scale(-1, 1);
+        if (!inGame) {
+            if (!isNight) {
+                drawGrid(0, 0, "#000000", "#FFFFFF", c.width, c.height);
+            }
+            else {
+                drawGrid(0, 0, "#FFFFFF", "#000000", c.width, c.height);
+            }
+
+            if (display == "times") {
+                document.getElementById("times").style.visibility = "visible";
+                document.getElementById("coins").style.visibility = "hidden";
+            } else {
+                document.getElementById("times").style.visibility = "hidden";
+                document.getElementById("coins").style.visibility = "visible";
+            }
+
+            if (user.level1time > 0) {
+                document.getElementById("level1-inner").innerHTML = "Level 1: " + user.level1time / 25 + "sec";
+            } else {
+                document.getElementById("level1-inner").innerHTML = "Level 1: Not Played";
+            }
+            if (user.level2time > 0) {
+                document.getElementById("level2-inner").innerHTML = "Level 2: " + user.level2time / 25 + "sec";
+            } else {
+                document.getElementById("level2-inner").innerHTML = "Level 2: Not Played";
+            }
+            if (user.level3time > 0) {
+                document.getElementById("level3-inner").innerHTML = "Level 3: " + user.level3time / 25 + "sec";
+            } else {
+                document.getElementById("level3-inner").innerHTML = "Level 3: Not Played";
+            }
+            if (user.level4time > 0) {
+                document.getElementById("level4-inner").innerHTML = "Level 4: " + user.level4time / 25 + "sec";
+            } else {
+                document.getElementById("level4-inner").innerHTML = "Level 4: Not Played";
+            }
+            if (user.level5time > 0) {
+                document.getElementById("level5-inner").innerHTML = "Level 5: " + user.level5time / 25 + "sec";
+            } else {
+                document.getElementById("level5-inner").innerHTML = "Level 5: Not Played";
+            }
+            if (user.level6time > 0) {
+                document.getElementById("level6-inner").innerHTML = "Level 6: " + user.level6time / 25 + "sec";
+            } else {
+                document.getElementById("level6-inner").innerHTML = "Level 6: Not Played";
+            }
+
+            if (user.level1 > 0) {
+                document.getElementById("level1c-inner").innerHTML = "Level 1: " + user.level1 + "/9";
+            } else {
+                document.getElementById("level1c-inner").innerHTML = "Level 1: Not Played";
+            }
+            if (user.level2 > 0) {
+                document.getElementById("level2c-inner").innerHTML = "Level 2: " + user.level2 + "/6";
+            } else {
+                document.getElementById("level2c-inner").innerHTML = "Level 2: Not Played";
+            }
+            if (user.level3 > 0) {
+                document.getElementById("level3c-inner").innerHTML = "Level 3: " + user.level3 + "/0";
+            } else {
+                document.getElementById("level3c-inner").innerHTML = "Level 3: Not Played";
+            }
+            if (user.level4e > 0) {
+                document.getElementById("level4c-inner").innerHTML = "Level 4: " + user.level4 + "/0";
+            } else {
+                document.getElementById("level4c-inner").innerHTML = "Level 4: Not Played";
+            }
+            if (user.level5e > 0) {
+                document.getElementById("level5c-inner").innerHTML = "Level 5: " + user.level5 + "/0";
+            } else {
+                document.getElementById("level5c-inner").innerHTML = "Level 5: Not Played";
+            }
+            if (user.level6 > 0) {
+                document.getElementById("level6c-inner").innerHTML = "Level 6: " + user.level6 + "/0";
+            } else {
+                document.getElementById("level6c-inner").innerHTML = "Level 6: Not Played";
+            }
+
+
         } else {
-            ctx.scale(1, 1);
-        }        
-        ctx.drawImage(skin, -50, -100, 100, 200);
+            if (isNight) {
+                drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", 13000, 7000);
+
+            }
+            else {
+                drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#000000", "#FFFFFF", 13000, 7000);
+
+            }
+        }
+        ctx.globalAlpha = 1;
+        if (inGame) {
+            showInstructions();
+        }
+
+        for (var i in stones) {
+            stones[i].draw();
+        }
+        for (var i in woods) {
+            if (woods[i].health > 0) {
+                woods[i].draw();
+            }
+        }
+        for (var i in coins) {
+            if (!coins[i].collect) {
+                coins[i].draw();
+            }
+        }
+        for (var i in jumpboosts) {
+            if (!jumpboosts[i].collect) {
+                jumpboosts[i].draw();
+            }
+        }
+        for (var i in lavas) {
+            lavas[i].draw();
+        }
         ctx.restore();
+        if (inGame) {
+            ctx.save();
+            ctx.translate(c.width / 2, c.height / 2);
+
+            if (user.rot) {
+                ctx.scale(-1, 1);
+            } else {
+                ctx.scale(1, 1);
+            }
+            ctx.drawImage(skin, -50, -100, 100, 200);
+            ctx.restore();
+        }
+
+    }, 40)
+
+    start = document.getElementById("play");
+
+    start.onclick = function () {
+        startGame();
     }
-    
-}, 40)
-
-start = document.getElementById("play");
-
-start.onclick = function () {
-    startGame();
-}
 
 
-var save = setInterval(function () {
-    if (tested) {
-        var health = [];
-        var coinCollected = [];
-        var jumpBoostCollected = [];
-        healthfunc = function () {
-            for (var i in woods) {
-                health.push(woods[i].health);
+    var save = setInterval(function () {
+        if (tested) {
+            var health = [];
+            var coinCollected = [];
+            var jumpBoostCollected = [];
+            var healthfunc = function () {
+                for (var i in woods) {
+                    health.push(woods[i].health);
+                }
+            }
+            var didCollectCoin = function () {
+                for (var i in coins) {
+                    coinCollected.push(coins[i].collect);
+                }
+            }
+            var didCollectJump = function () {
+                for (var i in jumpboosts) {
+                    jumpBoostCollected.push(jumpboosts[i].collect);
+                }
+            }
+            healthfunc();
+            didCollectCoin();
+            didCollectJump();
+            if (typeof (Storage) !== "undefined") {
+                localStorage.setItem("userdata", btoa(JSON.stringify(user)));
+                localStorage.setItem("playedbefore", JSON.stringify(btoa(finishedTut)));
+                localStorage.setItem("lastmap", JSON.stringify(btoa(currentMap)));
+                localStorage.setItem("lastmapData", JSON.stringify(btoa(mapData)));
+                localStorage.setItem("version", JSON.stringify(btoa(version)));
+                localStorage.setItem("time", JSON.stringify(btoa(runtime)));
+                localStorage.setItem("health", btoa(JSON.stringify(health)));
+                localStorage.setItem("coins", btoa(JSON.stringify(coinCollected)));
+                localStorage.setItem("jumps", btoa(JSON.stringify(jumpBoostCollected)));
             }
         }
-        var didCollectCoin = function () {
-            for (var i in coins) {
-                coinCollected.push(coins[i].collect);
-            }
-        }
-        var didCollectJump = function () {
-            for (var i in jumpboosts) {
-                jumpBoostCollected.push(jumpboosts[i].collect);
-            }
-        }
-        healthfunc();
-        didCollectCoin();
-        didCollectJump();
-        if (typeof (Storage) !== "undefined") {
-            localStorage.setItem("userdata", btoa(JSON.stringify(user)));
-            localStorage.setItem("playedbefore", JSON.stringify(btoa(finishedTut)));
-            localStorage.setItem("lastmap", JSON.stringify(btoa(currentMap)));
-            localStorage.setItem("lastmapData", JSON.stringify(btoa(mapData)));
-            localStorage.setItem("version", JSON.stringify(btoa(version)));
-            localStorage.setItem("time", JSON.stringify(btoa(runtime)));
-            localStorage.setItem("health", btoa(JSON.stringify(health)));
-            localStorage.setItem("coins", btoa(JSON.stringify(coinCollected)));
-            localStorage.setItem("jumps", btoa(JSON.stringify(jumpBoostCollected)));
-        }
-    }   
-},1000)
+    }, 1000)
