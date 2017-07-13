@@ -1,6 +1,6 @@
 var service = "/";
 var inGame = false;
-var version = "1.2.0";
+var version = "0.2.1";
 
 if (typeof (Storage) !== "undefined") {
     if (localStorage.userdata == null) {
