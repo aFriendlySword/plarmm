@@ -886,7 +886,7 @@ document.onkeydown = function (event) {
 
 
     var save = setInterval(function () {
-        if (tested) {
+        if (tested && inGame) {
             var health = [];
             var coinCollected = [];
             var jumpBoostCollected = [];
