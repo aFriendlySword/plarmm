@@ -401,6 +401,19 @@ startGame = function () {
 
     document.onkeydown = function (event) {
         switch (event.keyCode) {
+            case 27:
+                if (inGame) {
+                    inGame = false;
+                    document.getElementById("menu").style.visibility = "visible";
+                    document.getElementById("nite").style.visibility = "visible";
+                    document.getElementById("selected").style.visibility = "visible";
+                    document.getElementById("character").style.visibility = "visible";
+                    document.getElementById("coins").style.visibility = "visible";
+                    document.getElementById("times").style.visibility = "visible";
+                }
+
+
+                break;            
             case 68:
                 if (inGame) {
                     moveright = 5;
