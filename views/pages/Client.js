@@ -2,6 +2,15 @@ var service = "/";
 var inGame = false;
 var version = "0.2.1";
 
+var userdata = 0;
+var tut = 0;
+var last = 0;
+var lastData = 0;
+var lastTime = 0;
+var healthArr = 0;
+var coinCollArr = 0;
+var jumpCollArr = 0;
+
 if (typeof (Storage) !== "undefined") {
     if (localStorage.userdata == null) {
         if ((localStorage.version == undefined) || (atob(JSON.parse(localStorage.version)) !== version)) {
