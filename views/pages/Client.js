@@ -408,13 +408,13 @@ startGame = function () {
         if (!(localStorage.userdata == "test")) {
             try {
                 for (var i in woods) {
-                    woods[i].health = healthArr[i];
+                    woods[i].health = JSON.parse(healthArr[i]);
                 }
                 for (var i in coins) {
-                    coins[i].collect = coinCollArr[i];
+                    coins[i].collect = JSON.parse(coinCollArr[i]);
                 }
                 for (var i in jumpboosts) {
-                    jumpboosts[i].collect = jumpCollArr[i];
+                    jumpboosts[i].collect = JSON.parse(jumpCollArr[i]);
                 }
             }
             catch (err) {
