@@ -187,7 +187,7 @@ loadOldSave = function () {
         if (!(localStorage.userdata == "test")) {
             try {
                 var userdata = (JSON.parse(atob(localStorage.userdata)));
-                var tut = atob(JSON.parse(localStorage.playedbefore));
+                var tut = JSON.parse(atob(JSON.parse(localStorage.playedbefore)));
                 var last = parseInt(atob(JSON.parse(localStorage.lastmap)));
                 var lastData = atob(JSON.parse(localStorage.lastmapData));
                 var lastTime = atob(JSON.parse(localStorage.time));
