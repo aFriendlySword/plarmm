@@ -892,7 +892,9 @@ document.onkeydown = function (event) {
             var jumpBoostCollected = [];
             healthfunc = function () {
                 for (var i in woods) {
-                    health.push(woods[i].health+"");
+                    if (woods[i].health!=="undefined") {
+                        health.push(woods[i].health + "");
+                    }                    
                 }
             }
             didCollectCoin = function () {
