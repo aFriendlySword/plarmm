@@ -892,17 +892,17 @@ document.onkeydown = function (event) {
             var jumpBoostCollected = [];
             healthfunc = function () {
                 for (var i in woods) {
-                    health.push(woods[i].health);
+                    health.push(woods[i].health+"");
                 }
             }
             didCollectCoin = function () {
                 for (var i in coins) {
-                    coinCollected.push(coins[i].collect);
+                    coinCollected.push(coins[i].collect + "");
                 }
             }
             didCollectJump = function () {
                 for (var i in jumpboosts) {
-                    jumpBoostCollected.push(jumpboosts[i].collect);
+                    jumpBoostCollected.push(jumpboosts[i].collect + "");
                 }
             }
             healthfunc();
