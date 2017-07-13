@@ -924,7 +924,7 @@ var save = setInterval(function () {
             }
         }
         var didCollectJump = function () {
-            for (var i in coins) {
+            for (var i in jumpboosts) {
                 jumpBoostCollected.push(jumpboosts[i].collect);
             }
         }
