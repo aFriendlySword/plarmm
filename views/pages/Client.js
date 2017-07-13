@@ -51,8 +51,6 @@ var jumpboost = new Image();
 jumpboost.src = service + "jumpboost.png";
 var lava = new Image();
 lava.src = service + "lava.png";
-
-var servers = {};
 var c = document.getElementById("canvas");
 var ctx = c.getContext("2d");
 c.width = window.innerWidth;
@@ -230,7 +228,39 @@ showInstructions = function () {
     }   
 }
 
+jumping = function () {
+    if (inGame) {
+        for (var i in stones) {
+            if (stones[i].y - user.y == 150) {
+                if (stones[i].x - user.x < 90 && stones[i].x - user.x > -90) {
+                    moveup = user.jump;
+                }
+            }
+        }
+        for (var i in woods) {
+            if (woods[i].y - user.y == 150) {
+                if (woods[i].x - user.x < 90 && woods[i].x - user.x > -90) {
+                    moveup = user.jump;
+                }
+            }
+        }
 
+    }
+}
+
+changeMap = function (map, data) {
+    runtime = 0;
+    stones = [];
+    woods = [];
+    coins = [];
+    jumpboosts = [];
+    lavas = [];
+    currentMap = map;
+    mapData = data;
+    createMap();
+    user.x = 250;
+    user.y = 695;
+}
 
 startGame = function () {
     inGame = true;
@@ -378,241 +408,163 @@ startGame = function () {
             }
         }
     }
+}  
 
-    document.onmousemove = function (event) {
-        if (inGame) {
-            var cx = c.width / 2;
-            var mouseX = event.pageX;
-            if (cx > mouseX) {
-                user.rot = true;
-            } else {
-                user.rot = false;
+document.onmousemove = function (event) {
+    if (inGame) {
+        var cx = c.width / 2;
+        var mouseX = event.pageX;
+        if (cx > mouseX) {
+            user.rot = true;
+        } else {
+            user.rot = false;
+        }
+    }
+}
+
+document.onclick = function (event) {
+    if (inGame) {
+        var mouseX = event.pageX;
+        var mouseY = event.pageY;
+        for (var i in woods) {
+            if (user.x - c.width / 2 + mouseX - woods[i].x < 50 && user.x - c.width / 2 + mouseX - woods[i].x > - 50) {
+                if (user.y - c.height / 2 + mouseY - woods[i].y < 50 && user.y - c.height / 2 + mouseY - woods[i].y > - 50) {
+                    if (woods[i].health > 0) {
+                        woods[i].health--;
+                    }
+                }
             }
         }
     }
+}
 
-    document.onclick = function (event) {
-        if (inGame) {
-            var mouseX = event.pageX;
-            var mouseY = event.pageY;
-            for (var i in woods) {
-                if (user.x - c.width / 2 + mouseX - woods[i].x < 50 && user.x - c.width / 2 + mouseX - woods[i].x > - 50) {
-                    if (user.y - c.height / 2 + mouseY - woods[i].y < 50 && user.y - c.height / 2 + mouseY - woods[i].y > - 50) {
-                        if (woods[i].health > 0) {
-                            woods[i].health--;
+
+document.onkeydown = function (event) {
+    switch (event.keyCode) {
+        case 27:
+            if (inGame) {
+                inGame = false;
+                document.getElementById("menu").style.visibility = "visible";
+                document.getElementById("nite").style.visibility = "visible";
+                document.getElementById("selected").style.visibility = "visible";
+                document.getElementById("character").style.visibility = "visible";
+                document.getElementById("coins").style.visibility = "visible";
+                document.getElementById("times").style.visibility = "visible";
+            }
+            break;
+        case 68:
+            if (inGame) {
+                moveright = 5;
+            }
+            return moveright;
+            break;
+        case 83:
+            if (inGame) {
+                switch (currentMap) {
+                    case HUB:
+                        if (user.x > 650 && user.x < 750) {
+                            changeMap(LEVEL1, mapDataLevel1);
                         }
-                    }
+                        if (user.x > 1450 && user.x < 1550) {
+                            changeMap(LEVEL2, mapDataLevel2);
+                        }
+
+                        break;
+                    case LEVEL1:
+                        if (user.x > 4750) {
+                            if (runtime < user.level1time || user.level1time == 0) {
+                                user.level1time = runtime;
+                            }
+                            if (user.level1 < user.coins) {
+                                user.level1 = user.coins;
+                            }
+                            changeMap(HUB, mapDataHub);
+                        }
+                        break;
+                    case LEVEL2:
+                        if (user.x > 4750) {
+                            if (runtime < user.level2time || user.level2time == 0) {
+                                user.level2time = runtime;
+                            }
+                            if (user.level2 < user.coins) {
+                                user.level2 = user.coins;
+                            }
+                            changeMap(HUB, mapDataHub);
+                        }
+                        break;
+
+                    default:
+                        break;
                 }
             }
-        }
+            break;
+        case 65:
+            if (inGame) {
+                moveleft = 5;
+
+            }
+            return moveleft;
+            break;
+        case 87:
+            jumping();
+            return moveup;
+            break;
+        case 39:
+            if (inGame) {
+                moveright = 5;
+            }
+            return moveright;
+            break;
+        case 40:
+            if (inGame) {
+                switch (map) {
+                    case "Hub":
+                        if (user.x > 650 && user.x < 750) {
+                            stones = [];
+                            woods = [];
+                            coins = [];
+                            jumpboosts = [];
+                            map = "level1";
+                            mapData = mapDataLevel1;
+                            initialize();
+                            user.x = 250;
+                            user.y = 695;
+                        }
+                        break;
+                    case "level1":
+                        if (user.x > 4750) {
+                            finishedTut = true;
+                            stones = [];
+                            woods = [];
+                            coins = [];
+                            jumpboosts = [];
+                            map = "Hub";
+                            mapData = mapDataHub;
+                            initialize();
+                            user.x = 250;
+                            user.y = 695;
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+            break;
+        case 37:
+            if (inGame) {
+                moveleft = 5;
+            }
+            return moveleft;
+            break;
+        case 38:
+            jumping();
+            return moveup;
+            break;
+        case 32:
+            jumping();
+            return moveup;
+            break;
     }
-
-
-    document.onkeydown = function (event) {
-        switch (event.keyCode) {
-            case 27:
-                if (inGame) {
-                    inGame = false;
-                    document.getElementById("menu").style.visibility = "visible";
-                    document.getElementById("nite").style.visibility = "visible";
-                    document.getElementById("selected").style.visibility = "visible";
-                    document.getElementById("character").style.visibility = "visible";
-                    document.getElementById("coins").style.visibility = "visible";
-                    document.getElementById("times").style.visibility = "visible";
-                }
-
-
-                break;            
-            case 68:
-                if (inGame) {
-                    moveright = 5;
-                }
-                return moveright;
-                break;
-            case 83:                
-                if (inGame) {
-                    switch (currentMap) {
-                        case HUB:                            
-                            if (user.x > 650 && user.x < 750) {   
-                                runtime = 0;
-                                stones = [];
-                                woods = [];
-                                coins = [];
-                                jumpboosts = [];
-                                lavas = [];
-                                currentMap = LEVEL1;
-                                mapData = mapDataLevel1;
-                                createMap();
-                                user.x = 250;
-                                user.y = 695;
-                            }
-                            if (user.x > 1450 && user.x < 1550) {
-                                runtime = 0;
-                                stones = [];
-                                woods = [];
-                                coins = [];
-                                jumpboosts = [];
-                                lavas = [];
-                                currentMap = LEVEL2;
-                                mapData = mapDataLevel2;
-                                createMap();
-                                user.x = 250;
-                                user.y = 695;
-                            }
-
-                            break;
-                        case LEVEL1:
-                            if (user.x > 4750) {
-                                if (runtime < user.level1time || user.level1time == 0) {
-                                    user.level1time = runtime;
-                                }
-                                if (user.level1 < user.coins) {
-                                    user.level1 = user.coins;
-                                }
-                                runtime = 0;
-                                finishedTut = true;
-                                stones = [];
-                                woods = [];
-                                coins = [];
-                                jumpboosts = [];
-                                lavas = [];
-                                currentMap = HUB;
-                                mapData = mapDataHub;
-                                createMap();
-                                user.x = 250;
-                                user.y = 695;
-                                user.coins = 0;
-                            }
-                            break;
-                        case LEVEL2:
-                            if (user.x > 4750) {
-                                if (runtime < user.level2time || user.level2time == 0) {
-                                    user.level2time = runtime;
-                                }
-                                if (user.level2 < user.coins) {
-                                    user.level2 = user.coins;
-                                }
-                                runtime = 0;
-                                finishedTut = true;
-                                stones = [];
-                                woods = [];
-                                coins = [];
-                                jumpboosts = [];
-                                lavas = [];
-                                currentMap = HUB;
-                                mapData = mapDataHub;
-                                createMap();
-                                user.x = 250;
-                                user.y = 695;
-                                user.coins = 0;
-                            }
-                            break;
-
-                        default:
-                            break;
-                    }
-                }
-                break;
-            case 65:
-                if (inGame) {
-                    moveleft = 5;
-
-                }
-                return moveleft;
-                break;
-            case 87:
-                if (inGame) {
-                    for (var i in stones) {
-                        if (stones[i].y - user.y == 150) {
-                            if (stones[i].x - user.x < 90 && stones[i].x - user.x > -90) {
-                                moveup = user.jump;
-                            }
-                        }
-                    }
-                    for (var i in woods) {
-                        if (woods[i].y - user.y == 150) {
-                            if (woods[i].x - user.x < 90 && woods[i].x - user.x > -90) {
-                                moveup = user.jump;
-                            }
-                        }
-                    }
-
-                }
-                return moveup;
-                break;
-            case 39:
-                if (inGame) {
-                    moveright = 5;
-                }
-                return moveright;
-                break;
-            case 40:
-                if (inGame) {
-                    switch (map) {
-                        case "Hub":
-                            if (user.x > 650 && user.x < 750) {
-                                stones = [];
-                                woods = [];
-                                coins = [];
-                                jumpboosts = [];
-                                map = "level1";
-                                mapData = mapDataLevel1;
-                                initialize();
-                                user.x = 250;
-                                user.y = 695;
-                            }
-                            break;
-                        case "level1":
-                            if (user.x > 4750) {
-                                finishedTut = true;
-                                stones = [];
-                                woods = [];
-                                coins = [];
-                                jumpboosts = [];
-                                map = "Hub";
-                                mapData = mapDataHub;
-                                initialize();
-                                user.x = 250;
-                                user.y = 695;
-                            }
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                break;
-            case 37:
-                if (inGame) {
-                    moveleft = 5;
-                }
-                return moveleft;
-                break;
-            case 38:
-                if (inGame) {
-                    for (var i in stones) {
-                        if (stones[i].y - user.y == 150) {
-                            if (stones[i].x - user.x < 90 && stones[i].x - user.x > -90) {
-                                moveup = user.jump;
-                            }
-                        }
-                    }
-                    for (var i in woods) {
-                        if (woods[i].y - user.y == 150) {
-                            if (woods[i].x - user.x < 90 && woods[i].x - user.x > -90) {
-                                moveup = user.jump;
-                            }
-                        }
-                    }
-
-                }
-                return moveup;
-                break;
-                return moveup;
-                break;
-        }
-    }
-
-
 
     document.onkeyup = function (event) {
         switch (event.keyCode) {
@@ -644,9 +596,7 @@ startGame = function () {
                 return moveleft;
                 break;
         }
-    }
-
-}  
+    }    
 
 var game = setInterval(function () {
     runtime += 1;
