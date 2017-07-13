@@ -890,17 +890,17 @@ document.onkeydown = function (event) {
             var health = [];
             var coinCollected = [];
             var jumpBoostCollected = [];
-            var healthfunc = function () {
+            healthfunc = function () {
                 for (var i in woods) {
                     health.push(woods[i].health);
                 }
             }
-            var didCollectCoin = function () {
+            didCollectCoin = function () {
                 for (var i in coins) {
                     coinCollected.push(coins[i].collect);
                 }
             }
-            var didCollectJump = function () {
+            didCollectJump = function () {
                 for (var i in jumpboosts) {
                     jumpBoostCollected.push(jumpboosts[i].collect);
                 }
