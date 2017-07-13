@@ -225,6 +225,7 @@ loadOldSave = function () {
         }
     }
 }
+loadOldSave();
 
 
 showInstructions = function () {
