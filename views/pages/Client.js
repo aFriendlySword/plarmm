@@ -173,47 +173,50 @@ var currentMap = HUB;
 
 var finishedTut = false;
 
-if (typeof (Storage) !== "undefined") {
-    if (!(localStorage.userdata == "test")) {
-        try {
-            var userdata = (JSON.parse(atob(localStorage.userdata)));
-            var tut = atob(JSON.parse(localStorage.playedbefore));
-            var last = parseInt(atob(JSON.parse(localStorage.lastmap)));
-            var lastData = atob(JSON.parse(localStorage.lastmapData));
-            var lastTime = atob(JSON.parse(localStorage.time));
-            var healthArr = JSON.parse(atob(localStorage.health));
-            var coinCollArr = JSON.parse(atob(localStorage.coins));
-            var jumpCollArr = JSON.parse(atob(localStorage.jumps));
+loadOldSave = function () {
+    if (typeof (Storage) !== "undefined") {
+        if (!(localStorage.userdata == "test")) {
+            try {
+                var userdata = (JSON.parse(atob(localStorage.userdata)));
+                var tut = atob(JSON.parse(localStorage.playedbefore));
+                var last = parseInt(atob(JSON.parse(localStorage.lastmap)));
+                var lastData = atob(JSON.parse(localStorage.lastmapData));
+                var lastTime = atob(JSON.parse(localStorage.time));
+                var healthArr = JSON.parse(atob(localStorage.health));
+                var coinCollArr = JSON.parse(atob(localStorage.coins));
+                var jumpCollArr = JSON.parse(atob(localStorage.jumps));
 
 
-            user.level1 = userdata.level1;
-            user.level1time = userdata.level1time;
-            user.level2 = userdata.level2;
-            user.level2time = userdata.level2time;
-            user.level3 = userdata.level3;
-            user.level3time = userdata.level3time;
-            user.level4 = userdata.level4;
-            user.level4time = userdata.level4time;
-            user.level5 = userdata.level5;
-            user.level5time = userdata.level5time;
-            user.level6 = userdata.level6;
-            user.level6time = userdata.level6time;
-            user.coins = userdata.coins;
-            user.jump = userdata.jump;
-            user.x = userdata.x;
-            user.y = userdata.y;
-            user.rot = userdata.rot;
-            finishedTut = tut;
-            currentMap = last;
-            mapData = lastData;
-            runtime = parseInt(lastTime);            
+                user.level1 = userdata.level1;
+                user.level1time = userdata.level1time;
+                user.level2 = userdata.level2;
+                user.level2time = userdata.level2time;
+                user.level3 = userdata.level3;
+                user.level3time = userdata.level3time;
+                user.level4 = userdata.level4;
+                user.level4time = userdata.level4time;
+                user.level5 = userdata.level5;
+                user.level5time = userdata.level5time;
+                user.level6 = userdata.level6;
+                user.level6time = userdata.level6time;
+                user.coins = userdata.coins;
+                user.jump = userdata.jump;
+                user.x = userdata.x;
+                user.y = userdata.y;
+                user.rot = userdata.rot;
+                finishedTut = tut;
+                currentMap = last;
+                mapData = lastData;
+                runtime = parseInt(lastTime);
+            }
+            catch (err) {
+                localStorage.userdata = "test";
+            }
+
         }
-        catch (err) {
-            localStorage.userdata = "test";
-        }
-        
     }
 }
+
 
 showInstructions = function () {
     if (!finishedTut) {
@@ -264,6 +267,7 @@ changeMap = function (map, data) {
 
 startGame = function () {
     inGame = true;
+    loadOldSave();
 
     document.getElementById("menu").style.visibility = "hidden";
     document.getElementById("nite").style.visibility = "hidden";
@@ -410,6 +414,22 @@ startGame = function () {
     }
 }  
 
+stopGame = function () {
+    inGame = true;
+
+    document.getElementById("menu").style.visibility = "visible";
+    document.getElementById("nite").style.visibility = "visible";
+    document.getElementById("selected").style.visibility = "visible";
+    document.getElementById("character").style.visibility = "visible";
+    document.getElementById("coins").style.visibility = "visible";
+    document.getElementById("times").style.visibility = "visible";
+    stones = [];
+    woods = [];
+    coins = [];
+    jumpboosts = [];
+    lavas = [];
+}
+
 document.onmousemove = function (event) {
     if (inGame) {
         var cx = c.width / 2;
@@ -443,13 +463,7 @@ document.onkeydown = function (event) {
     switch (event.keyCode) {
         case 27:
             if (inGame) {
-                inGame = false;
-                document.getElementById("menu").style.visibility = "visible";
-                document.getElementById("nite").style.visibility = "visible";
-                document.getElementById("selected").style.visibility = "visible";
-                document.getElementById("character").style.visibility = "visible";
-                document.getElementById("coins").style.visibility = "visible";
-                document.getElementById("times").style.visibility = "visible";
+                stopGame();
             }
             break;
         case 68:
