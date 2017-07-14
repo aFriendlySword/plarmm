@@ -370,11 +370,11 @@ startGame = function () {
         }
     }
 
-    createMap = function (mapHeight, mapWidth) {
+    createMap = function (mapHeight, mapWidth, currentMap) {
         var initialize = 0;
         for (var i = 0; i < mapWidth; i++) {
             for (var j = 0; j < mapHeight; j++) {
-                switch (mapData.charAt(initialize)) {
+                switch (mapData[currentMap].charAt(initialize)) {
                     case "s":
                         stones.push(createObject(0, 50 + 100 * i, 50 + 100 * j));
                         break;
@@ -397,7 +397,7 @@ startGame = function () {
             }
         }
     }
-    createMap(10,50);
+    createMap(10, 50, currentMap);
 
     if (typeof (Storage) !== "undefined") {
         if (!(localStorage.userdata == "test")) {
