@@ -1,6 +1,6 @@
 var service = "/";
 var inGame = false;
-var version = "0.2.1";
+var version = "0.2.2";
 
 var userdata = 0;
 var tut = 0;
@@ -46,9 +46,17 @@ skinFour.src = service + "skinFour.png";
 
 var skin = skinOne;
 
-var mapDataHub = "sssssssssssaaaaaaasssaaaaaaasssaaaaaaasssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaassssssssssssss";
-var mapDataLevel1 = "sssssssssssssssssssssaaasaaasssacasaaaassaaasaaaassaaaaaaaassaaaaaassssaaaascaassaasaasaassaaaaaaaasssssswwsssscaasaaasssaaaaaasasaaasaaaaasaaaaaasaasaaaaasacasaaasaaaaassaaaassssssasaaasaassaaaaasaassaaascaaassaaasaaasssaasaaaaassaaaaasaassasasaaaassaaaaaassssaaaasawjssaasaaawwssaaawacaassaaasaaaassaaasaaaassacasaaaassaaaaaasassaaaaaasassaaasaaaassaaasaaaassaaasssssssaaaaasaassaaasacaassaaaaasaassaaasacaassaaaaasaassaaasaaaassaaaaaaaassaaaaaasassaaaasaaasswwssssssssaaaaaaaassaaaaaaaasssssssssss";
-var mapDataLevel2 = "sssssssssssaaaacawjssaaaaaaawssaaaaaaaassaaaaaaaassaaaaasssssaaaaaaaalsaaaaaassssaaaaaaaalsaaaaaaasssaaaaaaaassaaaaaaaassaaacaaasssaaaaaassssaaaaaaasssaaaaaaaassaaaaaasassaaaaasaassaacasaaassaaaaaaaassaaaaaaaalsaassaaaalsaaaaaaaassaaaaaassssaaaaaaacsssssswwssssacsaaassssaaaaaaasssaaasaaaassaaaaaasassaaaaaaaalsaaaasaaalsaaaaaaaalsaaaaaasalsaaaaaaaalsaaaasaaalaaasaaaaalaaaaaaaaalaaaaaaaaalaaaaaaaaalsaaaaaaasssaaaaasaassaaaaaaaalsaaaaaasassaaaaaaaassaaaaasssssaaaassssssaaaaaaaassaacaaaaasssssssssss";
+var mapData = [];
+
+
+mapData.push("sssssssssssaaaaaaasssaaaaaaasssaaaaaaasssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaassssssssssssss");
+mapData.push("sssssssssssssssssssssaaasaaasssacasaaaassaaasaaaassaaaaaaaassaaaaaassssaaaascaassaasaasaassaaaaaaaasssssswwsssscaasaaasssaaaaaasasaaasaaaaasaaaaaasaasaaaaasacasaaasaaaaassaaaassssssasaaasaassaaaaasaassaaascaaassaaasaaasssaasaaaaassaaaaasaassasasaaaassaaaaaassssaaaasawjssaasaaawwssaaawacaassaaasaaaassaaasaaaassacasaaaassaaaaaasassaaaaaasassaaasaaaassaaasaaaassaaasssssssaaaaasaassaaasacaassaaaaasaassaaasacaassaaaaasaassaaasaaaassaaaaaaaassaaaaaasassaaaasaaasswwssssssssaaaaaaaassaaaaaaaasssssssssss");
+mapData.push("sssssssssssaaaacawjssaaaaaaawssaaaaaaaassaaaaaaaassaaaaasssssaaaaaaaalsaaaaaassssaaaaaaaalsaaaaaaasssaaaaaaaassaaaaaaaassaaacaaasssaaaaaassssaaaaaaasssaaaaaaaassaaaaaasassaaaaasaassaacasaaassaaaaaaaassaaaaaaaalsaassaaaalsaaaaaaaassaaaaaassssaaaaaaacsssssswwssssacsaaassssaaaaaaasssaaasaaaassaaaaaasassaaaaaaaalsaaaasaaalsaaaaaaaalsaaaaaasalsaaaaaaaalsaaaasaaalaaasaaaaalaaaaaaaaalaaaaaaaaalaaaaaaaaalsaaaaaaasssaaaaasaassaaaaaaaalsaaaaaasassaaaaaaaassaaaaasssssaaaassssssaaaaaaaassaacaaaaasssssssssss");
+mapData.push("sssssssssssaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaasssssssssss");
+mapData.push("sssssssssssaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaasssssssssss");
+mapData.push("sssssssssssaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaasssssssssss");
+mapData.push("sssssssssssaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaasssssssssss");
+
 
 var stone = new Image();
 stone.src = service + "stone.png";
@@ -143,18 +151,8 @@ var coins = [];
 var jumpboosts = [];
 var lavas = [];
 var user = {
-    level1: 0,
-    level1time: 0,
-    level2: 0,
-    level2time: 0,
-    level3: 0,
-    level3time: 0,
-    level4: 0,
-    level4time: 0,
-    level5: 0,
-    level5time: 0,
-    level6: 0,
-    level6time: 0,
+    times: [0, 0, 0, 0, 0, 0],
+    score: [0, 0, 0, 0, 0, 0],
     coins: 0,
     jump: 20,
     x: 250,
@@ -169,15 +167,15 @@ var moveup = 0;
 var jumptime = 0;
 var runtime = 0;
 
-const HUB = 00;
-const LEVEL1 = 01;
-const LEVEL2 = 02;
-const LEVEL3 = 03;
-const LEVEL4 = 04;
-const LEVEL5 = 05;
-const LEVEL6 = 06;
+const HUB = 0;
+const LEVEL1 = 1;
+const LEVEL2 = 2;
+const LEVEL3 = 3;
+const LEVEL4 = 4;
+const LEVEL5 = 5;
+const LEVEL6 = 6;
 
-var mapData = mapDataHub;
+var currentMapData = mapData[HUB];
 var currentMap = HUB;
 
 var finishedTut = false;
@@ -189,25 +187,14 @@ loadOldSave = function () {
                 userdata = (JSON.parse(atob(localStorage.userdata)));
                 tut = JSON.parse(atob(JSON.parse(localStorage.playedbefore)));
                 last = parseInt(atob(JSON.parse(localStorage.lastmap)));
-                lastData = atob(JSON.parse(localStorage.lastmapData));
                 lastTime = atob(JSON.parse(localStorage.time));
                 healthArr = JSON.parse(atob(localStorage.health));
                 coinCollArr = JSON.parse(atob(localStorage.coins));
                 jumpCollArr = JSON.parse(atob(localStorage.jumps));
 
 
-                user.level1 = userdata.level1;
-                user.level1time = userdata.level1time;
-                user.level2 = userdata.level2;
-                user.level2time = userdata.level2time;
-                user.level3 = userdata.level3;
-                user.level3time = userdata.level3time;
-                user.level4 = userdata.level4;
-                user.level4time = userdata.level4time;
-                user.level5 = userdata.level5;
-                user.level5time = userdata.level5time;
-                user.level6 = userdata.level6;
-                user.level6time = userdata.level6time;
+                user.times = userdata.times;
+                user.score = userdata.score;
                 user.coins = userdata.coins;
                 user.jump = userdata.jump;
                 user.x = userdata.x;
@@ -215,7 +202,7 @@ loadOldSave = function () {
                 user.rot = userdata.rot;
                 finishedTut = tut;
                 currentMap = last;
-                mapData = lastData;
+                currentMapData = mapData[last];
                 runtime = parseInt(lastTime);
             }
             catch (err) {
@@ -270,9 +257,17 @@ changeMap = function (map, data) {
     lavas = [];
     currentMap = map;
     mapData = data;
-    createMap();
+    createMap(10,50);
     user.x = 250;
     user.y = 695;
+}
+saveStats = function (map) {
+    if (runtime < user.times[map - 1] || user.times[map - 1] == 0) {
+        user.times[map - 1] = runtime;
+    }
+    if (user.score[map - 1] < user.coins) {
+        user.score[map - 1] = user.coins;
+    }
 }
 
 startGame = function () {
@@ -375,10 +370,10 @@ startGame = function () {
         }
     }
 
-    createMap = function () {
+    createMap = function (mapHeight, mapWidth) {
         var initialize = 0;
-        for (var i = 0; i < 50; i++) {
-            for (var j = 0; j < 10; j++) {
+        for (var i = 0; i < mapWidth; i++) {
+            for (var j = 0; j < mapHeight; j++) {
                 switch (mapData.charAt(initialize)) {
                     case "s":
                         stones.push(createObject(0, 50 + 100 * i, 50 + 100 * j));
@@ -402,7 +397,7 @@ startGame = function () {
             }
         }
     }
-    createMap();
+    createMap(10,50);
 
     if (typeof (Storage) !== "undefined") {
         if (!(localStorage.userdata == "test")) {
@@ -486,38 +481,49 @@ document.onkeydown = function (event) {
             if (inGame) {
                 switch (currentMap) {
                     case HUB:
-                        if (user.x > 650 && user.x < 750) {
-                            changeMap(LEVEL1, mapDataLevel1);
+                        for (var i = 0; i < 6; i++) {
+                            if (user.x > 650 + 800*i && user.x < 750 + 800*i) {
+                            changeMap(i, mapData[i]);
+                            }
                         }
-                        if (user.x > 1450 && user.x < 1550) {
-                            changeMap(LEVEL2, mapDataLevel2);
-                        }
-
                         break;
                     case LEVEL1:
                         if (user.x > 4750) {
-                            if (runtime < user.level1time || user.level1time == 0) {
-                                user.level1time = runtime;
-                            }
-                            if (user.level1 < user.coins) {
-                                user.level1 = user.coins;
-                            }
+                            saveStats(1);
                             changeMap(HUB, mapDataHub);
                             finishedTut = true;
                         }
                         break;
                     case LEVEL2:
                         if (user.x > 4750) {
-                            if (runtime < user.level2time || user.level2time == 0) {
-                                user.level2time = runtime;
-                            }
-                            if (user.level2 < user.coins) {
-                                user.level2 = user.coins;
-                            }
+                            saveStats(2);
                             changeMap(HUB, mapDataHub);
                         }
                         break;
-
+                    case LEVEL3:
+                        if (user.x > 4750) {
+                            saveStats(3);
+                            changeMap(HUB, mapDataHub);
+                        }
+                        break;
+                    case LEVEL4:
+                        if (user.x > 4750) {
+                            saveStats(4);
+                            changeMap(HUB, mapDataHub);
+                        }
+                        break;
+                    case LEVEL5:
+                        if (user.x > 4750) {
+                            saveStats(5);
+                            changeMap(HUB, mapDataHub);
+                        }
+                        break;
+                    case LEVEL6:
+                        if (user.x > 4750) {
+                            saveStats(6);
+                            changeMap(HUB, mapDataHub);
+                        }
+                        break;
                     default:
                         break;
                 }
@@ -526,7 +532,6 @@ document.onkeydown = function (event) {
         case 65:
             if (inGame) {
                 moveleft = 5;
-
             }
             return moveleft;
             break;
@@ -542,32 +547,49 @@ document.onkeydown = function (event) {
             break;
         case 40:
             if (inGame) {
-                switch (map) {
-                    case "Hub":
-                        if (user.x > 650 && user.x < 750) {
-                            stones = [];
-                            woods = [];
-                            coins = [];
-                            jumpboosts = [];
-                            map = "level1";
-                            mapData = mapDataLevel1;
-                            initialize();
-                            user.x = 250;
-                            user.y = 695;
+                switch (currentMap) {
+                    case HUB:
+                        for (var i = 0; i < 6; i++) {
+                            if (user.x > 650 + 800 * i && user.x < 750 + 800 * i) {
+                                changeMap(i, mapData[i]);
+                            }
                         }
                         break;
-                    case "level1":
+                    case LEVEL1:
                         if (user.x > 4750) {
+                            saveStats(1);
+                            changeMap(HUB, mapDataHub);
                             finishedTut = true;
-                            stones = [];
-                            woods = [];
-                            coins = [];
-                            jumpboosts = [];
-                            map = "Hub";
-                            mapData = mapDataHub;
-                            initialize();
-                            user.x = 250;
-                            user.y = 695;
+                        }
+                        break;
+                    case LEVEL2:
+                        if (user.x > 4750) {
+                            saveStats(2);
+                            changeMap(HUB, mapDataHub);
+                        }
+                        break;
+                    case LEVEL3:
+                        if (user.x > 4750) {
+                            saveStats(3);
+                            changeMap(HUB, mapDataHub);
+                        }
+                        break;
+                    case LEVEL4:
+                        if (user.x > 4750) {
+                            saveStats(4);
+                            changeMap(HUB, mapDataHub);
+                        }
+                        break;
+                    case LEVEL5:
+                        if (user.x > 4750) {
+                            saveStats(5);
+                            changeMap(HUB, mapDataHub);
+                        }
+                        break;
+                    case LEVEL6:
+                        if (user.x > 4750) {
+                            saveStats(6);
+                            changeMap(HUB, mapDataHub);
                         }
                         break;
                     default:
@@ -913,7 +935,6 @@ document.onkeydown = function (event) {
                 localStorage.setItem("userdata", btoa(JSON.stringify(user)));
                 localStorage.setItem("playedbefore", JSON.stringify(btoa(finishedTut)));
                 localStorage.setItem("lastmap", JSON.stringify(btoa(currentMap)));
-                localStorage.setItem("lastmapData", JSON.stringify(btoa(mapData)));
                 localStorage.setItem("version", JSON.stringify(btoa(version)));
                 localStorage.setItem("time", JSON.stringify(btoa(runtime)));
                 localStorage.setItem("health", btoa(JSON.stringify(health)));
