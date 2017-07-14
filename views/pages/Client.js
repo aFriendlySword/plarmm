@@ -786,68 +786,17 @@ document.onkeydown = function (event) {
                 document.getElementById("coins").style.visibility = "visible";
             }
 
-            if (user.level1time > 0) {
-                document.getElementById("level1-inner").innerHTML = "Level 1: " + user.level1time / 25 + "sec";
-            } else {
-                document.getElementById("level1-inner").innerHTML = "Level 1: Not Played";
-            }
-            if (user.level2time > 0) {
-                document.getElementById("level2-inner").innerHTML = "Level 2: " + user.level2time / 25 + "sec";
-            } else {
-                document.getElementById("level2-inner").innerHTML = "Level 2: Not Played";
-            }
-            if (user.level3time > 0) {
-                document.getElementById("level3-inner").innerHTML = "Level 3: " + user.level3time / 25 + "sec";
-            } else {
-                document.getElementById("level3-inner").innerHTML = "Level 3: Not Played";
-            }
-            if (user.level4time > 0) {
-                document.getElementById("level4-inner").innerHTML = "Level 4: " + user.level4time / 25 + "sec";
-            } else {
-                document.getElementById("level4-inner").innerHTML = "Level 4: Not Played";
-            }
-            if (user.level5time > 0) {
-                document.getElementById("level5-inner").innerHTML = "Level 5: " + user.level5time / 25 + "sec";
-            } else {
-                document.getElementById("level5-inner").innerHTML = "Level 5: Not Played";
-            }
-            if (user.level6time > 0) {
-                document.getElementById("level6-inner").innerHTML = "Level 6: " + user.level6time / 25 + "sec";
-            } else {
-                document.getElementById("level6-inner").innerHTML = "Level 6: Not Played";
+            for (var i = 0; i < 6; i++) {
+                if (user.times[i] > 0) {
+                    document.getElementById("level"+(i+1)+"-inner").innerHTML = "Level 1: " + user.times[i] / 25 + "sec";
+                }
             }
 
-            if (user.level1 > 0) {
-                document.getElementById("level1c-inner").innerHTML = "Level 1: " + user.level1 + "/9";
-            } else {
-                document.getElementById("level1c-inner").innerHTML = "Level 1: Not Played";
+            for (var i = 0; i < 6; i++) {
+                if (user.score[i] > 0) {
+                    document.getElementById("level" + (i + 1) + "c-inner").innerHTML = "Level 1: " + user.score[i] + "Coinssec";
+                }
             }
-            if (user.level2 > 0) {
-                document.getElementById("level2c-inner").innerHTML = "Level 2: " + user.level2 + "/6";
-            } else {
-                document.getElementById("level2c-inner").innerHTML = "Level 2: Not Played";
-            }
-            if (user.level3 > 0) {
-                document.getElementById("level3c-inner").innerHTML = "Level 3: " + user.level3 + "/0";
-            } else {
-                document.getElementById("level3c-inner").innerHTML = "Level 3: Not Played";
-            }
-            if (user.level4e > 0) {
-                document.getElementById("level4c-inner").innerHTML = "Level 4: " + user.level4 + "/0";
-            } else {
-                document.getElementById("level4c-inner").innerHTML = "Level 4: Not Played";
-            }
-            if (user.level5e > 0) {
-                document.getElementById("level5c-inner").innerHTML = "Level 5: " + user.level5 + "/0";
-            } else {
-                document.getElementById("level5c-inner").innerHTML = "Level 5: Not Played";
-            }
-            if (user.level6 > 0) {
-                document.getElementById("level6c-inner").innerHTML = "Level 6: " + user.level6 + "/0";
-            } else {
-                document.getElementById("level6c-inner").innerHTML = "Level 6: Not Played";
-            }
-
 
         } else {
             if (isNight) {
