@@ -481,9 +481,9 @@ document.onkeydown = function (event) {
             if (inGame) {
                 switch (currentMap) {
                     case HUB:
-                        for (var i = 1; i <= 6; i++) {
+                        for (var i = 0; i < 6; i++) {
                             if (user.x > 650 + 800*i && user.x < 750 + 800*i) {
-                            changeMap(i, mapData[i]);
+                            changeMap(i+1, mapData[i+1]);
                             }
                         }
                         break;
