@@ -256,7 +256,7 @@ changeMap = function (map, data) {
     jumpboosts = [];
     lavas = [];
     currentMap = map;
-    mapData = data;
+    currentMapData = mapData[map];
     createMap(10,50, map);
     user.x = 250;
     user.y = 695;
