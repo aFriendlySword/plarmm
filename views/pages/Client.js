@@ -789,12 +789,16 @@ document.onkeydown = function (event) {
             for (var i = 0; i < 6; i++) {
                 if (user.times[i] > 0) {
                     document.getElementById("level"+(i+1)+"-inner").innerHTML = "Level 1: " + user.times[i] / 25 + "sec";
+                } else {
+                    document.getElementById("level" + (i + 1) + "-inner").innerHTML = "Level 1: Not Played";
                 }
             }
 
             for (var i = 0; i < 6; i++) {
                 if (user.score[i] > 0) {
                     document.getElementById("level" + (i + 1) + "c-inner").innerHTML = "Level 1: " + user.score[i] + "Coinssec";
+                } else {
+                    document.getElementById("level" + (i + 1) + "c-inner").innerHTML = "Level 1: Not Played";
                 }
             }
 
