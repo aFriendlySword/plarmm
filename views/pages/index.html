@@ -29,6 +29,9 @@
                 <div id="switch">
                     <button id="btnswitch" type="button" class="button"></button>
                 </div>
+                <div id="discord">
+                    <a href="https://discord.gg/8Vx2Wqr" target="_blank" id="dis-button" class="button">Discord</a>
+                </div>
                 <div id="stats-inner">
                     <div id="times">
                         <div id="level1">
@@ -71,6 +74,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div id="tips">
+                <div id="tips-inner">
+                    Get back here by pressing ESC
+                </div>                
             </div>
         </div>
     </div>
@@ -127,11 +135,29 @@
             text-decoration: none;
         }
 
-            .button:focus {
-                outline: 0;
-                -moz-outline: 0;
-                border: 0
-            }
+        .button:focus {
+            outline: 0;
+            -moz-outline: 0;
+            border: 0;
+        }
+        #tips {
+            color: white;
+            border-radius: 12.5px;
+            position: absolute;
+            width: 200px;
+            height: 25px;
+            background-color: #1f1f1f;
+            bottom: 0px;
+            left: 135px;
+            text-align: center;
+        }
+        #tips-inner {
+            position: absolute;
+            top: 5px;
+            font-size: 15px;
+            text-align: center;
+            width: 100%;
+        }
         #imgbtl {
             border-radius: 25px 0px 0px 0px;
         }
@@ -200,6 +226,23 @@
             width: 20px;
             height: 30px;
             background-color: #300ba8;
+        }
+        #discord {
+            position: absolute;
+            width: 65px;
+            height: 20px;
+            bottom: 0px;
+            left: 55px;
+            text-decoration: none;
+        }
+        #dis-button {
+            border-radius: 10px;
+            position: absolute;
+            width: 65px;
+            height: 20px;
+            background-color: #300ba8;
+            text-decoration: none;
+            color: white;
         }
         #stats-inner {
             position:absolute;
