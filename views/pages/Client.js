@@ -257,7 +257,7 @@ changeMap = function (map, data) {
     lavas = [];
     currentMap = map;
     mapData = data;
-    createMap(10,50);
+    createMap(10,50, map);
     user.x = 250;
     user.y = 695;
 }
