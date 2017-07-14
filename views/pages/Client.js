@@ -186,14 +186,14 @@ loadOldSave = function () {
     if (typeof (Storage) !== "undefined") {
         if (!(localStorage.userdata == "test")) {
             try {
-                var userdata = (JSON.parse(atob(localStorage.userdata)));
-                var tut = JSON.parse(atob(JSON.parse(localStorage.playedbefore)));
-                var last = parseInt(atob(JSON.parse(localStorage.lastmap)));
-                var lastData = atob(JSON.parse(localStorage.lastmapData));
-                var lastTime = atob(JSON.parse(localStorage.time));
-                var healthArr = JSON.parse(atob(localStorage.health));
-                var coinCollArr = JSON.parse(atob(localStorage.coins));
-                var jumpCollArr = JSON.parse(atob(localStorage.jumps));
+                userdata = (JSON.parse(atob(localStorage.userdata)));
+                tut = JSON.parse(atob(JSON.parse(localStorage.playedbefore)));
+                last = parseInt(atob(JSON.parse(localStorage.lastmap)));
+                lastData = atob(JSON.parse(localStorage.lastmapData));
+                lastTime = atob(JSON.parse(localStorage.time));
+                healthArr = JSON.parse(atob(localStorage.health));
+                coinCollArr = JSON.parse(atob(localStorage.coins));
+                jumpCollArr = JSON.parse(atob(localStorage.jumps));
 
 
                 user.level1 = userdata.level1;
