@@ -503,6 +503,7 @@ document.onkeydown = function (event) {
                                 user.level1 = user.coins;
                             }
                             changeMap(HUB, mapDataHub);
+                            finishedTut = true;
                         }
                         break;
                     case LEVEL2:
