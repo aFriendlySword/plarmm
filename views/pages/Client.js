@@ -1,4 +1,3 @@
-run();
 run = function () {
 
 
@@ -901,3 +900,4 @@ run = function () {
         }
     }, 1000)
 }
+run();
