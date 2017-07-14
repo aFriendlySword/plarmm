@@ -484,7 +484,7 @@ run = function () {
                 if (inGame) {
                     switch (currentMap) {
                         case HUB:
-                            for (var i = 0; i < 6; i++) {
+                            for (var i = 0; i < 2; i++) {
                                 if (user.x > 650 + 800 * i && user.x < 750 + 800 * i) {
                                     changeMap(i + 1, mapData[i + 1]);
                                 }
