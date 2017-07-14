@@ -481,47 +481,47 @@ document.onkeydown = function (event) {
             if (inGame) {
                 switch (currentMap) {
                     case HUB:
-                        for (var i = 0; i < 6; i++) {
+                        for (var i = 1; i <= 6; i++) {
                             if (user.x > 650 + 800*i && user.x < 750 + 800*i) {
-                            changeMap(i+1, mapData[i+1]);
+                            changeMap(i, mapData[i]);
                             }
                         }
                         break;
                     case LEVEL1:
                         if (user.x > 4750) {
                             saveStats(1);
-                            changeMap(HUB, mapDataHub);
+                            changeMap(HUB, mapData[0]);
                             finishedTut = true;
                         }
                         break;
                     case LEVEL2:
                         if (user.x > 4750) {
                             saveStats(2);
-                            changeMap(HUB, mapDataHub);
+                            changeMap(HUB, mapData[0]);
                         }
                         break;
                     case LEVEL3:
                         if (user.x > 4750) {
                             saveStats(3);
-                            changeMap(HUB, mapDataHub);
+                            changeMap(HUB, mapData[0]);
                         }
                         break;
                     case LEVEL4:
                         if (user.x > 4750) {
                             saveStats(4);
-                            changeMap(HUB, mapDataHub);
+                            changeMap(HUB, mapData[0]);
                         }
                         break;
                     case LEVEL5:
                         if (user.x > 4750) {
                             saveStats(5);
-                            changeMap(HUB, mapDataHub);
+                            changeMap(HUB, mapData[0]);
                         }
                         break;
                     case LEVEL6:
                         if (user.x > 4750) {
                             saveStats(6);
-                            changeMap(HUB, mapDataHub);
+                            changeMap(HUB, mapData[0]);
                         }
                         break;
                     default:
