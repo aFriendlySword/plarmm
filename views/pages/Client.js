@@ -14,10 +14,10 @@
 
     if (typeof (Storage) !== "undefined") {
         if (localStorage.userdata == null) {
-            if ((localStorage.version == undefined) || (atob(JSON.parse(localStorage.version)) !== version)) {
+            if (localStorage.version == undefined) {
                 localStorage.setItem("userdata", "test");
             }
-
+        
         }
         var tested = true;
     }
@@ -219,6 +219,7 @@
                 }
                 catch (err) {
                     localStorage.userdata = "test";
+                    localStorage.setItem("version", JSON.stringify(btoa(version)));
                 }
 
             }
@@ -272,6 +273,7 @@
         createMap(map);
         user.x = 250;
         user.y = 695;
+        user.coins = 0;
     }
     saveStats = function (map) {
         if (runtime < user.times[map - 1] || user.times[map - 1] == 0) {
@@ -280,7 +282,6 @@
         }
         if (user.score[map - 1] < user.coins) {
             user.score[map - 1] = user.coins;
-            user.coins = 0;
         }
     }
 
@@ -895,14 +896,19 @@
             didCollectCoin();
             didCollectJump();
             if (typeof (Storage) !== "undefined") {
-                localStorage.setItem("userdata", btoa(JSON.stringify(user)));
-                localStorage.setItem("playedbefore", JSON.stringify(btoa(finishedTut)));
-                localStorage.setItem("lastmap", JSON.stringify(btoa(currentMap)));
-                localStorage.setItem("version", JSON.stringify(btoa(version)));
-                localStorage.setItem("time", JSON.stringify(btoa(runtime)));
-                localStorage.setItem("health", btoa(JSON.stringify(health)));
-                localStorage.setItem("coins", btoa(JSON.stringify(coinCollected)));
-                localStorage.setItem("jumps", btoa(JSON.stringify(jumpBoostCollected)));
+                if (version == atob(JSON.parse(localStorage.version))) {
+                    localStorage.setItem("version", JSON.stringify(btoa(version)));
+                    localStorage.setItem("userdata", btoa(JSON.stringify(user)));
+                    localStorage.setItem("playedbefore", JSON.stringify(btoa(finishedTut)));
+                    localStorage.setItem("lastmap", JSON.stringify(btoa(currentMap)));
+                    localStorage.setItem("time", JSON.stringify(btoa(runtime)));
+                    localStorage.setItem("health", btoa(JSON.stringify(health)));
+                    localStorage.setItem("coins", btoa(JSON.stringify(coinCollected)));
+                    localStorage.setItem("jumps", btoa(JSON.stringify(jumpBoostCollected)));
+                } else {
+                    localStorage.userdata = "test";
+                    localStorage.setItem("version", JSON.stringify(btoa(version)));
+                }                
             }
         }
     }, 1000)
