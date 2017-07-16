@@ -1,5 +1,3 @@
-run = function () {
-
 
     var service = "/";
     var inGame = false;
@@ -906,5 +904,3 @@ run = function () {
             }
         }
     }, 1000)
-}
-run();
