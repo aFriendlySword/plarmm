@@ -51,14 +51,21 @@ run = function () {
 
     var mapData = [];
 
-
-    mapData.push("sssssssssssaaaaaaasssaaaaaaasssaaaaaaasssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaassssssssssssss");
-    mapData.push("sssssssssssssssssssssaaasaaasssacasaaaassaaasaaaassaaaaaaaassaaaaaassssaaaascaassaasaasaassaaaaaaaasssssswwsssscaasaaasssaaaaaasasaaasaaaaasaaaaaasaasaaaaasacasaaasaaaaassaaaassssssasaaasaassaaaaasaassaaascaaassaaasaaasssaasaaaaassaaaaasaassasasaaaassaaaaaassssaaaasawjssaasaaawwssaaawacaassaaasaaaassaaasaaaassacasaaaassaaaaaasassaaaaaasassaaasaaaassaaasaaaassaaasssssssaaaaasaassaaasacaassaaaaasaassaaasacaassaaaaasaassaaasaaaassaaaaaaaassaaaaaasassaaaasaaasswwssssssssaaaaaaaassaaaaaaaasssssssssss");
-    mapData.push("sssssssssssaaaacawjssaaaaaaawssaaaaaaaassaaaaaaaassaaaaasssssaaaaaaaalsaaaaaassssaaaaaaaalsaaaaaaasssaaaaaaaassaaaaaaaassaaacaaasssaaaaaassssaaaaaaasssaaaaaaaassaaaaaasassaaaaasaassaacasaaassaaaaaaaassaaaaaaaalsaassaaaalsaaaaaaaassaaaaaassssaaaaaaacsssssswwssssacsaaassssaaaaaaasssaaasaaaassaaaaaasassaaaaaaaalsaaaasaaalsaaaaaaaalsaaaaaasalsaaaaaaaalsaaaasaaalaaasaaaaalaaaaaaaaalaaaaaaaaalaaaaaaaaalsaaaaaaasssaaaaasaassaaaaaaaalsaaaaaasassaaaaaaaassaaaaasssssaaaassssssaaaaaaaassaacaaaaasssssssssss");
-    mapData.push("sssssssssssaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaasssssssssss");
-    mapData.push("sssssssssssaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaasssssssssss");
-    mapData.push("sssssssssssaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaasssssssssss");
-    mapData.push("sssssssssssaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaasssssssssss");
+    addMap = function (height, width, data) {
+        map = {
+            height: height,
+            width: width,
+            data: data
+        };
+        mapData.push(map);
+    }
+    addMap(10,50,"sssssssssssaaaaaaasssaaaaaaasssaaaaaaasssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaassssssssssssss");
+    addMap(10,50,"sssssssssssssssssssssaaasaaasssacasaaaassaaasaaaassaaaaaaaassaaaaaassssaaaascaassaasaasaassaaaaaaaasssssswwsssscaasaaasssaaaaaasasaaasaaaaasaaaaaasaasaaaaasacasaaasaaaaassaaaassssssasaaasaassaaaaasaassaaascaaassaaasaaasssaasaaaaassaaaaasaassasasaaaassaaaaaassssaaaasawjssaasaaawwssaaawacaassaaasaaaassaaasaaaassacasaaaassaaaaaasassaaaaaasassaaasaaaassaaasaaaassaaasssssssaaaaasaassaaasacaassaaaaasaassaaasacaassaaaaasaassaaasaaaassaaaaaaaassaaaaaasassaaaasaaasswwssssssssaaaaaaaassaaaaaaaasssssssssss");
+    addMap(10,50,"sssssssssssaaaacawjssaaaaaaawssaaaaaaaassaaaaaaaassaaaaasssssaaaaaaaalsaaaaaassssaaaaaaaalsaaaaaaasssaaaaaaaassaaaaaaaassaaacaaasssaaaaaassssaaaaaaasssaaaaaaaassaaaaaasassaaaaasaassaacasaaassaaaaaaaassaaaaaaaalsaassaaaalsaaaaaaaassaaaaaassssaaaaaaacsssssswwssssacsaaassssaaaaaaasssaaasaaaassaaaaaasassaaaaaaaalsaaaasaaalsaaaaaaaalsaaaaaasalsaaaaaaaalsaaaasaaalaaasaaaaalaaaaaaaaalaaaaaaaaalaaaaaaaaalsaaaaaaasssaaaaasaassaaaaaaaalsaaaaaasassaaaaaaaassaaaaasssssaaaassssssaaaaaaaassaacaaaaasssssssssss");
+    addMap(10,50,"sssssssssssaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaasssssssssss");
+    addMap(10,50,"sssssssssssaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaasssssssssss");
+    addMap(10,50,"sssssssssssaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaasssssssssss");
+    addMap(10,50,"sssssssssssaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaasssssssssss");
 
 
     var stone = new Image();
@@ -373,11 +380,11 @@ run = function () {
             }
         }
 
-        createMap = function (mapHeight, mapWidth, currentMap) {
+        createMap = function (currentMap) {
             var initialize = 0;
-            for (var i = 0; i < mapWidth; i++) {
-                for (var j = 0; j < mapHeight; j++) {
-                    switch (mapData[currentMap].charAt(initialize)) {
+            for (var i = 0; i < mapData[currentMap].width; i++) {
+                for (var j = 0; j < mapData[currentMap].height; j++) {
+                    switch (mapData[currentMap].data.charAt(initialize)) {
                         case "s":
                             stones.push(createObject(0, 50 + 100 * i, 50 + 100 * j));
                             break;
@@ -400,7 +407,7 @@ run = function () {
                 }
             }
         }
-        createMap(10, 50, currentMap);
+        createMap(currentMap);
 
         if (typeof (Storage) !== "undefined") {
             if (!(localStorage.userdata == "test")) {
@@ -791,17 +798,17 @@ run = function () {
 
             for (var i = 0; i < 6; i++) {
                 if (user.times[i] > 0) {
-                    document.getElementById("level" + (i + 1) + "-inner").innerHTML = "Level 1: " + user.times[i] / 25 + "sec";
+                    document.getElementById("level" + (i + 1) + "-inner").innerHTML = "Level "+(i+1)+": " + user.times[i] / 25 + "sec";
                 } else {
-                    document.getElementById("level" + (i + 1) + "-inner").innerHTML = "Level 1: Not Played";
+                    document.getElementById("level" + (i + 1) + "-inner").innerHTML = "Level " + (i + 1) +": Not Played";
                 }
             }
 
             for (var i = 0; i < 6; i++) {
                 if (user.score[i] > 0) {
-                    document.getElementById("level" + (i + 1) + "c-inner").innerHTML = "Level 1: " + user.score[i] + " Coins";
+                    document.getElementById("level" + (i + 1) + "c-inner").innerHTML = "Level " + (i + 1) +": " + user.score[i] + " Coins";
                 } else {
-                    document.getElementById("level" + (i + 1) + "c-inner").innerHTML = "Level 1: Not Played";
+                    document.getElementById("level" + (i + 1) + "c-inner").innerHTML = "Level " + (i + 1) +": Not Played";
                 }
             }
 
