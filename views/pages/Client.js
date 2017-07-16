@@ -264,8 +264,7 @@
         jumpboosts = [];
         lavas = [];
         currentMap = map;
-        currentMapData = mapData[map];
-        createMap(10, 50, map);
+        createMap(map);
         user.x = 250;
         user.y = 695;
     }
