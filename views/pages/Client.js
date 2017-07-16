@@ -757,7 +757,7 @@ run = function () {
                 }
             }
 
-            if (lavas[i].y - user.y < 150 && user.y - lavas[i].y < 150) {
+            if (lavas[i].y - user.y < 150 && user.y - lavas[i].y < 135) {
                 if (lavas[i].x - user.x < 91 && lavas[i].x - user.x > 0) {
                     moveup = 0;
                     changeMap(currentMap);
