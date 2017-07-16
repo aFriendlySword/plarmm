@@ -35,6 +35,9 @@
     instr4.src = service + "instructions4.png";
     var instr5 = new Image();
     instr5.src = service + "instructions5.png";
+    var instr6 = new Image();
+    instr6.src = service + "instruction6.png";
+
 
     var skinOne = new Image();
     skinOne.src = service + "skinOne.png";
@@ -232,6 +235,7 @@
                 ctx.drawImage(instr3, 500 - user.x + c.width / 2, 200 - user.y + + c.height / 2, 300, 100);
                 ctx.drawImage(instr4, 1100 - user.x + c.width / 2, 550 - user.y + + c.height / 2, 300, 100);
                 ctx.drawImage(instr5, 2800 - user.x + c.width / 2, 800 - user.y + + c.height / 2, 300, 100);
+                ctx.drawImage(instr6, 4700 - user.x + c.width / 2, 600 - user.y + + c.height / 2, 200, 200)
             }
         }
     }
