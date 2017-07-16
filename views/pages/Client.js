@@ -1,7 +1,7 @@
 
     var service = "/";
     var inGame = false;
-    var version = "0.2.2";
+    var version = "0.2.3";
 
     var userdata = 0;
     var tut = 0;
