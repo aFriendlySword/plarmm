@@ -801,12 +801,12 @@
 
             for (var i = 0; i < 6; i++) {
                 if (user.times[i] > 0) {
-                    document.getElementById("level" + (i + 1) + "-inner").innerHTML = "Level "+(i+1)+": " + user.times[i] / 25 + "sec";
+                    document.getElementById("level" + (i + 1) + "-inner").innerHTML = "Level "+(i+1)+": " + user.times[i+1] / 25 + "sec";
                 } else {
                     document.getElementById("level" + (i + 1) + "-inner").innerHTML = "Level " + (i + 1) +": Not Played";
                 }
             }
-
+        
             for (var i = 0; i < 6; i++) {
                 if (user.score[i] > 0) {
                     document.getElementById("level" + (i + 1) + "c-inner").innerHTML = "Level " + (i + 1) + ": " + user.score[i+1] + " / " + mapData[i+1].maxscore;
