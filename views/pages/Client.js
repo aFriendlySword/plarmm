@@ -519,7 +519,7 @@
                         case LEVEL3:
                             if (user.x > 9750) {
                                 saveStats(3);
-                                cchangeMap(HUB);
+                                changeMap(HUB);
                             }
                             break;
                         case LEVEL4:
