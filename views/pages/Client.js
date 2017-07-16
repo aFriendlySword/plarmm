@@ -817,7 +817,7 @@
 
         } else {
             if (isNight) {
-                drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", 13000, 7000);
+                drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", mapData[currentMap].width*100+8000, 7000);
 
             }
             else {
