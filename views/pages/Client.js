@@ -24,6 +24,10 @@ run = function () {
         var tested = true;
     }
 
+    document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+    }, false);
+
     var display = "times";
 
 
@@ -900,19 +904,24 @@ run = function () {
             didCollectCoin();
             didCollectJump();
             if (typeof (Storage) !== "undefined") {
-                if (version == atob(JSON.parse(localStorage.version))) {
-                    localStorage.setItem("version", JSON.stringify(btoa(version)));
-                    localStorage.setItem("userdata", btoa(JSON.stringify(user)));
-                    localStorage.setItem("playedbefore", JSON.stringify(btoa(finishedTut)));
-                    localStorage.setItem("lastmap", JSON.stringify(btoa(currentMap)));
-                    localStorage.setItem("time", JSON.stringify(btoa(runtime)));
-                    localStorage.setItem("health", btoa(JSON.stringify(health)));
-                    localStorage.setItem("coins", btoa(JSON.stringify(coinCollected)));
-                    localStorage.setItem("jumps", btoa(JSON.stringify(jumpBoostCollected)));
+                if (localStorage.version !== "undefined") {
+                    if (version == atob(JSON.parse(localStorage.version))) {
+                        localStorage.setItem("version", JSON.stringify(btoa(version)));
+                        localStorage.setItem("userdata", btoa(JSON.stringify(user)));
+                        localStorage.setItem("playedbefore", JSON.stringify(btoa(finishedTut)));
+                        localStorage.setItem("lastmap", JSON.stringify(btoa(currentMap)));
+                        localStorage.setItem("time", JSON.stringify(btoa(runtime)));
+                        localStorage.setItem("health", btoa(JSON.stringify(health)));
+                        localStorage.setItem("coins", btoa(JSON.stringify(coinCollected)));
+                        localStorage.setItem("jumps", btoa(JSON.stringify(jumpBoostCollected)));
+                    } else {
+                        localStorage.userdata = "test";
+                        localStorage.setItem("version", JSON.stringify(btoa(version)));
+                    }
                 } else {
-                    localStorage.userdata = "test";
                     localStorage.setItem("version", JSON.stringify(btoa(version)));
-                }
+                }                  
+                
                 for (var i = 0; i < 7; i++) {
                     if (user.coins[i] > mapData[i].maxscore) {
                         localStorage.userdata = "test";
