@@ -36,7 +36,7 @@
     var instr5 = new Image();
     instr5.src = service + "instructions5.png";
     var instr6 = new Image();
-    instr6.src = service + "instruction6.png";
+    instr6.src = service + "instructions6.png";
 
 
     var skinOne = new Image();
