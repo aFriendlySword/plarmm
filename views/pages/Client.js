@@ -503,7 +503,7 @@
                         case LEVEL1:
                             if (user.x > 4750) {
                                 saveStats(1);
-                                changeMap(HUB;
+                                changeMap(HUB);
                                 finishedTut = true;
                             }
                             break;
