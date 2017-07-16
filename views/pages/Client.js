@@ -897,7 +897,7 @@
             healthfunc();
             didCollectCoin();
             didCollectJump();
-            if (typeof (Storage) !== "undefined" && localStorage.userdata!=="test") {
+            if (typeof (Storage) !== "undefined") {
                 if (version == atob(JSON.parse(localStorage.version))) {
                     localStorage.setItem("version", JSON.stringify(btoa(version)));
                     localStorage.setItem("userdata", btoa(JSON.stringify(user)));
