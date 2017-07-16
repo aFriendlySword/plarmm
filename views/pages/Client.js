@@ -260,7 +260,7 @@
         }
     }
 
-    changeMap = function (map, data) {
+    changeMap = function (map) {
         runtime = 0;
         stones = [];
         woods = [];
@@ -496,45 +496,45 @@
                         case HUB:
                             for (var i = 0; i < 3; i++) {
                                 if (user.x > 650 + 800 * i && user.x < 750 + 800 * i) {
-                                    changeMap(i + 1, mapData[i + 1]);
+                                    changeMap(i + 1);
                                 }
                             }
                             break;
                         case LEVEL1:
                             if (user.x > 4750) {
                                 saveStats(1);
-                                changeMap(HUB, mapData[0]);
+                                changeMap(HUB;
                                 finishedTut = true;
                             }
                             break;
                         case LEVEL2:
                             if (user.x > 4750) {
                                 saveStats(2);
-                                changeMap(HUB, mapData[0]);
+                                changeMap(HUB);
                             }
                             break;
                         case LEVEL3:
                             if (user.x > 9750) {
                                 saveStats(3);
-                                changeMap(HUB, mapData[0]);
+                                cchangeMap(HUB);
                             }
                             break;
                         case LEVEL4:
                             if (user.x > 4750) {
                                 saveStats(4);
-                                changeMap(HUB, mapData[0]);
+                                changeMap(HUB);
                             }
                             break;
                         case LEVEL5:
                             if (user.x > 4750) {
                                 saveStats(5);
-                                changeMap(HUB, mapData[0]);
+                                changeMap(HUB);
                             }
                             break;
                         case LEVEL6:
                             if (user.x > 4750) {
                                 saveStats(6);
-                                changeMap(HUB, mapData[0]);
+                                changeMap(HUB);
                             }
                             break;
                         default:
@@ -564,45 +564,45 @@
                         case HUB:
                             for (var i = 0; i < 3; i++) {
                                 if (user.x > 650 + 800 * i && user.x < 750 + 800 * i) {
-                                    changeMap(i, mapData[i]);
+                                    changeMap(i+1);
                                 }
                             }
                             break;
                         case LEVEL1:
                             if (user.x > 4750) {
                                 saveStats(1);
-                                changeMap(HUB, mapDataHub);
+                                changeMap(HUB);
                                 finishedTut = true;
                             }
                             break;
                         case LEVEL2:
                             if (user.x > 4750) {
                                 saveStats(2);
-                                changeMap(HUB, mapDataHub);
+                                changeMap(HUB);
                             }
                             break;
                         case LEVEL3:
                             if (user.x > 9750) {
                                 saveStats(3);
-                                changeMap(HUB, mapDataHub);
+                                changeMap(HUB);
                             }
                             break;
                         case LEVEL4:
                             if (user.x > 4750) {
                                 saveStats(4);
-                                changeMap(HUB, mapDataHub);
+                                changeMap(HUB);
                             }
                             break;
                         case LEVEL5:
                             if (user.x > 4750) {
                                 saveStats(5);
-                                changeMap(HUB, mapDataHub);
+                                changeMap(HUB);
                             }
                             break;
                         case LEVEL6:
                             if (user.x > 4750) {
                                 saveStats(6);
-                                changeMap(HUB, mapDataHub);
+                                changeMap(HUB);
                             }
                             break;
                         default:
@@ -751,13 +751,11 @@
 
             if (lavas[i].y - user.y < 150 && user.y - lavas[i].y < 150) {
                 if (lavas[i].x - user.x < 91 && lavas[i].x - user.x > 0) {
-                    user.x = 250;
-                    user.y = 695;
                     moveup = 0;
+                    changeMap(currentMap);
                 }
                 if (user.x - lavas[i].x < 91 && user.x - lavas[i].x > 0) {
-                    user.x = 250;
-                    user.y = 695;
+                    changeMap(currentMap);
                     moveup = 0;
                 }
             }
