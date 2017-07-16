@@ -63,7 +63,7 @@
     addMap(10,50,"sssssssssssaaaaaaasssaaaaaaasssaaaaaaasssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaassssssssssssss");
     addMap(10,50,"sssssssssssssssssssssaaasaaasssacasaaaassaaasaaaassaaaaaaaassaaaaaassssaaaascaassaasaasaassaaaaaaaasssssswwsssscaasaaasssaaaaaasasaaasaaaaasaaaaaasaasaaaaasacasaaasaaaaassaaaassssssasaaasaassaaaaasaassaaascaaassaaasaaasssaasaaaaassaaaaasaassasasaaaassaaaaaassssaaaasawjssaasaaawwssaaawacaassaaasaaaassaaasaaaassacasaaaassaaaaaasassaaaaaasassaaasaaaassaaasaaaassaaasssssssaaaaasaassaaasacaassaaaaasaassaaasacaassaaaaasaassaaasaaaassaaaaaaaassaaaaaasassaaaasaaasswwssssssssaaaaaaaassaaaaaaaasssssssssss");
     addMap(10,50,"sssssssssssaaaacawjssaaaaaaawssaaaaaaaassaaaaaaaassaaaaasssssaaaaaaaalsaaaaaassssaaaaaaaalsaaaaaaasssaaaaaaaassaaaaaaaassaaacaaasssaaaaaassssaaaaaaasssaaaaaaaassaaaaaasassaaaaasaassaacasaaassaaaaaaaassaaaaaaaalsaassaaaalsaaaaaaaassaaaaaassssaaaaaaacsssssswwssssacsaaassssaaaaaaasssaaasaaaassaaaaaasassaaaaaaaalsaaaasaaalsaaaaaaaalsaaaaaasalsaaaaaaaalsaaaasaaalaaasaaaaalaaaaaaaaalaaaaaaaaalaaaaaaaaalsaaaaaaasssaaaaasaassaaaaaaaalsaaaaaasassaaaaaaaassaaaaasssssaaaassssssaaaaaaaassaacaaaaasssssssssss");
-    addMap(10,50,"sssssssssssaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaasssssssssss");
+    addMap(20, 100,"sssssssssssssssssssssaacaaajssaaaaaaaaassaasaaaassasaaaaaaassaaaaasaaaaaasaascassaaasaawaaaawaaasaassaaaaaaasssaaaaaasassaaaaaaaaalcaaasssssssssssssssssaaaaaaalsaacaaaaaaaaaasssssssaasaaaaaaaasaaaaaassaasaaaaaasaaaassaassaasaaaascaaasaaaaassaasaaaalsaaaasaaaassaasaaaslsaaaasaassssaasaaaalsssaasaaaassaasaaaalsaaaasasaassaasaaaslsaaaascaaassaasaaaalsaasssasaassaasaaaalsaaaasaaaassaasaaaslssaassaasassaaaaaaalsaaaasaaaassaaasaaalsaaaasasaassaaaaaaasaaaaasaaaassaaaaascaaaasasasaassaaasaasaaaaaascaaassaaaaaaassaaassasaassaaaasaaalsaaasaaaassaaaaaaaalsaaasaasassaaaaaaaalsjaasaaaassaaaaaaaslsaaasasaassacaaaaaalsaaascaaassaaaaaaaasaaassasaassaaaajsaaaaaaasaaaassaaaaaaaaaaaaasasaassaasaaassslllllsaaassaasaaaaaslsaasaaasssaaasaaaaasaajaaasassaaaaaaaaaaaaaasaaassaaaasaaaaaaascaaaassaaaaaaaaaaaaaaaaaassaaaajsssssssssssssssaaaaaaaaaaaaaaaaalssaaaaaaaaaaaaaaaaalssaaaaaaaaaaaaaaaaalssaaaaaaaaaaaaaaaaalssaaaaaaaaaaaaaaaaalssaaaaaaaaaaaaaaaaalssaaaaaaaaaaaaaaasalssaaaaaaaaaaaaaaaaasssaaaaaaaaaaaaaaaaaassaaaaaaaaaaaaaasjaassaaaaaasaaaaaaasaaassaaasaaaaaaaassssssssaaaaaaaaaasaalscaassaasaaaasaaaaalsaaassaaaaaaaaaaaassaaajssaaaasaaaajsaaaaassssaaaaaaaaaaaaassaalssaaaaaaasasssaaaaalssaaaassaawwwwaaaaalssaaaaaaaawwwwaaaaalsssssssaaasaassssssssscassscasaaaaaaasaassaaaaasaaaaaawaaaajssaaasaaaaaaassssaaassaaaaaaaaaaaaalsaaassaaaaaaaaaaaaalscaassaaasaaaaaaasssssssssaaaaaaaaaaaaaaaaalssaaaaaaaaaaaaaaaaalssaaasaaaaaaasssssssssaaaaaaaaaaasaascaassaaaaaaaaaaasaasaaassaaasaaaaaaasaasaaassaaaaaaaaaaaaaawaaassaaaaaaaaaaawaaaaawssaaaasaaaaaassssaasssaaaaaaasaaasaasaasssaaaaaaaaaaasaasjasssaaasaaaaaaasaassssssaaaaaaaajsaaaaaaaassaaasssssaaaaaaaaaassaaaaaascaaajssssaassaaaaaaasaaaascaaaassssssaaasaaaaaasaaassssssaaasaaaasaaaaassacaaaasaaasaaaaaaassaaaaasaaaalsaaaaaassaaasaaaaassaaaaaaassaaaaaaaasaaaaaaassssssssasasaaaaaaaaaassaaaaaaaaaaaaaaasaassaaaaaaaaaaaaasaaaassaaaaaaaaaajsaaaassssaaaaaaaassaaaassssssaaaaasscaaajssssssssaassssssssssssssssssaaaaaaaaaaaaaaaaaassaaaaaaaaaaaaaaaaaasssssssssssssssssssss");
     addMap(10,50,"sssssssssssaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaasssssssssss");
     addMap(10,50,"sssssssssssaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaasssssssssss");
     addMap(10,50,"sssssssssssaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaasssssssssss");
@@ -494,7 +494,7 @@
                 if (inGame) {
                     switch (currentMap) {
                         case HUB:
-                            for (var i = 0; i < 2; i++) {
+                            for (var i = 0; i < 3; i++) {
                                 if (user.x > 650 + 800 * i && user.x < 750 + 800 * i) {
                                     changeMap(i + 1, mapData[i + 1]);
                                 }
@@ -514,7 +514,7 @@
                             }
                             break;
                         case LEVEL3:
-                            if (user.x > 4750) {
+                            if (user.x > 9750) {
                                 saveStats(3);
                                 changeMap(HUB, mapData[0]);
                             }
@@ -562,7 +562,7 @@
                 if (inGame) {
                     switch (currentMap) {
                         case HUB:
-                            for (var i = 0; i < 6; i++) {
+                            for (var i = 0; i < 3; i++) {
                                 if (user.x > 650 + 800 * i && user.x < 750 + 800 * i) {
                                     changeMap(i, mapData[i]);
                                 }
@@ -582,7 +582,7 @@
                             }
                             break;
                         case LEVEL3:
-                            if (user.x > 4750) {
+                            if (user.x > 9750) {
                                 saveStats(3);
                                 changeMap(HUB, mapDataHub);
                             }
