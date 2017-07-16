@@ -1,3 +1,5 @@
+run = function () {
+
 
     var service = "/";
     var inGame = false;
@@ -17,7 +19,7 @@
             if (localStorage.version == undefined) {
                 localStorage.setItem("userdata", "test");
             }
-        
+
         }
         var tested = true;
     }
@@ -57,17 +59,17 @@
             height: height,
             width: width,
             data: data,
-            maxscore:maxscore
+            maxscore: maxscore
         };
         mapData.push(map);
     }
-    addMap(10,50,"sssssssssssaaaaaaasssaaaaaaasssaaaaaaasssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaassssssssssssss",0);
-    addMap(10,50,"sssssssssssssssssssssaaasaaasssacasaaaassaaasaaaassaaaaaaaassaaaaaassssaaaascaassaasaasaassaaaaaaaasssssswwsssscaasaaasssaaaaaasasaaasaaaaasaaaaaasaasaaaaasacasaaasaaaaassaaaassssssasaaasaassaaaaasaassaaascaaassaaasaaasssaasaaaaassaaaaasaassasasaaaassaaaaaassssaaaasawjssaasaaawwssaaawacaassaaasaaaassaaasaaaassacasaaaassaaaaaasassaaaaaasassaaasaaaassaaasaaaassaaasssssssaaaaasaassaaasacaassaaaaasaassaaasacaassaaaaasaassaaasaaaassaaaaaaaassaaaaaasassaaaasaaasswwssssssssaaaaaaaassaaaaaaaasssssssssss",9);
-    addMap(10,50,"sssssssssssaaaacawjssaaaaaaawssaaaaaaaassaaaaaaaassaaaaasssssaaaaaaaalsaaaaaassssaaaaaaaalsaaaaaaasssaaaaaaaassaaaaaaaassaaacaaasssaaaaaassssaaaaaaasssaaaaaaaassaaaaaasassaaaaasaassaacasaaassaaaaaaaassaaaaaaaalsaassaaaalsaaaaaaaassaaaaaassssaaaaaaacsssssswwssssacsaaassssaaaaaaasssaaasaaaassaaaaaasassaaaaaaaalsaaaasaaalsaaaaaaaalsaaaaaasalsaaaaaaaalsaaaasaaalaaasaaaaalaaaaaaaaalaaaaaaaaalaaaaaaaaalsaaaaaaasssaaaaasaassaaaaaaaalsaaaaaasassaaaaaaaassaaaaasssssaaaassssssaaaaaaaassaacaaaaasssssssssss",6);
-    addMap(20, 100,"sssssssssssssssssssssaacaaajssaaaaaaasassaasaaaassasaaaaaaassaaaaasaaaaaasaascassaaasaawaaaawaaasaassaaaaaaasssaaaaaasassaaaaaaaaalcaaasssssssssssssssssaaaaaaalsaacaaaaaaaaaasssssssaasaaaaaaaasaaaaaassaasaaaaaasaaaassaassaasaaaascaaasaaaaassaasaaaalsaaaasaaaassaasaaaslsaaaasaassssaasaaaalsssaasaaaassaasaaaslsaaaasasaassaasaaaalsaaaascaaassaasaaaslsaasssasaassaasaaaalsaaaasaaaassaasaaaslssaassaasassaaaaaaalsaaaasaaaassaaasaaassaaaasasaassaaaaaaasaaaaasaaaassaaaaascaaaasasasaassaaasaasaaaaaascaaassaaaaaaassaaassasaassaaaasaaalsaaasaaaassaaaaaaaalsaaasaasassaaaaaaaalsjaasaaaassaaaaaaaslsaaasasaassacaaaaaalsaaascaaassaaaaaaaasaaassasaassaaaajsaaaaaaasaaaassaaaaaaaaaaaaasasaassaasaaassslllllsaaassaasaaaaaslsaasaaasssaaasaaaaasaajaaasassaaaaaaaaaaaaaasaaassaaaasaaaaaaascaaaassaaaaaaaaaaaaaaaaaassaaaajsssssssssssssssaaaaaaaaaaaaaaaaalssaaaaaaaaaaaaaaaaalssaaaaaaaaaaaaaaaaalssaaaaaaaaaaaaaaasalssaaaaaaaaaaaaaaaaalssaaaaaaaaaaaaaaaaalssaaaaaaaaaaaaaaasalssaaaaaaaaaaaaaaaaasssaaaaaaaaaaaaaaaaaassaaaaaaaaaaaaaasjaassaaaaaasaaaaaaasaaassaaasaaaaaaaassssssssaaaaaaaaaasaalscaassaasaaaasaaaaalsaaassaaaaaaaaaaaassaaajssaaaasaaaajsaaaaassssaaaaaaaaaaaaassaalssaaaaaaasasssaaaaalssaaaassaawwwwaaaaalssaaaaaaaawwwwaaaaalsssssssaaasaassssssssscassscasaaaaaaasaassaaaaasaaaaaawaaaajssaaasaaaaaaassssaaassaaaaaaaaaaaaalsaaassaaaaaaaaaaaaalscaassaaasaaaaaaasssssssssaaaaaaaaaaaaaaaaalssaaaaaaaaaaaaaaaaalssaaasaaaaaaasssssssssaaaaaaaaaaasaascaassaaaaaaaaaaasaasaaassaaasaaaaaaasaasaaassaaaaaaaaaaaaaawaaassaaaaaaaaaaawaaaaawssaaaasaaaaaassssaasssaaaaaaasaaasaasaasssaaaaaaaaaaasaasjasssaaasaaaaaaasaassssssaaaaaaaajsaaaaaaaassaaasssssaaaaaaaaaassaaaaaascaaajssssaassaaaaaaasaaaascaaaassssssaaasaaaaaasaaassssssaaasaaaasaaaaassacaaaasaaasaaaaaaassaaaaasaaaalsaaaaaassaaasaaaaassaaaaaaassaaaaaaaasaaaaaaassssssssasasaaaaaaaaaassaaaaaaaaaaaaaaasaassaaaaaaaaaaaaasaaaassaaaaaaaaaajsaaaassssaaaaaaaassaaaassssssaaaaasscaaajssssssssaassssssssssssssssssaaaaaaaaaaaaaaaaaassaaaaaaaaaaaaaaaaaasssssssssssssssssssss",20);
-    addMap(10,50,"sssssssssssaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaasssssssssss",0);
-    addMap(10,50,"sssssssssssaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaasssssssssss",0);
-    addMap(10,50,"sssssssssssaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaasssssssssss",0);
+    addMap(10, 50, "sssssssssssaaaaaaasssaaaaaaasssaaaaaaasssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaasssssaaaaaassssaaaaaassssaaaaaassssaaaaaassssaaaaasssssaaaaaaasssaaaaaaasssaaaaassssssssssssss", 0);
+    addMap(10, 50, "sssssssssssssssssssssaaasaaasssacasaaaassaaasaaaassaaaaaaaassaaaaaassssaaaascaassaasaasaassaaaaaaaasssssswwsssscaasaaasssaaaaaasasaaasaaaaasaaaaaasaasaaaaasacasaaasaaaaassaaaassssssasaaasaassaaaaasaassaaascaaassaaasaaasssaasaaaaassaaaaasaassasasaaaassaaaaaassssaaaasawjssaasaaawwssaaawacaassaaasaaaassaaasaaaassacasaaaassaaaaaasassaaaaaasassaaasaaaassaaasaaaassaaasssssssaaaaasaassaaasacaassaaaaasaassaaasacaassaaaaasaassaaasaaaassaaaaaaaassaaaaaasassaaaasaaasswwssssssssaaaaaaaassaaaaaaaasssssssssss", 9);
+    addMap(10, 50, "sssssssssssaaaacawjssaaaaaaawssaaaaaaaassaaaaaaaassaaaaasssssaaaaaaaalsaaaaaassssaaaaaaaalsaaaaaaasssaaaaaaaassaaaaaaaassaaacaaasssaaaaaassssaaaaaaasssaaaaaaaassaaaaaasassaaaaasaassaacasaaassaaaaaaaassaaaaaaaalsaassaaaalsaaaaaaaassaaaaaassssaaaaaaacsssssswwssssacsaaassssaaaaaaasssaaasaaaassaaaaaasassaaaaaaaalsaaaasaaalsaaaaaaaalsaaaaaasalsaaaaaaaalsaaaasaaalaaasaaaaalaaaaaaaaalaaaaaaaaalaaaaaaaaalsaaaaaaasssaaaaasaassaaaaaaaalsaaaaaasassaaaaaaaassaaaaasssssaaaassssssaaaaaaaassaacaaaaasssssssssss", 6);
+    addMap(20, 100, "sssssssssssssssssssssaacaaajssaaaaaaasassaasaaaassasaaaaaaassaaaaasaaaaaasaascassaaasaawaaaawaaasaassaaaaaaasssaaaaaasassaaaaaaaaalcaaasssssssssssssssssaaaaaaalsaacaaaaaaaaaasssssssaasaaaaaaaasaaaaaassaasaaaaaasaaaassaassaasaaaascaaasaaaaassaasaaaalsaaaasaaaassaasaaaslsaaaasaassssaasaaaalsssaasaaaassaasaaaslsaaaasasaassaasaaaalsaaaascaaassaasaaaslsaasssasaassaasaaaalsaaaasaaaassaasaaaslssaassaasassaaaaaaalsaaaasaaaassaaasaaassaaaasasaassaaaaaaasaaaaasaaaassaaaaascaaaasasasaassaaasaasaaaaaascaaassaaaaaaassaaassasaassaaaasaaalsaaasaaaassaaaaaaaalsaaasaasassaaaaaaaalsjaasaaaassaaaaaaaslsaaasasaassacaaaaaalsaaascaaassaaaaaaaasaaassasaassaaaajsaaaaaaasaaaassaaaaaaaaaaaaasasaassaasaaassslllllsaaassaasaaaaaslsaasaaasssaaasaaaaasaajaaasassaaaaaaaaaaaaaasaaassaaaasaaaaaaascaaaassaaaaaaaaaaaaaaaaaassaaaajsssssssssssssssaaaaaaaaaaaaaaaaalssaaaaaaaaaaaaaaaaalssaaaaaaaaaaaaaaaaalssaaaaaaaaaaaaaaasalssaaaaaaaaaaaaaaaaalssaaaaaaaaaaaaaaaaalssaaaaaaaaaaaaaaasalssaaaaaaaaaaaaaaaaasssaaaaaaaaaaaaaaaaaassaaaaaaaaaaaaaasjaassaaaaaasaaaaaaasaaassaaasaaaaaaaassssssssaaaaaaaaaasaalscaassaasaaaasaaaaalsaaassaaaaaaaaaaaassaaajssaaaasaaaajsaaaaassssaaaaaaaaaaaaassaalssaaaaaaasasssaaaaalssaaaassaawwwwaaaaalssaaaaaaaawwwwaaaaalsssssssaaasaassssssssscassscasaaaaaaasaassaaaaasaaaaaawaaaajssaaasaaaaaaassssaaassaaaaaaaaaaaaalsaaassaaaaaaaaaaaaalscaassaaasaaaaaaasssssssssaaaaaaaaaaaaaaaaalssaaaaaaaaaaaaaaaaalssaaasaaaaaaasssssssssaaaaaaaaaaasaascaassaaaaaaaaaaasaasaaassaaasaaaaaaasaasaaassaaaaaaaaaaaaaawaaassaaaaaaaaaaawaaaaawssaaaasaaaaaassssaasssaaaaaaasaaasaasaasssaaaaaaaaaaasaasjasssaaasaaaaaaasaassssssaaaaaaaajsaaaaaaaassaaasssssaaaaaaaaaassaaaaaascaaajssssaassaaaaaaasaaaascaaaassssssaaasaaaaaasaaassssssaaasaaaasaaaaassacaaaasaaasaaaaaaassaaaaasaaaalsaaaaaassaaasaaaaassaaaaaaassaaaaaaaasaaaaaaassssssssasasaaaaaaaaaassaaaaaaaaaaaaaaasaassaaaaaaaaaaaaasaaaassaaaaaaaaaajsaaaassssaaaaaaaassaaaassssssaaaaasscaaajssssssssaassssssssssssssssssaaaaaaaaaaaaaaaaaassaaaaaaaaaaaaaaaaaasssssssssssssssssssss", 20);
+    addMap(10, 50, "sssssssssssaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaasssssssssss", 0);
+    addMap(10, 50, "sssssssssssaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaasssssssssss", 0);
+    addMap(10, 50, "sssssssssssaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaassaaaaaaaasssssssssss", 0);
 
 
     var stone = new Image();
@@ -800,24 +802,24 @@
             }
 
             for (var i = 0; i < 6; i++) {
-                if (user.times[i+1] > 0) {
-                    document.getElementById("level" + (i + 1) + "-inner").innerHTML = "Level "+(i+1)+": " + user.times[i+1] / 25 + "sec";
+                if (user.times[i + 1] > 0) {
+                    document.getElementById("level" + (i + 1) + "-inner").innerHTML = "Level " + (i + 1) + ": " + user.times[i + 1] / 25 + "sec";
                 } else {
-                    document.getElementById("level" + (i + 1) + "-inner").innerHTML = "Level " + (i + 1) +": Not Played";
+                    document.getElementById("level" + (i + 1) + "-inner").innerHTML = "Level " + (i + 1) + ": Not Played";
                 }
             }
-        
+
             for (var i = 0; i < 6; i++) {
-                if (user.score[i+1] > 0) {
-                    document.getElementById("level" + (i + 1) + "c-inner").innerHTML = "Level " + (i + 1) + ": " + user.score[i+1] + " / " + mapData[i+1].maxscore;
+                if (user.score[i + 1] > 0) {
+                    document.getElementById("level" + (i + 1) + "c-inner").innerHTML = "Level " + (i + 1) + ": " + user.score[i + 1] + " / " + mapData[i + 1].maxscore;
                 } else {
-                    document.getElementById("level" + (i + 1) + "c-inner").innerHTML = "Level " + (i + 1) +": Not Played";
+                    document.getElementById("level" + (i + 1) + "c-inner").innerHTML = "Level " + (i + 1) + ": Not Played";
                 }
             }
 
         } else {
             if (isNight) {
-                drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", mapData[currentMap].width*100+8000, 7000);
+                drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", mapData[currentMap].width * 100 + 8000, 7000);
 
             }
             else {
@@ -910,7 +912,7 @@
                 } else {
                     localStorage.userdata = "test";
                     localStorage.setItem("version", JSON.stringify(btoa(version)));
-                }  
+                }
                 for (var i = 0; i < 7; i++) {
                     if (user.coins[i] > mapData[i].maxscore) {
                         localStorage.userdata = "test";
@@ -920,3 +922,5 @@
             }
         }
     }, 1000)
+}
+run();
