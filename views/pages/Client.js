@@ -806,7 +806,7 @@
 
             for (var i = 0; i < 6; i++) {
                 if (user.score[i] > 0) {
-                    document.getElementById("level" + (i + 1) + "c-inner").innerHTML = "Level " + (i + 1) + ": " + user.score[i] + " / " + mapData[i].maxscore;
+                    document.getElementById("level" + (i + 1) + "c-inner").innerHTML = "Level " + (i + 1) + ": " + user.score[i] + " / " + mapData[i+1].maxscore;
                 } else {
                     document.getElementById("level" + (i + 1) + "c-inner").innerHTML = "Level " + (i + 1) +": Not Played";
                 }
