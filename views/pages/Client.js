@@ -271,9 +271,11 @@
     saveStats = function (map) {
         if (runtime < user.times[map - 1] || user.times[map - 1] == 0) {
             user.times[map - 1] = runtime;
+            runtime = 0;
         }
         if (user.score[map - 1] < user.coins) {
             user.score[map - 1] = user.coins;
+            user.coins = 0;
         }
     }
 
