@@ -160,7 +160,8 @@ run = function () {
             document.getElementById("switch").style.right = "0px";
         }
     }
-    hardreset.onclick = function () {
+
+    reset = function () {
         user = {
             times: [0, 0, 0, 0, 0, 0, 0],
             score: [0, 0, 0, 0, 0, 0, 0],
@@ -176,7 +177,9 @@ run = function () {
         var coins = [];
         var jumpboosts = [];
         var lavas = [];
-
+    }
+    hardreset.onclick = function () {
+        reset();
     }
 
     var stones = [];
@@ -822,7 +825,7 @@ run = function () {
                 document.getElementById("times").style.visibility = "hidden";
                 document.getElementById("coins").style.visibility = "visible";
             }
-
+            console.log(user);
             for (var i = 0; i < 6; i++) {
                 if (user.times[i + 1] > 0) {
                     document.getElementById("level" + (i + 1) + "-inner").innerHTML = "Level " + (i + 1) + ": " + user.times[i + 1] / 25 + "sec";
@@ -925,7 +928,6 @@ run = function () {
                 if (localStorage.version !== undefined) {
                     console.log("Version exists already.");
                     if (version == atob(JSON.parse(localStorage.version))) {
-                        console.log("Versions are the same.");
                         localStorage.setItem("version", JSON.stringify(btoa(version)));
                         localStorage.setItem("userdata", btoa(JSON.stringify(user)));
                         localStorage.setItem("playedbefore", JSON.stringify(btoa(finishedTut)));
@@ -935,12 +937,10 @@ run = function () {
                         localStorage.setItem("coins", btoa(JSON.stringify(coinCollected)));
                         localStorage.setItem("jumps", btoa(JSON.stringify(jumpBoostCollected)));
                     } else {
-                        console.log("Versions are NOT/NOOW the same.");
                         localStorage.userdata = "test";
                         localStorage.setItem("version", JSON.stringify(btoa(version)));
                     }
                 } else {
-                    console.log("Versions are NOW the same/exist.");
                     localStorage.setItem("version", JSON.stringify(btoa(version)));
                 }                  
                 
@@ -949,11 +949,13 @@ run = function () {
                         console.log("Caught ya cheater" + i);
                         localStorage.userdata = "test";
                         localStorage.setItem("version", JSON.stringify(btoa(version)));
+                        reset();
                     }
                     if (user.times[i] < 30 && user.times[i] >0) {
                         console.log("Caught ya cheater." + i);
                         localStorage.userdata = "test";
                         localStorage.setItem("version", JSON.stringify(btoa(version)));
+                        reset();
                     }
                 }
             }
