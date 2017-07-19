@@ -172,11 +172,7 @@ run = function () {
             rot: false
         };
         currentMap = 0;
-        var stones = [];
-        var woods = [];
-        var coins = [];
-        var jumpboosts = [];
-        var lavas = [];
+        stopGame();
     }
     hardreset.onclick = function () {
         reset();
@@ -825,11 +821,11 @@ run = function () {
                 document.getElementById("times").style.visibility = "hidden";
                 document.getElementById("coins").style.visibility = "visible";
             }
-            if (localStorage.times == undefined) {
-                reset();
+            if (user.times == undefined) {
+                reset();               
             }
-            if (localStorage.coins == undefined) {
-                reset();
+            if (user.score == undefined) {
+                reset();               
             }
             for (var i = 0; i < 6; i++) {
                 if (user.times[i + 1] > 0) {
@@ -931,7 +927,6 @@ run = function () {
             didCollectJump();
             if (typeof (Storage) !== "undefined") {
                 if (localStorage.version !== undefined) {
-                    console.log("Version exists already.");
                     if (version == atob(JSON.parse(localStorage.version))) {
                         localStorage.setItem("version", JSON.stringify(btoa(version)));
                         localStorage.setItem("userdata", btoa(JSON.stringify(user)));
@@ -948,10 +943,10 @@ run = function () {
                 } else {
                     localStorage.setItem("version", JSON.stringify(btoa(version)));
                 }                  
-                if (localStorage.times == undefined) {
+                if (user.times == undefined) {
                     reset();
                 }
-                if (localStorage.coins == undefined) {
+                if (user.score == undefined) {
                     reset();
                 }
                 for (var i = 0; i < 7; i++) {
