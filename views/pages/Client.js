@@ -18,13 +18,7 @@ run = function () {
         if (localStorage.userdata == null) {
             if (localStorage.version == undefined) {
                 localStorage.setItem("userdata", "test");
-            }
-            if (localStorage.times == undefined) {
-                localStorage.setItem("userdata", "test");
-            }
-            if (localStorage.coins == undefined) {
-                localStorage.setItem("userdata", "test");
-            }
+            }            
         }
     }
 
@@ -831,7 +825,12 @@ run = function () {
                 document.getElementById("times").style.visibility = "hidden";
                 document.getElementById("coins").style.visibility = "visible";
             }
-            console.log(user);
+            if (localStorage.times == undefined) {
+                reset();
+            }
+            if (localStorage.coins == undefined) {
+                reset();
+            }
             for (var i = 0; i < 6; i++) {
                 if (user.times[i + 1] > 0) {
                     document.getElementById("level" + (i + 1) + "-inner").innerHTML = "Level " + (i + 1) + ": " + user.times[i + 1] / 25 + "sec";
