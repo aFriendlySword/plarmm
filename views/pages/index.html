@@ -5,6 +5,7 @@
     <title>Plarm</title>
 </head>
 <body>
+    <div id="hardreset">Hardreset</div>
     <div id="nite">
         <button id="sleep" class="button" > Turn Nightmode OFF</button>
     </div>
@@ -85,7 +86,17 @@
     <div id="selected"><div id="imgsel"><img id="selimg" src="/skinOneTop.png" /></div></div>
     <canvas id="canvas" width="5000" height="1000"></canvas>
     <style>
-        
+        #hardreset {
+            position:absolute;
+            bottom:0;
+            right:0;
+            border-radius:10px;
+            width:70px;
+            color:black;
+            background-color:red;
+            opacity:0.9;
+            text-align:center;
+        }
         #menu {
             visibility: visible;
             border-radius: 25px;

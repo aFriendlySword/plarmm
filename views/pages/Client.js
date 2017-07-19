@@ -160,6 +160,24 @@ run = function () {
             document.getElementById("switch").style.right = "0px";
         }
     }
+    hardreset.onclick = function () {
+        user = {
+            times: [0, 0, 0, 0, 0, 0, 0],
+            score: [0, 0, 0, 0, 0, 0, 0],
+            coins: 0,
+            jump: 20,
+            x: 250,
+            y: 695,
+            rot: false
+        };
+        currentMap = 0;
+        var stones = [];
+        var woods = [];
+        var coins = [];
+        var jumpboosts = [];
+        var lavas = [];
+
+    }
 
     var stones = [];
     var woods = [];
@@ -299,6 +317,7 @@ run = function () {
         document.getElementById("character").style.visibility = "hidden";
         document.getElementById("coins").style.visibility = "hidden";
         document.getElementById("times").style.visibility = "hidden";
+        document.getElementById("hardreset").style.visibility = "hidden";
 
         if (isNight) {
             drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", 13000, 7000);
@@ -447,6 +466,7 @@ run = function () {
         document.getElementById("character").style.visibility = "visible";
         document.getElementById("coins").style.visibility = "visible";
         document.getElementById("times").style.visibility = "visible";
+        document.getElementById("hardreset").style.visibility = "visible";
         stones = [];
         woods = [];
         coins = [];
