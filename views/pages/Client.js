@@ -19,6 +19,12 @@ run = function () {
             if (localStorage.version == undefined) {
                 localStorage.setItem("userdata", "test");
             }
+            if (localStorage.times == undefined) {
+                localStorage.setItem("userdata", "test");
+            }
+            if (localStorage.coins == undefined) {
+                localStorage.setItem("userdata", "test");
+            }
         }
     }
 
