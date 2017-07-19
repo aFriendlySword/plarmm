@@ -510,38 +510,38 @@ run = function () {
                             }
                             break;
                         case LEVEL1:
-                            if (user.x > 4750) {
+                            if (user.x > 4740) {
                                 saveStats(1);
                                 changeMap(HUB);
                                 finishedTut = true;
                             }
                             break;
                         case LEVEL2:
-                            if (user.x > 4750) {
+                            if (user.x > 4740) {
                                 saveStats(2);
                                 changeMap(HUB);
                             }
                             break;
                         case LEVEL3:
-                            if (user.x > 9750) {
+                            if (user.x > 9740) {
                                 saveStats(3);
                                 changeMap(HUB);
                             }
                             break;
                         case LEVEL4:
-                            if (user.x > 4750) {
+                            if (user.x > 7740) {
                                 saveStats(4);
                                 changeMap(HUB);
                             }
                             break;
                         case LEVEL5:
-                            if (user.x > 4750) {
+                            if (user.x > 4740) {
                                 saveStats(5);
                                 changeMap(HUB);
                             }
                             break;
                         case LEVEL6:
-                            if (user.x > 4750) {
+                            if (user.x > 4740) {
                                 saveStats(6);
                                 changeMap(HUB);
                             }
@@ -572,45 +572,45 @@ run = function () {
                     switch (currentMap) {
                         case HUB:
                             for (var i = 0; i < 3; i++) {
-                                if (user.x > 650 + 800 * i && user.x < 750 + 800 * i) {
+                                if (user.x > 640 + 800 * i && user.x < 760 + 800 * i) {
                                     changeMap(i + 1);
                                     saveStats(0);
                                 }
                             }
                             break;
                         case LEVEL1:
-                            if (user.x > 4750) {
+                            if (user.x > 4740) {
                                 saveStats(1);
                                 changeMap(HUB);
                                 finishedTut = true;
                             }
                             break;
                         case LEVEL2:
-                            if (user.x > 4750) {
+                            if (user.x > 4740) {
                                 saveStats(2);
                                 changeMap(HUB);
                             }
                             break;
                         case LEVEL3:
-                            if (user.x > 9750) {
+                            if (user.x > 9740) {
                                 saveStats(3);
                                 changeMap(HUB);
                             }
                             break;
                         case LEVEL4:
-                            if (user.x > 4750) {
+                            if (user.x > 7740) {
                                 saveStats(4);
                                 changeMap(HUB);
                             }
                             break;
                         case LEVEL5:
-                            if (user.x > 4750) {
+                            if (user.x > 4740) {
                                 saveStats(5);
                                 changeMap(HUB);
                             }
                             break;
                         case LEVEL6:
-                            if (user.x > 4750) {
+                            if (user.x > 4740) {
                                 saveStats(6);
                                 changeMap(HUB);
                             }
@@ -683,7 +683,7 @@ run = function () {
                     moveup = 150 - stones[i].y + user.y;
                 }
                 if (stones[i].y - user.y + moveup > -135 && stones[i].y - user.y < 0) {
-                    moveup = -0;
+                    moveup = -135 - stones[i].y + user.y;
                 }
             }
 
@@ -708,7 +708,7 @@ run = function () {
                     }
                 }
 
-                if (woods[i].y - user.y < 150 && user.y - woods[i].y < 150) {
+                if (woods[i].y - user.y < 150 && user.y - woods[i].y < 135) {
                     if (woods[i].x - user.x < 91 && woods[i].x - user.x > 0) {
                         forcemoveleft = 5;
                     }
@@ -823,7 +823,7 @@ run = function () {
 
         } else {
             if (isNight) {
-                drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", mapData[currentMap].width * 100 + 8000, 7000);
+                drawGrid(-4000 - user.x + c.width / 2, -3000 - user.y + c.height / 2, "#FFFFFF", "#000000", mapData[currentMap].width * 100 + 8000, mapData[currentMap].height * 100 + 6000);
 
             }
             else {
@@ -904,7 +904,7 @@ run = function () {
             didCollectCoin();
             didCollectJump();
             if (typeof (Storage) !== "undefined") {
-                if (localStorage.version !== "undefined") {
+                if (localStorage.version !== undefined) {
                     if (version == atob(JSON.parse(localStorage.version))) {
                         localStorage.setItem("version", JSON.stringify(btoa(version)));
                         localStorage.setItem("userdata", btoa(JSON.stringify(user)));
