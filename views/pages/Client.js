@@ -948,7 +948,12 @@ run = function () {
                 } else {
                     localStorage.setItem("version", JSON.stringify(btoa(version)));
                 }                  
-                
+                if (localStorage.times == undefined) {
+                    reset();
+                }
+                if (localStorage.coins == undefined) {
+                    reset();
+                }
                 for (var i = 0; i < 7; i++) {
                     if (user.coins[i] > mapData[i].maxscore) {
                         console.log("Caught ya cheater" + i);
@@ -956,7 +961,7 @@ run = function () {
                         localStorage.setItem("version", JSON.stringify(btoa(version)));
                         reset();
                     }
-                    if (user.times[i] < 30 && user.times[i] >0) {
+                    if (user.times[i] < 30 && user.times[i] > 0) {
                         console.log("Caught ya cheater." + i);
                         localStorage.userdata = "test";
                         localStorage.setItem("version", JSON.stringify(btoa(version)));
