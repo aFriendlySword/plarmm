@@ -879,7 +879,7 @@ run = function () {
 
 
     var save = setInterval(function () {
-        if (tested && inGame) {
+        if (inGame) {
             var health = [];
             var coinCollected = [];
             var jumpBoostCollected = [];
