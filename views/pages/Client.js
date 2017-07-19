@@ -930,7 +930,7 @@ run = function () {
                         localStorage.userdata = "test";
                         localStorage.setItem("version", JSON.stringify(btoa(version)));
                     }
-                    if (user.times[i] < 30) {
+                    if (user.times[i] < 30 && user.times[i] >0) {
                         console.log("Caught ya cheater." + i);
                         localStorage.userdata = "test";
                         localStorage.setItem("version", JSON.stringify(btoa(version)));
